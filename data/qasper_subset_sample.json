@@ -1,0 +1,61 @@
+[
+  {
+    "paper_id": "paper-1",
+    "full_text": [
+      {
+        "section_name": "Introduction",
+        "paragraphs": [
+          "This paper studies model accuracy on a benchmark dataset.",
+          "We compare retrieval settings and analyze evidence distribution."
+        ]
+      },
+      {
+        "section_name": "Method",
+        "paragraphs": [
+          "Our method uses bridge expansion with adjacency and entity overlap.",
+          "Section continuity is included as a binary signal."
+        ]
+      }
+    ],
+    "qas": [
+      {
+        "question": "Which signal includes section information?",
+        "answers": [
+          {
+            "answer": {
+              "evidence": [
+                "Section continuity is included as a binary signal."
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "paper_id": "paper-2",
+    "full_text": [
+      {
+        "section_name": "Results",
+        "paragraphs": [
+          "Adjacency-only expansion can add noisy neighbors.",
+          "Bridge scoring helps prioritize relevant nearby context."
+        ]
+      }
+    ],
+    "qas": [
+      {
+        "question": "What can add noisy neighbors?",
+        "answers": [
+          {
+            "answer": {
+              "evidence": [
+                "Adjacency-only expansion can add noisy neighbors."
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
