@@ -1,6 +1,16 @@
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import numpy as np
+
+# Allow `python tests/test_pipeline.py` from the repo root without requiring
+# an editable install first.
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
 from lspbe.expansion import adjacency_expand, bridge_expand
 from lspbe.retrieval import BGERetriever
@@ -48,3 +58,9 @@ def test_flat_retrieval_and_expansion() -> None:
 
     bridge = bridge_expand(rank.ranked, by_doc, context_budget=5, radius=1, top_m=1)
     assert len(bridge) >= 2
+
+
+if __name__ == "__main__":
+    import pytest
+
+    raise SystemExit(pytest.main([__file__]))
