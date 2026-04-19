@@ -79,6 +79,20 @@ Run the main four-way baseline comparison:
 python scripts/run_qasper_baseline_compare.py --qasper-path data/qasper_subset_debug_50.json
 ```
 
+Run the one-shot canonical 50-paper bundle that writes both public artifact sets:
+
+```bash
+python scripts/run_qasper_eval_bundle.py --qasper-path data/qasper_subset_debug_50.json --max-papers 50 --max-qas 10000 --tag final_qasper_50paper_recomputed
+```
+
+Run the targeted 50-paper segmentation robustness study:
+
+```bash
+python scripts/run_qasper_segmentation_study.py
+```
+
+The segmentation study winner for the planned full-QASPER run is `seg_paragraph_pair`.
+
 Run optional diagnostics:
 
 ```bash
@@ -118,5 +132,15 @@ The locked final summary lives in:
 
 - [artifacts/final_qasper_model_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_summary.md)
 - [artifacts/final_qasper_model_results.json](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_results.json)
+- [artifacts/final_qasper_model_summary_recomputed.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_summary_recomputed.md)
+- [artifacts/final_qasper_baseline_compare_recomputed.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_baseline_compare_recomputed.md)
+- [artifacts/final_verification_note.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_verification_note.md)
+- [artifacts/qasper_segmentation_study_50_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/qasper_segmentation_study_50_summary.md)
 
-These summarize the final model config, baseline comparison, beyond-adjacency result, and what was removed during streamlining.
+For the full-QASPER final run path, use:
+
+```bash
+python scripts/run_qasper_full_final_eval.py --qasper-path data/qasper_train_full.json --segmentation-mode seg_paragraph_pair
+```
+
+The exact full-run plan is documented in [docs/final_full_qasper_run_plan.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/final_full_qasper_run_plan.md).

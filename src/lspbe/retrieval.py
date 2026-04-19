@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from math import log
+from pathlib import Path
 import re
 from typing import Counter as CounterType
 from typing import Protocol
@@ -38,7 +39,30 @@ class SentenceTransformerEmbedder:
                 "Install with: pip install '.[retrieval]'"
             ) from exc
 
-        self._model = SentenceTransformer(model_name)
+        self._model = SentenceTransformer(self._resolve_model_name(model_name))
+
+    @staticmethod
+    def _resolve_model_name(model_name: str) -> str:
+        """Prefer a fully cached local snapshot before falling back to the repo id."""
+
+        if Path(model_name).exists():
+            return model_name
+
+        repo_key = model_name.replace("/", "--")
+        hub_root = Path.home() / ".cache" / "huggingface" / "hub" / f"models--{repo_key}"
+        refs_main = hub_root / "refs" / "main"
+        if refs_main.exists():
+            snapshot_id = refs_main.read_text(encoding="utf-8").strip()
+            snapshot_path = hub_root / "snapshots" / snapshot_id
+            required = [
+                snapshot_path / "config.json",
+                snapshot_path / "modules.json",
+                snapshot_path / "model.safetensors",
+            ]
+            if snapshot_path.exists() and all(path.exists() for path in required):
+                return str(snapshot_path)
+
+        return model_name
 
     def encode(self, texts: list[str]) -> np.ndarray:
         vectors = self._model.encode(texts, normalize_embeddings=True)

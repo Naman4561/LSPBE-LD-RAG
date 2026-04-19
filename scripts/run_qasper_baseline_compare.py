@@ -25,6 +25,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-papers", type=int, default=50)
     parser.add_argument("--max-qas", type=int, default=10_000)
     parser.add_argument(
+        "--segmentation-mode",
+        choices=["seg_paragraph", "seg_paragraph_pair", "seg_micro_chunk"],
+        default="seg_paragraph",
+        help="Segmentation strategy to apply before retrieval.",
+    )
+    parser.add_argument(
         "--output-json",
         default="",
         help="Optional path to save the comparison payload as JSON.",
@@ -38,11 +44,13 @@ def main() -> int:
         args.qasper_path,
         max_papers=args.max_papers,
         max_qas=args.max_qas,
+        segmentation_mode=args.segmentation_mode,
     )
     methods = canonical_qasper_methods()
     results = evaluate_methods(context, methods)
     payload = {
         "subset_path": str(args.qasper_path),
+        "segmentation_mode": args.segmentation_mode,
         "methods": [method.as_dict() for method in methods],
         "results": results,
         "locked_50_paper_reference": LOCKED_QASPER_RESULTS_50,

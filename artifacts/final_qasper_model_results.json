@@ -1,6 +1,8 @@
 {
   "canonical_model_name": "bridge_final",
-  "dataset": "QASPER 50-paper doc-constrained diagnostic set",
+  "dataset": "data/qasper_subset_debug_50.json",
+  "recomputed_from_cleaned_codepath": true,
+  "source_artifact": "artifacts/final_qasper_50paper_recomputed_model_results.json",
   "final_model_config": {
     "seed_retrieval_mode": "hybrid",
     "seed_dense_weight": 1.0,
@@ -14,18 +16,29 @@
     "reranker": false,
     "diversification": false
   },
-  "baseline_results": {
+  "recomputed_baseline_results": {
+    "adjacency": 0.7704081632653061,
+    "bridge_v1": 0.7704081632653061,
+    "bridge_v2": 0.8112244897959183,
+    "bridge_final": 0.8214285714285714
+  },
+  "locked_historical_reference": {
     "adjacency": 0.7704,
     "bridge_v1": 0.7704,
     "bridge_v2": 0.8112,
     "bridge_v21_hybrid_soft": 0.8214,
-    "bridge_final": 0.8214
+    "bridge_final": 0.8214,
+    "beyond_adjacency_subset_hit_rate": 0.8511
   },
-  "beyond_adjacency_subset_hit_rate": 0.8511,
-  "streamlining_notes": [
-    "Hybrid seed retrieval was the main additional gain over the earlier Bridge v2 baseline.",
-    "Section scoring did not provide measurable value in the streamlined study.",
-    "Diversification did not provide measurable value in the streamlined study.",
-    "The final default removes adaptive trigger, reranker, and other unsupported extras."
+  "match_status": {
+    "adjacency": true,
+    "bridge_v1": true,
+    "bridge_v2": true,
+    "bridge_final": true
+  },
+  "notes": [
+    "The canonical 50-paper validation was freshly recomputed from the cleaned final path.",
+    "The exact recomputed values match the locked historical results to four decimal places.",
+    "The beyond-adjacency subset value remains a historical diagnostic reference and was not recomputed by the lightweight canonical script."
   ]
 }

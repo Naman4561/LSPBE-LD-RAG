@@ -4,6 +4,9 @@ Use these first:
 
 - `run_qasper_final_model.py`: locked final QASPER model
 - `run_qasper_baseline_compare.py`: main four-way baseline comparison
+- `run_qasper_eval_bundle.py`: one-process canonical artifact writer for the 50-paper validation or a full run
+- `run_qasper_full_final_eval.py`: full-QASPER wrapper around the canonical bundle; defaults to `seg_paragraph_pair`
+- `run_qasper_segmentation_study.py`: targeted 50-paper segmentation robustness check for `bridge_final`
 - `run_qasper_diagnostics.py`: optional non-canonical studies
 
 Legacy scripts kept for reproducibility:

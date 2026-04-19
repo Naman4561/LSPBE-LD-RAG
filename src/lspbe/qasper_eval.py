@@ -9,15 +9,72 @@ from .expansion import build_segment_idf
 from .mve import QAExample, _build_segments_by_doc, _evidence_hit, load_qasper_subset
 from .qasper import QasperMethodConfig, apply_qasper_method
 from .retrieval import BGERetriever
+from .segmentation import segment_document_with_mode
 from .types import DocumentSegment, RetrievedSegment
+
+
+def load_qasper_subset_with_segmentation(
+    path: str | Path,
+    segmentation_mode: str,
+    max_papers: int = 100,
+    max_qas: int = 300,
+) -> tuple[list[DocumentSegment], list[QAExample]]:
+    """Load QASPER while overriding the document segmentation strategy."""
+
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    papers = list(raw.values()) if isinstance(raw, dict) else raw
+
+    segments: list[DocumentSegment] = []
+    qas: list[QAExample] = []
+    mode_lookup = {
+        "seg_paragraph": "paragraph",
+        "seg_paragraph_pair": "paragraph_pair",
+        "seg_micro_chunk": "micro_chunk",
+    }
+    segment_mode = mode_lookup[segmentation_mode]
+
+    for paper in papers[:max_papers]:
+        doc_id = paper.get("paper_id") or paper.get("id") or str(len(segments))
+        full_text = paper.get("full_text", [])
+        doc_text_parts: list[str] = []
+        for section in full_text:
+            section_name = section.get("section_name") or "SECTION"
+            doc_text_parts.append(f"# {section_name}")
+            doc_text_parts.extend(section.get("paragraphs", []))
+            doc_text_parts.append("")
+
+        doc_text = "\n".join(doc_text_parts)
+        segments.extend(segment_document_with_mode(doc_id, doc_text, mode=segment_mode))
+
+        for qa in paper.get("qas", []):
+            if len(qas) >= max_qas:
+                break
+            evidence: list[str] = []
+            for ans in qa.get("answers", []):
+                evidence.extend(ans.get("answer", {}).get("evidence", []))
+            qas.append(QAExample(doc_id=doc_id, query=qa.get("question", ""), evidence_texts=evidence))
+
+        if len(qas) >= max_qas:
+            break
+
+    return segments, qas
 
 
 def load_qasper_eval_context(
     subset_path: str | Path,
     max_papers: int = 50,
     max_qas: int = 10_000,
+    segmentation_mode: str = "seg_paragraph",
 ) -> dict[str, object]:
-    segments, qas = load_qasper_subset(subset_path, max_papers=max_papers, max_qas=max_qas)
+    if segmentation_mode == "seg_paragraph":
+        segments, qas = load_qasper_subset(subset_path, max_papers=max_papers, max_qas=max_qas)
+    else:
+        segments, qas = load_qasper_subset_with_segmentation(
+            subset_path,
+            segmentation_mode=segmentation_mode,
+            max_papers=max_papers,
+            max_qas=max_qas,
+        )
     retriever = BGERetriever(segments)
     segments_by_doc = _build_segments_by_doc(segments)
     idf_map = build_segment_idf(segments)
@@ -32,6 +89,7 @@ def load_qasper_eval_context(
         "segments_by_doc": segments_by_doc,
         "idf_map": idf_map,
         "segment_vectors": segment_vectors,
+        "segmentation_mode": segmentation_mode,
     }
 
 
