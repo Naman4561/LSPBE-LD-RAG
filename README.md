@@ -15,12 +15,23 @@ Local Structure-Preserving Bridge Expansion for long-document retrieval.
 ```bash
 pip install -e .
 pip install -e '.[retrieval,dev]'
+pip install datasets
 ```
+
+## Convert QASPER
+
+Start with a tiny subset so it is easy to debug:
+
+```bash
+python scripts/convert_qasper_hf_to_subset.py --split train --max-papers 2 --max-qas 3 --output data/qasper_train_tiny.json
+```
+
+To randomize which papers land in the subset, add `--seed 7`.
 
 ## Run MVE
 
 ```bash
-python scripts/run_mve.py --qasper-path /path/to/qasper_subset.json --max-papers 100 --max-qas 300 --k 5 --radius 1 --top-m 2 --context-budget 20
+python scripts/run_mve.py --qasper-path data/qasper_train_tiny.json --max-papers 2 --max-qas 3 --k 5 --radius 1 --top-m 2 --context-budget 20 --embedder hash
 ```
 
 The script prints JSON metrics for Recall@k proxy, MRR proxy, and evidence hit rate.
