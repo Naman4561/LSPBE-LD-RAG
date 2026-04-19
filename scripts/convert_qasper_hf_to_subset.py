@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import re
 import sys
 from itertools import zip_longest
 from pathlib import Path
@@ -21,6 +22,70 @@ def _string_list(values: Any) -> list[str]:
     if not isinstance(values, list):
         return []
     return [value for value in values if isinstance(value, str)]
+
+
+def is_obvious_evidence_artifact(text: str) -> bool:
+    """Return True only for evidence strings that are almost certainly labels.
+
+    This cleanup is intentionally narrow: we remove obvious annotation artifacts
+    from evidence supervision, not from the paper text itself. The goal is to
+    avoid making the benchmark artificially easier through aggressive corpus
+    normalization while still dropping strings that are extremely likely to be
+    non-prose labels.
+    """
+
+    stripped = text.strip()
+    if not stripped:
+        return False
+
+    if stripped.startswith("FLOAT SELECTED:"):
+        remainder = stripped.removeprefix("FLOAT SELECTED:").strip()
+        if not remainder:
+            return True
+        if len(remainder.split()) <= 12 and not re.search(r"[.!?]", remainder):
+            return True
+
+    # Keep raw section names and messy labels by default. Only remove the most
+    # obvious standalone figure/table labels with no prose attached.
+    if len(stripped.split()) <= 6 and not re.search(r"[.!?]", stripped):
+        if re.fullmatch(r"(Table|Figure|Fig\.|Appendix|Section)\s+[A-Za-z0-9.\-]+", stripped):
+            return True
+
+    return False
+
+
+def clean_evidence_list(evidence_list: list[str]) -> tuple[list[str], dict[str, int]]:
+    """Apply light evidence cleanup without rewriting the underlying corpus.
+
+    We only trim whitespace, drop empty strings, remove exact duplicates within
+    the same QA, and filter obvious label artifacts. We intentionally keep raw
+    prose, citation placeholders, section names inside document text, and other
+    messy QASPER content so the converted benchmark stays realistic.
+    """
+
+    cleaned: list[str] = []
+    seen: set[str] = set()
+    stats = {
+        "raw_evidence": 0,
+        "retained_evidence": 0,
+        "removed_duplicates": 0,
+        "removed_empty_or_artifact": 0,
+    }
+
+    for evidence in evidence_list:
+        stats["raw_evidence"] += 1
+        stripped = evidence.strip()
+        if not stripped or is_obvious_evidence_artifact(stripped):
+            stats["removed_empty_or_artifact"] += 1
+            continue
+        if stripped in seen:
+            stats["removed_duplicates"] += 1
+            continue
+        seen.add(stripped)
+        cleaned.append(stripped)
+        stats["retained_evidence"] += 1
+
+    return cleaned, stats
 
 
 def _normalize_full_text(full_text: Any) -> list[dict[str, object]]:
@@ -58,10 +123,11 @@ def _normalize_full_text(full_text: Any) -> list[dict[str, object]]:
     return sections
 
 
-def _normalize_answers(answers: Any) -> list[dict[str, object]]:
+def _normalize_answers(answers: Any) -> tuple[list[dict[str, object]], dict[str, int]]:
     """Extract only answer.evidence from multiple possible QASPER answer shapes."""
 
     normalized: list[dict[str, object]] = []
+    raw_evidence: list[str] = []
 
     if isinstance(answers, list):
         for answer_entry in answers:
@@ -70,8 +136,10 @@ def _normalize_answers(answers: Any) -> list[dict[str, object]]:
             answer_obj = answer_entry.get("answer", {})
             if not isinstance(answer_obj, dict):
                 answer_obj = {}
-            normalized.append({"answer": {"evidence": _string_list(answer_obj.get("evidence"))}})
-        return normalized
+            raw_evidence.extend(_string_list(answer_obj.get("evidence")))
+        cleaned, stats = clean_evidence_list(raw_evidence)
+        normalized.append({"answer": {"evidence": cleaned}})
+        return normalized, stats
 
     if isinstance(answers, dict):
         raw_answers = answers.get("answer", [])
@@ -79,28 +147,48 @@ def _normalize_answers(answers: Any) -> list[dict[str, object]]:
             for answer_obj in raw_answers:
                 if not isinstance(answer_obj, dict):
                     continue
-                normalized.append({"answer": {"evidence": _string_list(answer_obj.get("evidence"))}})
+                raw_evidence.extend(_string_list(answer_obj.get("evidence")))
 
-    return normalized
+    cleaned, stats = clean_evidence_list(raw_evidence)
+    normalized.append({"answer": {"evidence": cleaned}})
+    return normalized, stats
 
 
-def _normalize_qas(qas: Any) -> list[dict[str, object]]:
+def _empty_cleanup_stats() -> dict[str, int]:
+    return {
+        "raw_evidence": 0,
+        "retained_evidence": 0,
+        "removed_duplicates": 0,
+        "removed_empty_or_artifact": 0,
+    }
+
+
+def _merge_cleanup_stats(left: dict[str, int], right: dict[str, int]) -> dict[str, int]:
+    for key, value in right.items():
+        left[key] = left.get(key, 0) + value
+    return left
+
+
+def _normalize_qas(qas: Any) -> tuple[list[dict[str, object]], dict[str, int]]:
     """Normalize question-answer groups into the minimal MVE-compatible schema."""
 
     normalized: list[dict[str, object]] = []
+    stats = _empty_cleanup_stats()
 
     if isinstance(qas, list):
         for qa in qas:
             if not isinstance(qa, dict):
                 continue
             question = qa.get("question")
+            normalized_answers, answer_stats = _normalize_answers(qa.get("answers"))
+            _merge_cleanup_stats(stats, answer_stats)
             normalized.append(
                 {
                     "question": question if isinstance(question, str) else "",
-                    "answers": _normalize_answers(qa.get("answers")),
+                    "answers": normalized_answers,
                 }
             )
-        return normalized
+        return normalized, stats
 
     if isinstance(qas, dict):
         questions = qas.get("question", [])
@@ -111,38 +199,50 @@ def _normalize_qas(qas: Any) -> list[dict[str, object]]:
             answers = []
 
         for question, answer_group in zip_longest(questions, answers, fillvalue=[]):
+            normalized_answers, answer_stats = _normalize_answers(answer_group)
+            _merge_cleanup_stats(stats, answer_stats)
             normalized.append(
                 {
                     "question": question if isinstance(question, str) else "",
-                    "answers": _normalize_answers(answer_group),
+                    "answers": normalized_answers,
                 }
             )
 
-    return normalized
+    return normalized, stats
 
 
-def _normalize_paper(record: dict[str, Any]) -> dict[str, object]:
+def _normalize_paper(record: dict[str, Any]) -> tuple[dict[str, object], dict[str, int]]:
     """Project a Hugging Face QASPER record into the local subset schema."""
 
     paper_id = record.get("id")
+    normalized_qas, stats = _normalize_qas(record.get("qas"))
     return {
         "paper_id": paper_id if isinstance(paper_id, str) else "",
         "full_text": _normalize_full_text(record.get("full_text")),
-        "qas": _normalize_qas(record.get("qas")),
-    }
+        "qas": normalized_qas,
+    }, stats
+
+
+def _sum_selected_qas(papers: list[dict[str, object]]) -> int:
+    total = 0
+    for paper in papers:
+        paper_qas = paper.get("qas", [])
+        if isinstance(paper_qas, list):
+            total += len(paper_qas)
+    return total
 
 
 def _apply_limits(
-    papers: list[dict[str, object]],
+    papers_with_stats: list[tuple[dict[str, object], dict[str, int]]],
     max_papers: int | None,
     max_qas: int | None,
-) -> tuple[list[dict[str, object]], int]:
+) -> tuple[list[dict[str, object]], int, dict[str, int]]:
     """Apply global paper and QA limits while keeping output paper-centric."""
 
     selected: list[dict[str, object]] = []
-    qa_count = 0
+    cleanup_stats = _empty_cleanup_stats()
 
-    for paper in papers:
+    for paper, paper_stats in papers_with_stats:
         if max_papers is not None and len(selected) >= max_papers:
             break
 
@@ -152,9 +252,10 @@ def _apply_limits(
 
         if max_qas is None:
             selected.append(paper)
-            qa_count += len(paper_qas)
+            _merge_cleanup_stats(cleanup_stats, paper_stats)
             continue
 
+        qa_count = _sum_selected_qas(selected)
         remaining = max_qas - qa_count
         if remaining <= 0:
             break
@@ -166,9 +267,22 @@ def _apply_limits(
             "qas": trimmed_qas,
         }
         selected.append(trimmed_paper)
-        qa_count += len(trimmed_qas)
 
-    return selected, qa_count
+        if len(trimmed_qas) == len(paper_qas):
+            _merge_cleanup_stats(cleanup_stats, paper_stats)
+        else:
+            partial_stats = _empty_cleanup_stats()
+            for qa in trimmed_qas:
+                for answer in qa.get("answers", []):
+                    answer_obj = answer.get("answer", {})
+                    if isinstance(answer_obj, dict):
+                        retained = answer_obj.get("evidence", [])
+                        if isinstance(retained, list):
+                            partial_stats["retained_evidence"] += len(retained)
+                            partial_stats["raw_evidence"] += len(retained)
+            _merge_cleanup_stats(cleanup_stats, partial_stats)
+
+    return selected, _sum_selected_qas(selected), cleanup_stats
 
 
 def parse_args() -> argparse.Namespace:
@@ -203,12 +317,19 @@ def main() -> int:
         print(f"Failed to load QASPER split '{args.split}': {exc}", file=sys.stderr)
         return 1
 
-    papers = [_normalize_paper(dict(record)) for record in dataset]
+    papers_with_stats: list[tuple[dict[str, object], dict[str, int]]] = []
+    for record in dataset:
+        paper, paper_stats = _normalize_paper(dict(record))
+        papers_with_stats.append((paper, paper_stats))
 
     if args.seed is not None:
-        random.Random(args.seed).shuffle(papers)
+        random.Random(args.seed).shuffle(papers_with_stats)
 
-    selected, qa_count = _apply_limits(papers, max_papers=args.max_papers, max_qas=args.max_qas)
+    selected, qa_count, cleanup_stats = _apply_limits(
+        papers_with_stats,
+        max_papers=args.max_papers,
+        max_qas=args.max_qas,
+    )
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -221,6 +342,10 @@ def main() -> int:
 
     print(f"Papers: {len(selected)}")
     print(f"QA pairs: {qa_count}")
+    print(f"Raw evidence strings: {cleanup_stats['raw_evidence']}")
+    print(f"Evidence retained: {cleanup_stats['retained_evidence']}")
+    print(f"Evidence removed as duplicates: {cleanup_stats['removed_duplicates']}")
+    print(f"Evidence removed as empty/artifact: {cleanup_stats['removed_empty_or_artifact']}")
     print(f"Output: {output_path}")
     return 0
 

@@ -24,14 +24,14 @@ def test_normalize_paper_supports_list_style_nested_fields() -> None:
             {
                 "question": "What matters?",
                 "answers": [
-                    {"answer": {"evidence": ["e1", None, "e2"]}},
+                    {"answer": {"evidence": [" e1 ", None, "e2", "e1", "FLOAT SELECTED: Table 1"]}},
                     {"answer": {"evidence": []}},
                 ],
             }
         ],
     }
 
-    normalized = converter._normalize_paper(record)
+    normalized, stats = converter._normalize_paper(record)
 
     assert normalized == {
         "paper_id": "paper-1",
@@ -44,10 +44,15 @@ def test_normalize_paper_supports_list_style_nested_fields() -> None:
                 "question": "What matters?",
                 "answers": [
                     {"answer": {"evidence": ["e1", "e2"]}},
-                    {"answer": {"evidence": []}},
                 ],
             }
         ],
+    }
+    assert stats == {
+        "raw_evidence": 4,
+        "retained_evidence": 2,
+        "removed_duplicates": 1,
+        "removed_empty_or_artifact": 1,
     }
 
 
@@ -67,7 +72,7 @@ def test_normalize_paper_supports_dict_style_nested_fields() -> None:
         },
     }
 
-    normalized = converter._normalize_paper(record)
+    normalized, stats = converter._normalize_paper(record)
 
     assert normalized == {
         "paper_id": "paper-2",
@@ -78,10 +83,7 @@ def test_normalize_paper_supports_dict_style_nested_fields() -> None:
         "qas": [
             {
                 "question": "Q1",
-                "answers": [
-                    {"answer": {"evidence": ["a1"]}},
-                    {"answer": {"evidence": ["a2"]}},
-                ],
+                "answers": [{"answer": {"evidence": ["a1", "a2"]}}],
             },
             {
                 "question": "Q2",
@@ -89,17 +91,46 @@ def test_normalize_paper_supports_dict_style_nested_fields() -> None:
             },
         ],
     }
+    assert stats == {
+        "raw_evidence": 3,
+        "retained_evidence": 3,
+        "removed_duplicates": 0,
+        "removed_empty_or_artifact": 0,
+    }
 
 
 def test_apply_limits_trims_last_paper_by_global_qa_cap() -> None:
-    papers = [
-        {"paper_id": "p1", "full_text": [], "qas": [{"question": "q1", "answers": []}, {"question": "q2", "answers": []}]},
-        {"paper_id": "p2", "full_text": [], "qas": [{"question": "q3", "answers": []}, {"question": "q4", "answers": []}]},
+    papers_with_stats = [
+        (
+            {"paper_id": "p1", "full_text": [], "qas": [{"question": "q1", "answers": []}, {"question": "q2", "answers": []}]},
+            {"raw_evidence": 2, "retained_evidence": 2, "removed_duplicates": 0, "removed_empty_or_artifact": 0},
+        ),
+        (
+            {"paper_id": "p2", "full_text": [], "qas": [{"question": "q3", "answers": []}, {"question": "q4", "answers": []}]},
+            {"raw_evidence": 5, "retained_evidence": 3, "removed_duplicates": 1, "removed_empty_or_artifact": 1},
+        ),
     ]
 
-    selected, qa_count = converter._apply_limits(papers, max_papers=None, max_qas=3)
+    selected, qa_count, stats = converter._apply_limits(papers_with_stats, max_papers=None, max_qas=3)
 
     assert qa_count == 3
     assert [paper["paper_id"] for paper in selected] == ["p1", "p2"]
     assert len(selected[0]["qas"]) == 2
     assert len(selected[1]["qas"]) == 1
+    assert stats == {
+        "raw_evidence": 2,
+        "retained_evidence": 2,
+        "removed_duplicates": 0,
+        "removed_empty_or_artifact": 0,
+    }
+
+
+def test_is_obvious_evidence_artifact_is_conservative() -> None:
+    assert converter.is_obvious_evidence_artifact("FLOAT SELECTED: Table 1")
+    assert converter.is_obvious_evidence_artifact("Table 3")
+    assert not converter.is_obvious_evidence_artifact(
+        "FLOAT SELECTED: Table 1: Hierarchical intent annotation scheme on both datasets."
+    )
+    assert not converter.is_obvious_evidence_artifact("Datasets ::: PersuasionForGood Dataset")
+    assert not converter.is_obvious_evidence_artifact("BIBREF1")
+    assert not converter.is_obvious_evidence_artifact("Section continuity is included as a binary signal.")

@@ -1,0 +1,31 @@
+{
+  "canonical_model_name": "bridge_final",
+  "dataset": "QASPER 50-paper doc-constrained diagnostic set",
+  "final_model_config": {
+    "seed_retrieval_mode": "hybrid",
+    "seed_dense_weight": 1.0,
+    "seed_sparse_weight": 0.5,
+    "bridge_design": "Bridge v2 skip-local",
+    "max_skip_distance": 2,
+    "top_bridge_candidates_per_seed": 1,
+    "continuity_mode": "idf_overlap",
+    "section_scoring": false,
+    "adaptive_trigger": false,
+    "reranker": false,
+    "diversification": false
+  },
+  "baseline_results": {
+    "adjacency": 0.7704,
+    "bridge_v1": 0.7704,
+    "bridge_v2": 0.8112,
+    "bridge_v21_hybrid_soft": 0.8214,
+    "bridge_final": 0.8214
+  },
+  "beyond_adjacency_subset_hit_rate": 0.8511,
+  "streamlining_notes": [
+    "Hybrid seed retrieval was the main additional gain over the earlier Bridge v2 baseline.",
+    "Section scoring did not provide measurable value in the streamlined study.",
+    "Diversification did not provide measurable value in the streamlined study.",
+    "The final default removes adaptive trigger, reranker, and other unsupported extras."
+  ]
+}
