@@ -11,13 +11,15 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+LEGACY_ARTIFACTS_DIR = ROOT / "artifacts" / "legacy_pre_redo"
+
 from lspbe.qasper import LOCKED_QASPER_RESULTS_50, canonical_qasper_methods
-from lspbe.qasper_eval import evaluate_methods, load_qasper_eval_context, write_json
+from lspbe.qasper_eval import evaluate_methods_detailed, load_qasper_eval_context, write_json
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run the canonical QASPER baseline bundle once and write final + comparison artifacts."
+        description="Legacy pre-redo QASPER bundle writer kept for reproducibility."
     )
     parser.add_argument("--qasper-path", required=True, help="QASPER JSON file to evaluate.")
     parser.add_argument("--max-papers", type=int, default=50)
@@ -29,7 +31,7 @@ def parse_args() -> argparse.Namespace:
         help="Segmentation strategy to apply before retrieval.",
     )
     parser.add_argument("--tag", required=True, help="Artifact tag, for example final_qasper_50paper or final_qasper_full.")
-    parser.add_argument("--artifacts-dir", default=str(ROOT / "artifacts"))
+    parser.add_argument("--artifacts-dir", default=str(LEGACY_ARTIFACTS_DIR))
     return parser.parse_args()
 
 
@@ -55,7 +57,9 @@ def build_compare_markdown(
     ]
     for name in ["adjacency", "bridge_v1", "bridge_v2", "bridge_final"]:
         metric = float(by_name[name]["evidence_hit_rate"])
-        line = f"- `{name}`: `{metric:.4f}`"
+        seed = float(by_name[name].get("seed_hit_rate", 0.0))
+        beyond = float(by_name[name].get("beyond_adjacency_evidence_hit_rate", 0.0))
+        line = f"- `{name}`: evidence `{metric:.4f}`, seed `{seed:.4f}`, beyond-adjacency `{beyond:.4f}`"
         if locked_reference is not None and name in locked_reference:
             expected = float(locked_reference[name])
             status = "match" if abs(metric - expected) < 5e-5 else f"mismatch vs `{expected:.4f}`"
@@ -79,6 +83,9 @@ def build_final_markdown(
         f"- segmentation_mode: `{segmentation_mode}`",
         f"- canonical model: `bridge_final`",
         f"- evidence_hit_rate: `{metric:.4f}`",
+        f"- seed_hit_rate: `{float(final_result.get('seed_hit_rate', 0.0)):.4f}`",
+        f"- beyond_adjacency_evidence_hit_rate: `{float(final_result.get('beyond_adjacency_evidence_hit_rate', 0.0)):.4f}`",
+        f"- beyond_adjacency_subset_size: `{int(final_result.get('beyond_adjacency_subset_size', 0))}`",
     ]
     if locked_reference is not None:
         expected = float(locked_reference["bridge_final"])
@@ -105,7 +112,10 @@ def build_final_markdown(
 
 
 def main() -> int:
-    args = parse_args()
+    return run_bundle(parse_args())
+
+
+def run_bundle(args: argparse.Namespace) -> int:
     artifacts_dir = Path(args.artifacts_dir)
     artifacts_dir.mkdir(parents=True, exist_ok=True)
 
@@ -116,7 +126,7 @@ def main() -> int:
         segmentation_mode=args.segmentation_mode,
     )
     methods = canonical_qasper_methods()
-    results = evaluate_methods(context, methods)
+    results, metadata = evaluate_methods_detailed(context, methods)
     by_name = result_by_name(results)
 
     compare_json_path = artifacts_dir / f"{args.tag}_baseline_compare.json"
@@ -131,6 +141,7 @@ def main() -> int:
         "segmentation_mode": args.segmentation_mode,
         "methods": [method.as_dict() for method in methods],
         "results": results,
+        "metadata": metadata,
         "locked_reference": locked_reference,
     }
     final_payload = {
@@ -138,6 +149,7 @@ def main() -> int:
         "segmentation_mode": args.segmentation_mode,
         "method": by_name["bridge_final"]["config"],
         "metrics": by_name["bridge_final"],
+        "metadata": metadata,
         "locked_reference": (
             {
                 "evidence_hit_rate": LOCKED_QASPER_RESULTS_50["bridge_final"],

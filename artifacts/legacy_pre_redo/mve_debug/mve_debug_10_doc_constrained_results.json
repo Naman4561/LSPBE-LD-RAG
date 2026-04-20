@@ -1,0 +1,31 @@
+{
+  "subset_path": "data\\qasper_subset_debug_10.json",
+  "embedder": "bge",
+  "restrict_to_doc": true,
+  "max_papers": 10,
+  "max_qas": 1000,
+  "k": 5,
+  "radius": 1,
+  "top_m": 2,
+  "context_budget": 20,
+  "metrics": {
+    "flat": {
+      "queries": 51.0,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "evidence_hit_rate": 0.5686274509803921
+    },
+    "adjacency": {
+      "queries": 51.0,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "evidence_hit_rate": 0.7058823529411765
+    },
+    "bridge": {
+      "queries": 51.0,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "evidence_hit_rate": 0.7058823529411765
+    }
+  }
+}

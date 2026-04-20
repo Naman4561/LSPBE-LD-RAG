@@ -26,13 +26,13 @@ Other available full converted splits:
 Full final-model evaluation:
 
 ```bash
-python scripts/run_qasper_final_model.py --qasper-path data/qasper_train_full.json --max-papers 1000000 --max-qas 1000000 --segmentation-mode seg_paragraph_pair --output-json artifacts/final_qasper_full_model_results.json
+python scripts/run_qasper_final_model.py --qasper-path data/qasper_train_full.json --max-papers 1000000 --max-qas 1000000 --segmentation-mode seg_paragraph_pair --output-json artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_model_results.json
 ```
 
 Full baseline comparison:
 
 ```bash
-python scripts/run_qasper_baseline_compare.py --qasper-path data/qasper_train_full.json --max-papers 1000000 --max-qas 1000000 --segmentation-mode seg_paragraph_pair --output-json artifacts/final_qasper_full_baseline_compare.json
+python scripts/run_qasper_baseline_compare.py --qasper-path data/qasper_train_full.json --max-papers 1000000 --max-qas 1000000 --segmentation-mode seg_paragraph_pair --output-json artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_baseline_compare.json
 ```
 
 Cleaner one-shot bundle:
@@ -45,10 +45,10 @@ python scripts/run_qasper_full_final_eval.py --qasper-path data/qasper_train_ful
 
 If using the one-shot bundle, the canonical artifacts are:
 
-- `artifacts/final_qasper_full_baseline_compare.json`
-- `artifacts/final_qasper_full_baseline_compare.md`
-- `artifacts/final_qasper_full_model_results.json`
-- `artifacts/final_qasper_full_model_summary.md`
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_baseline_compare.json`
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_baseline_compare.md`
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_model_results.json`
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_full_model_summary.md`
 
 ## Environment Requirements
 
@@ -60,11 +60,11 @@ If using the one-shot bundle, the canonical artifacts are:
 
 The cleaned codepath is in place, and the full converted QASPER files exist locally.
 
-In this session, actual fresh execution was blocked by environment/runtime constraints:
+The full train / validation / test run has now completed successfully with:
 
-- Hugging Face network access is disabled in the sandbox
-- the BGE model needed explicit local-cache resolution to work offline
-- the 50-paper canonical bundle took about 20 minutes for 196 QA pairs, which implies a multi-hour run for full QASPER in this environment
+- final model: `bridge_final`
+- segmentation: `seg_paragraph_pair`
+- outputs written under `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_*`
 
 Rough wall-clock estimate from the fresh 50-paper validation:
 
@@ -73,4 +73,7 @@ Rough wall-clock estimate from the fresh 50-paper validation:
 - full validation split: 1005 QA pairs, roughly 1.7 hours
 - full test split: 1451 QA pairs, roughly 2.5 hours
 
-So the full-QASPER final evaluation path is prepared, but full results should only be reported after the command above completes successfully.
+The final public summaries now live in:
+
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_all_splits_summary.md`
+- `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_presentation_summary.md`

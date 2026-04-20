@@ -2,145 +2,109 @@
 
 Lightweight long-document retrieval for QASPER using local bridge expansion.
 
-The repo now centers on one locked final QASPER model, `bridge_final`, plus three reproducible comparison baselines:
+The repo keeps the locked `bridge_final` retrieval model, but the serious QASPER redo now uses a new protocol layer on top of it:
 
-- `adjacency`: adjacency-only expansion
-- `bridge_v1`: original multi-signal local bridge baseline
-- `bridge_v2`: current Bridge v2 skip-local baseline
-- `bridge_final`: streamlined final model
+- paper-level train split redesign
+- method-independent hard subsets
+- retrieval-side headline metrics centered on evidence recovery and coverage
+- explicit split roles for development, lockbox checks, validation, and final test reporting
 
-## What The Project Does
+## Start Here
 
-LSPBE tests whether document-local structure can recover evidence that plain chunk retrieval misses. Documents are segmented into section-aware paragraph chunks, seed chunks are retrieved with BGE embeddings, and local expansion adds nearby evidence without building a full document graph.
+Read these first for the serious redo path:
 
-## Final Model
+- [docs/eval_protocol.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/eval_protocol.md)
+- [docs/retrieval_metrics.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/retrieval_metrics.md)
+- [docs/subset_definitions.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/subset_definitions.md)
+- [artifacts/ARTIFACTS_MAP.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/ARTIFACTS_MAP.md)
+- [bucket1_protocol_reset_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket1_protocol/bucket1_protocol_reset_summary.md)
 
-Canonical model name: `bridge_final`
+## Serious Redo Protocol
+
+Use these split roles going forward:
+
+- `train_fast50`: quick debugging only
+- `train_dev`: development and ablations
+- `train_lockbox`: occasional milestone checks only
+- `validation`: model selection
+- `test`: final reporting only
+
+The train split is now materialized at:
+
+- `data/qasper_train_dev.json`
+- `data/qasper_train_lockbox.json`
+- `data/qasper_train_fast50.json`
+
+The paper manifests live at:
+
+- `data/splits/train_dev_papers.json`
+- `data/splits/train_lockbox_papers.json`
+- `data/splits/train_fast50_papers.json`
+
+## Canonical Model
+
+The retrieval model itself is unchanged in Bucket 1.
 
 Locked QASPER configuration:
 
+- segmentation `seg_paragraph_pair`
 - hybrid seed retrieval
 - dense weight `1.00`
 - sparse weight `0.50`
-- Bridge v2 skip-local design
-- max skip distance `2`
-- top bridge candidate per seed `1`
-- continuity mode `idf_overlap`
+- Bridge v2 skip-local expansion
+- continuity `idf_overlap`
 - no section scoring
 - no adaptive trigger
 - no reranker
 - no diversification
 
-This is the clean default because the latest diagnostics showed that the extra v2.1 add-ons did not improve the best result beyond the hybrid seed change.
-
-## Locked 50-Paper Diagnostic Results
-
-- adjacency: `0.7704`
-- bridge v1: `0.7704`
-- current Bridge v2 baseline: `0.8112`
-- final streamlined model: `0.8214`
-- beyond-adjacency subset hit rate for the final streamlined model: `0.8511`
-
-Main interpretation:
-
-- the biggest extra gain over the earlier Bridge v2 baseline came from hybrid seed retrieval
-- section scoring did not improve the streamlined study
-- diversification did not improve the streamlined study
-- no examples were found where improved section scoring helped
-- no examples were found where removing sections helped over the tied streamlined result
-
-## Install
-
-```bash
-pip install -e .
-pip install -e ".[retrieval,dev]"
-pip install datasets
-```
-
-## Data Prep
-
-Create a small QASPER subset for debugging:
-
-```bash
-python scripts/convert_qasper_hf_to_subset.py --split train --max-papers 2 --max-qas 3 --output data/qasper_train_tiny.json
-```
-
 ## Main Commands
 
-Run the locked final model:
+Build the split manifests, materialized train subsets, and cached subset labels:
 
 ```bash
-python scripts/run_qasper_final_model.py --qasper-path data/qasper_subset_debug_50.json
+python scripts/build_qasper_protocol_assets.py
 ```
 
-Run the main four-way baseline comparison:
+Run the canonical serious-redo sanity check on `train_fast50`:
 
 ```bash
-python scripts/run_qasper_baseline_compare.py --qasper-path data/qasper_subset_debug_50.json
+python scripts/run_qasper_protocol_sanity_check.py
 ```
 
-Run the one-shot canonical 50-paper bundle that writes both public artifact sets:
+Optionally add validation to the sanity pass:
 
 ```bash
-python scripts/run_qasper_eval_bundle.py --qasper-path data/qasper_subset_debug_50.json --max-papers 50 --max-qas 10000 --tag final_qasper_50paper_recomputed
+python scripts/run_qasper_protocol_sanity_check.py --also-validation
 ```
 
-Run the targeted 50-paper segmentation robustness study:
+Active serious-redo outputs now live under:
 
-```bash
-python scripts/run_qasper_segmentation_study.py
-```
+- `artifacts/current/bucket1_protocol/`
+- `artifacts/current/manual_review/`
+- `artifacts/current/bucket2_answer_eval/`
 
-The segmentation study winner for the planned full-QASPER run is `seg_paragraph_pair`.
+## Legacy Context
 
-Run optional diagnostics:
+The repo still preserves the earlier pre-redo artifacts and runners for reproducibility, including the old all-splits full-train reporting story. Those results remain useful context, but they are no longer the gold-standard evaluation path for the serious redo.
 
-```bash
-python scripts/run_qasper_diagnostics.py --study streamlined
-```
+Legacy examples:
 
-Legacy v2.1 component sweep:
+- [final_qasper_model_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_model_summary.md)
+- [final_qasper_all_splits_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_all_splits_summary.md)
+- `scripts/run_qasper_eval_bundle.py`
+- `scripts/run_qasper_full_final_eval.py`
+- `scripts/run_qasper_all_splits_final_eval.py`
 
-```bash
-python scripts/run_qasper_diagnostics.py --study legacy_v21
-```
+## Repo Layout
 
-## Scripts And Repo Layout
+Key protocol files:
 
-Canonical scripts:
+- [src/lspbe/qasper_protocol.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_protocol.py)
+- [src/lspbe/subsets.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/subsets.py)
+- [src/lspbe/qasper_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_eval.py)
 
-- `scripts/run_qasper_final_model.py`: single clean entry point for the locked final model
-- `scripts/run_qasper_baseline_compare.py`: adjacency vs bridge_v1 vs bridge_v2 vs bridge_final
-- `scripts/run_qasper_diagnostics.py`: optional dispatcher for non-canonical studies
+Key model/config files:
 
-Useful legacy or exploratory scripts kept for reproducibility:
-
-- `scripts/run_bridge_v2_doc_constrained_sweep.py`
-- `scripts/run_bridge_v21_doc_constrained_sweep.py`
-- `scripts/run_bridge_streamlined_section_study.py`
-- `scripts/run_doc_constrained_sweep.py`
-
-Key library files:
-
-- [src/lspbe/qasper.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper.py): named QASPER method registry and locked final config
-- [src/lspbe/qasper_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_eval.py): shared evaluation helpers for the new runners
-- [src/lspbe/expansion.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/expansion.py): expansion logic including the locked `bridge_final` helper
-
-## Final Artifacts
-
-The locked final summary lives in:
-
-- [artifacts/final_qasper_model_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_summary.md)
-- [artifacts/final_qasper_model_results.json](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_results.json)
-- [artifacts/final_qasper_model_summary_recomputed.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_model_summary_recomputed.md)
-- [artifacts/final_qasper_baseline_compare_recomputed.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_qasper_baseline_compare_recomputed.md)
-- [artifacts/final_verification_note.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/final_verification_note.md)
-- [artifacts/qasper_segmentation_study_50_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/qasper_segmentation_study_50_summary.md)
-
-For the full-QASPER final run path, use:
-
-```bash
-python scripts/run_qasper_full_final_eval.py --qasper-path data/qasper_train_full.json --segmentation-mode seg_paragraph_pair
-```
-
-The exact full-run plan is documented in [docs/final_full_qasper_run_plan.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/final_full_qasper_run_plan.md).
+- [src/lspbe/qasper.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper.py)
+- [docs/algorithm_spec.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/algorithm_spec.md)

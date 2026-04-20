@@ -11,9 +11,11 @@ if str(ROOT / "scripts") not in sys.path:
 
 import run_qasper_eval_bundle
 
+LEGACY_FINAL_LOCKED_DIR = ROOT / "artifacts" / "legacy_pre_redo" / "final_locked_qasper"
+
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run the canonical full-QASPER evaluation bundle.")
+    parser = argparse.ArgumentParser(description="Run the legacy pre-redo full-QASPER evaluation bundle.")
     parser.add_argument(
         "--qasper-path",
         default=str(ROOT / "data" / "qasper_train_full.json"),
@@ -22,6 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-papers", type=int, default=1000000)
     parser.add_argument("--max-qas", type=int, default=1000000)
     parser.add_argument("--tag", default="final_qasper_full")
+    parser.add_argument("--artifacts-dir", default=str(LEGACY_FINAL_LOCKED_DIR))
     parser.add_argument(
         "--segmentation-mode",
         choices=["seg_paragraph", "seg_paragraph_pair", "seg_micro_chunk"],
@@ -45,6 +48,8 @@ def main() -> int:
         args.segmentation_mode,
         "--tag",
         args.tag,
+        "--artifacts-dir",
+        args.artifacts_dir,
     ]
     return run_qasper_eval_bundle.main()
 

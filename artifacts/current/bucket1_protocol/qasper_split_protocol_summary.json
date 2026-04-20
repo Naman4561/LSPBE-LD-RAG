@@ -1,0 +1,59 @@
+{
+  "seed": 20260419,
+  "segmentation_mode_for_balance_proxy": "seg_paragraph_pair",
+  "overlap_checks": {
+    "train_dev_vs_train_lockbox": 0,
+    "train_fast50_outside_train_dev": 0,
+    "train_fast50_vs_train_lockbox": 0
+  },
+  "splits": {
+    "train_dev": {
+      "papers": 622,
+      "questions": 1817,
+      "avg_questions_per_paper": 2.9212218649517685,
+      "avg_segments_per_paper": 14.461414790996784,
+      "avg_evidence_units_per_question": 1.565217391304348,
+      "float_table_paper_rate": 0.9871382636655949,
+      "float_table_question_rate": 0.3648871766648321,
+      "question_type_distribution": {
+        "boolean": 0.182168409466153,
+        "what": 0.4259768849752339,
+        "how": 0.24600990643918547,
+        "which": 0.08970831040176115,
+        "other": 0.05613648871766648
+      }
+    },
+    "train_lockbox": {
+      "papers": 266,
+      "questions": 776,
+      "avg_questions_per_paper": 2.917293233082707,
+      "avg_segments_per_paper": 14.462406015037594,
+      "avg_evidence_units_per_question": 1.5670103092783505,
+      "float_table_paper_rate": 0.9849624060150376,
+      "float_table_question_rate": 0.3646907216494845,
+      "question_type_distribution": {
+        "boolean": 0.18170103092783504,
+        "what": 0.4265463917525773,
+        "how": 0.24613402061855671,
+        "which": 0.09020618556701031,
+        "other": 0.055412371134020616
+      }
+    },
+    "train_fast50": {
+      "papers": 50,
+      "questions": 146,
+      "avg_questions_per_paper": 2.92,
+      "avg_segments_per_paper": 14.46,
+      "avg_evidence_units_per_question": 1.5684931506849316,
+      "float_table_paper_rate": 0.98,
+      "float_table_question_rate": 0.363013698630137,
+      "question_type_distribution": {
+        "boolean": 0.18493150684931506,
+        "what": 0.4246575342465753,
+        "how": 0.2465753424657534,
+        "which": 0.08904109589041095,
+        "other": 0.0547945205479452
+      }
+    }
+  }
+}

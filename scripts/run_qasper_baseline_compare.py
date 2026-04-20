@@ -16,7 +16,7 @@ from lspbe.qasper_eval import evaluate_methods, load_qasper_eval_context, write_
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Compare the main QASPER baselines and final model.")
+    parser = argparse.ArgumentParser(description="Run the legacy QASPER baseline comparison.")
     parser.add_argument(
         "--qasper-path",
         default=str(ROOT / "data" / "qasper_subset_debug_50.json"),
