@@ -1,0 +1,877 @@
+{
+  "metadata": {
+    "split": "train",
+    "dataset_path": "data/qasper_train_fast50.json",
+    "segmentation_mode": "seg_paragraph_pair",
+    "total_questions_available": 5,
+    "questions": 5,
+    "max_qas_requested": 5,
+    "max_papers_requested": 1000000,
+    "start_index": 0,
+    "end_index": 5,
+    "chunk_size": 5,
+    "methods": [
+      "adjacency",
+      "bridge_final"
+    ],
+    "answerer": {
+      "kind": "local_qa",
+      "reason": "Offline QA model 'distilbert-base-cased-distilled-squad' loaded successfully from the local Hugging Face cache.",
+      "model_name": "distilbert-base-cased-distilled-squad"
+    },
+    "subset_counts": {
+      "adjacency_easy": 4,
+      "skip_local": 1,
+      "multi_span": 1,
+      "float_table": 4,
+      "boolean": 1,
+      "what": 3,
+      "how": 1,
+      "which": 0,
+      "other": 0
+    },
+    "cache_layout": {
+      "root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "run_name": "bucket2_recovery_localqa_smoke5_bench",
+      "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}"
+    }
+  },
+  "methods": [
+    {
+      "method": "adjacency",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.2,
+        "token_f1": 0.28125,
+        "yes_no_accuracy": null,
+        "yes_no_questions": 0,
+        "empty_prediction_rate": 0.4,
+        "prediction_length_mean": 6.0,
+        "prediction_length_median": 1.0,
+        "retrieval_evidence_hit_rate": 1.0
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 4,
+          "exact_match": 0.25,
+          "token_f1": 0.3359375,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.5,
+          "prediction_length_mean": 3.0,
+          "prediction_length_median": 0.5,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0625,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 18.0,
+          "prediction_length_median": 18.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0625,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 18.0,
+          "prediction_length_median": 18.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.10156250000000001,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.25,
+          "prediction_length_mean": 7.5,
+          "prediction_length_median": 6.0,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "what": {
+          "questions": 3,
+          "exact_match": 0.3333333333333333,
+          "token_f1": 0.3541666666666667,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.6666666666666666,
+          "prediction_length_mean": 6.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "how": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.34375000000000006,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 11.0,
+          "prediction_length_median": 11.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    },
+    {
+      "method": "bridge_final",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.2,
+        "token_f1": 0.26875,
+        "yes_no_accuracy": null,
+        "yes_no_questions": 0,
+        "empty_prediction_rate": 0.2,
+        "prediction_length_mean": 3.8,
+        "prediction_length_median": 1.0,
+        "retrieval_evidence_hit_rate": 1.0
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 4,
+          "exact_match": 0.25,
+          "token_f1": 0.3359375,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.25,
+          "prediction_length_mean": 3.25,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 6.0,
+          "prediction_length_median": 6.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 6.0,
+          "prediction_length_median": 6.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.08593750000000001,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 4.75,
+          "prediction_length_median": 3.5,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "what": {
+          "questions": 3,
+          "exact_match": 0.3333333333333333,
+          "token_f1": 0.3333333333333333,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.3333333333333333,
+          "prediction_length_mean": 2.3333333333333335,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "how": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.34375000000000006,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 11.0,
+          "prediction_length_median": 11.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    }
+  ],
+  "per_method_records": {
+    "adjacency": [
+      {
+        "paper_id": "1908.06606",
+        "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+        "question_index": 0,
+        "question": "What data is the language model pretrained on?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "",
+        "normalized_prediction": "",
+        "gold_answers": [
+          "Chinese general corpus",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "chinese general corpus",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 1.0,
+        "token_f1": 1.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+        "question_index": 1,
+        "question": "What baselines is the proposed model compared against?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "",
+        "normalized_prediction": "",
+        "gold_answers": [
+          "BERT-Base",
+          "QANet",
+          "QANet BIBREF39",
+          "BERT-Base BIBREF26"
+        ],
+        "normalized_gold_answers": [
+          "bert base",
+          "qanet",
+          "qanet bibref39",
+          "bert base bibref26"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+        "question_index": 2,
+        "question": "How is the clinical text structuring task defined?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "critical task for fetching medical research data from electronic health records",
+        "normalized_prediction": "critical task for fetching medical research data from electronic health records",
+        "gold_answers": [
+          "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+          "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+          "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+        ],
+        "normalized_gold_answers": [
+          "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+          "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+          "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.34375000000000006,
+        "retrieval_evidence_hit": true,
+        "question_type": "how",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+        "question_index": 3,
+        "question": "What are the specific tasks being unified?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "identify and classify important clinical terms such as diseases, symptoms, treatments, exams, and body parts from Chinese EHRs",
+        "normalized_prediction": "identify and classify important clinical terms such as diseases symptoms treatments exams and body parts from chinese ehrs",
+        "gold_answers": [
+          "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "three types of questions namely tumor size proximal resection margin and distal resection margin",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0625,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+        "question_index": 4,
+        "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "normalized_gold_answers": [
+          "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "answer_type": "free_form",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "boolean",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ],
+    "bridge_final": [
+      {
+        "paper_id": "1908.06606",
+        "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+        "question_index": 0,
+        "question": "What data is the language model pretrained on?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "",
+        "normalized_prediction": "",
+        "gold_answers": [
+          "Chinese general corpus",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "chinese general corpus",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 1.0,
+        "token_f1": 1.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+        "question_index": 1,
+        "question": "What baselines is the proposed model compared against?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "costly",
+        "normalized_prediction": "costly",
+        "gold_answers": [
+          "BERT-Base",
+          "QANet",
+          "QANet BIBREF39",
+          "BERT-Base BIBREF26"
+        ],
+        "normalized_gold_answers": [
+          "bert base",
+          "qanet",
+          "qanet bibref39",
+          "bert base bibref26"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+        "question_index": 2,
+        "question": "How is the clinical text structuring task defined?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "critical task for fetching medical research data from electronic health records",
+        "normalized_prediction": "critical task for fetching medical research data from electronic health records",
+        "gold_answers": [
+          "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+          "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+          "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+        ],
+        "normalized_gold_answers": [
+          "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+          "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+          "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.34375000000000006,
+        "retrieval_evidence_hit": true,
+        "question_type": "how",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+        "question_index": 3,
+        "question": "What are the specific tasks being unified?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "task - specific end - to - end methods",
+        "normalized_prediction": "task specific end to end methods",
+        "gold_answers": [
+          "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "three types of questions namely tumor size proximal resection margin and distal resection margin",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+        "question_index": 4,
+        "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "normalized_gold_answers": [
+          "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "answer_type": "free_form",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "boolean",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ]
+  },
+  "per_question_records": [
+    {
+      "paper_id": "1908.06606",
+      "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+      "question_index": 0,
+      "question": "What data is the language model pretrained on?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "gold_answers": [
+        "Chinese general corpus",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "chinese general corpus",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 1.0,
+      "token_f1": 1.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+      "question_index": 1,
+      "question": "What baselines is the proposed model compared against?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "gold_answers": [
+        "BERT-Base",
+        "QANet",
+        "QANet BIBREF39",
+        "BERT-Base BIBREF26"
+      ],
+      "normalized_gold_answers": [
+        "bert base",
+        "qanet",
+        "qanet bibref39",
+        "bert base bibref26"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+      "question_index": 2,
+      "question": "How is the clinical text structuring task defined?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "critical task for fetching medical research data from electronic health records",
+      "normalized_prediction": "critical task for fetching medical research data from electronic health records",
+      "gold_answers": [
+        "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+        "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+      ],
+      "normalized_gold_answers": [
+        "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+        "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.34375000000000006,
+      "retrieval_evidence_hit": true,
+      "question_type": "how",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+      "question_index": 3,
+      "question": "What are the specific tasks being unified?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "identify and classify important clinical terms such as diseases, symptoms, treatments, exams, and body parts from Chinese EHRs",
+      "normalized_prediction": "identify and classify important clinical terms such as diseases symptoms treatments exams and body parts from chinese ehrs",
+      "gold_answers": [
+        "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "three types of questions namely tumor size proximal resection margin and distal resection margin",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0625,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+      "question_index": 4,
+      "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "normalized_gold_answers": [
+        "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "answer_type": "free_form",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "boolean",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+      "question_index": 0,
+      "question": "What data is the language model pretrained on?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "gold_answers": [
+        "Chinese general corpus",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "chinese general corpus",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 1.0,
+      "token_f1": 1.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+      "question_index": 1,
+      "question": "What baselines is the proposed model compared against?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "costly",
+      "normalized_prediction": "costly",
+      "gold_answers": [
+        "BERT-Base",
+        "QANet",
+        "QANet BIBREF39",
+        "BERT-Base BIBREF26"
+      ],
+      "normalized_gold_answers": [
+        "bert base",
+        "qanet",
+        "qanet bibref39",
+        "bert base bibref26"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+      "question_index": 2,
+      "question": "How is the clinical text structuring task defined?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "critical task for fetching medical research data from electronic health records",
+      "normalized_prediction": "critical task for fetching medical research data from electronic health records",
+      "gold_answers": [
+        "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+        "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+      ],
+      "normalized_gold_answers": [
+        "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+        "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.34375000000000006,
+      "retrieval_evidence_hit": true,
+      "question_type": "how",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+      "question_index": 3,
+      "question": "What are the specific tasks being unified?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "task - specific end - to - end methods",
+      "normalized_prediction": "task specific end to end methods",
+      "gold_answers": [
+        "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "three types of questions namely tumor size proximal resection margin and distal resection margin",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+      "question_index": 4,
+      "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "normalized_gold_answers": [
+        "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "answer_type": "free_form",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "boolean",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    }
+  ],
+  "run_progress": {
+    "adjacency": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 5,
+      "skipped_existing": 0,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5_bench\\adjacency",
+      "legacy_cache_path": null
+    },
+    "bridge_final": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 5,
+      "skipped_existing": 0,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5_bench\\bridge_final",
+      "legacy_cache_path": null
+    }
+  }
+}

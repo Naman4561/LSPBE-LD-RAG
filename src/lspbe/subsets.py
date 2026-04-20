@@ -4,6 +4,7 @@ import re
 from statistics import median
 
 from .qasper import question_type
+from .structure_repr import build_float_structure_metadata, segment_has_float_signal
 from .types import DocumentSegment, RetrievedSegment
 
 _FLOAT_TABLE_PATTERN = re.compile(r"\b(?:figure|fig|table|tab|caption)\b|FIGREF|TABREF", re.IGNORECASE)
@@ -35,6 +36,16 @@ def evidence_segment_ids(doc_segments: list[DocumentSegment], evidence_texts: li
                 ids.add(segment.segment_id)
                 break
     return ids
+
+
+def evidence_matching_segments(doc_segments: list[DocumentSegment], evidence_texts: list[str]) -> list[DocumentSegment]:
+    matched: list[DocumentSegment] = []
+    normalized_units = [normalize_text(unit) for unit in unique_evidence_units(evidence_texts)]
+    for segment in doc_segments:
+        lower = normalize_text(segment.text)
+        if any(evidence and evidence[:120] in lower for evidence in normalized_units):
+            matched.append(segment)
+    return matched
 
 
 def matched_evidence_units(retrieved: list[DocumentSegment], evidence_texts: list[str]) -> set[str]:
@@ -116,7 +127,9 @@ def build_subset_label(
     doc_segments: list[DocumentSegment],
 ) -> dict[str, object]:
     segment_ids = evidence_segment_ids(doc_segments, evidence_texts)
+    matched_segments = evidence_matching_segments(doc_segments, evidence_texts)
     regions = local_regions(segment_ids)
+    float_metadata = build_float_structure_metadata(matched_segments, evidence_texts)
     return {
         "qa_id": qa_id,
         "doc_id": doc_id,
@@ -128,6 +141,15 @@ def build_subset_label(
         "multi_span": len(regions) >= 2,
         "float_table": has_float_table_signal(doc_segments, evidence_texts),
         "evidence_unit_count": len(unique_evidence_units(evidence_texts)),
+        "float_direct": bool(float_metadata["float_direct"]),
+        "float_reference": bool(float_metadata["float_reference"]),
+        "float_adjacent_prose": bool(float_metadata["float_adjacent_prose"]),
+        "float_signal_mode": float_metadata["float_signal_mode"],
+        "gold_matched_unit_types": list(float_metadata["matched_unit_types"]),
+        "float_table_match_sources": {
+            "evidence_text_regex_hit": any(_FLOAT_TABLE_PATTERN.search(text) for text in evidence_texts),
+            "matched_segment_regex_hit": any(segment_has_float_signal(segment) for segment in matched_segments),
+        },
     }
 
 
@@ -137,6 +159,9 @@ def subset_summary(labels: list[dict[str, object]]) -> dict[str, int]:
         "skip_local": sum(bool(label["skip_local"]) for label in labels),
         "multi_span": sum(bool(label["multi_span"]) for label in labels),
         "float_table": sum(bool(label["float_table"]) for label in labels),
+        "float_direct": sum(bool(label.get("float_direct")) for label in labels),
+        "float_reference": sum(bool(label.get("float_reference")) for label in labels),
+        "float_adjacent_prose": sum(bool(label.get("float_adjacent_prose")) for label in labels),
         "boolean": sum(label["question_type"] == "boolean" for label in labels),
         "what": sum(label["question_type"] == "what" for label in labels),
         "how": sum(label["question_type"] == "how" for label in labels),

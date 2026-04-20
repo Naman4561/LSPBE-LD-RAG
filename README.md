@@ -7,6 +7,7 @@ The repo keeps the locked `bridge_final` retrieval model, but the serious QASPER
 - paper-level train split redesign
 - method-independent hard subsets
 - retrieval-side headline metrics centered on evidence recovery and coverage
+- structure-aware representation study for captions, inline references, and float-linked evidence
 - explicit split roles for development, lockbox checks, validation, and final test reporting
 
 ## Start Here
@@ -14,7 +15,9 @@ The repo keeps the locked `bridge_final` retrieval model, but the serious QASPER
 Read these first for the serious redo path:
 
 - [docs/eval_protocol.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/eval_protocol.md)
+- [docs/answer_eval_protocol.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/answer_eval_protocol.md)
 - [docs/retrieval_metrics.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/retrieval_metrics.md)
+- [docs/runtime_run_policy.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/runtime_run_policy.md)
 - [docs/subset_definitions.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/subset_definitions.md)
 - [artifacts/ARTIFACTS_MAP.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/ARTIFACTS_MAP.md)
 - [bucket1_protocol_reset_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket1_protocol/bucket1_protocol_reset_summary.md)
@@ -78,11 +81,39 @@ Optionally add validation to the sanity pass:
 python scripts/run_qasper_protocol_sanity_check.py --also-validation
 ```
 
+Run the canonical Bucket 2 answer-eval layer on a validation-first split:
+
+```bash
+python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_validation_full.json --split validation --methods adjacency,bridge_final --json-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json --md-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md --csv-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv
+```
+
+Run the canonical Bucket 3 structure-aware representation study on validation:
+
+```bash
+python scripts/run_qasper_structure_repr_study.py --dataset-path data/qasper_validation_full.json --methods bridge_final --smoke-max-questions 150 --full-max-questions 1005 --skip-smoke
+```
+
+Preflight and environment audit before long runs:
+
+```bash
+C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/run_env_preflight.py
+C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/audit_local_models.py
+```
+
+For resumable answer-eval smoke or chunked runs, reuse a stable cache tag and opt into resume:
+
+```bash
+python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_train_fast50.json --split train --methods adjacency,bridge_final --max-questions 5 --chunk-size 2 --save-every 1 --cache-tag train_fast50_smoke --output-dir artifacts/current/environment
+python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_train_fast50.json --split train --methods adjacency,bridge_final --max-questions 5 --chunk-size 5 --save-every 1 --cache-tag train_fast50_smoke --resume --output-dir artifacts/current/environment
+```
+
 Active serious-redo outputs now live under:
 
 - `artifacts/current/bucket1_protocol/`
 - `artifacts/current/manual_review/`
 - `artifacts/current/bucket2_answer_eval/`
+- `artifacts/current/bucket3_structure_repr/`
+- `artifacts/current/environment/`
 
 ## Legacy Context
 
@@ -103,6 +134,7 @@ Key protocol files:
 - [src/lspbe/qasper_protocol.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_protocol.py)
 - [src/lspbe/subsets.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/subsets.py)
 - [src/lspbe/qasper_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_eval.py)
+- [src/lspbe/qasper_answer_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_answer_eval.py)
 
 Key model/config files:
 

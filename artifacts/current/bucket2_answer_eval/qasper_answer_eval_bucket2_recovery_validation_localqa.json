@@ -1,0 +1,869 @@
+{
+  "metadata": {
+    "split": "validation",
+    "dataset_path": "data/qasper_validation_full.json",
+    "segmentation_mode": "seg_paragraph_pair",
+    "total_questions_available": 1005,
+    "questions": 5,
+    "max_qas_requested": 1000000,
+    "max_papers_requested": 1000000,
+    "start_index": 1000,
+    "end_index": 1005,
+    "chunk_size": 250,
+    "methods": [
+      "adjacency",
+      "bridge_final"
+    ],
+    "answerer": {
+      "kind": "local_qa",
+      "reason": "Offline QA model 'distilbert-base-cased-distilled-squad' loaded successfully from the local Hugging Face cache.",
+      "model_name": "distilbert-base-cased-distilled-squad"
+    },
+    "subset_counts": {
+      "adjacency_easy": 1,
+      "skip_local": 1,
+      "multi_span": 1,
+      "float_table": 2,
+      "boolean": 1,
+      "what": 4,
+      "how": 0,
+      "which": 0,
+      "other": 0
+    },
+    "cache_layout": {
+      "root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "run_name": "bucket2_recovery_validation_localqa",
+      "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}"
+    }
+  },
+  "methods": [
+    {
+      "method": "adjacency",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.2,
+        "token_f1": 0.20634920634920634,
+        "yes_no_accuracy": 0.0,
+        "yes_no_questions": 1,
+        "empty_prediction_rate": 0.2,
+        "prediction_length_mean": 1.8,
+        "prediction_length_median": 2.0,
+        "retrieval_evidence_hit_rate": 0.4
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 3.0,
+          "prediction_length_median": 3.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.031746031746031744,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.031746031746031744,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 2,
+          "exact_match": 0.0,
+          "token_f1": 0.015873015873015872,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.5,
+          "prediction_length_median": 2.5,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": 0.0,
+          "yes_no_questions": 1,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "what": {
+          "questions": 4,
+          "exact_match": 0.25,
+          "token_f1": 0.2579365079365079,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.25,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.5,
+          "retrieval_evidence_hit_rate": 0.5
+        },
+        "how": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    },
+    {
+      "method": "bridge_final",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.2,
+        "token_f1": 0.20634920634920634,
+        "yes_no_accuracy": 0.0,
+        "yes_no_questions": 1,
+        "empty_prediction_rate": 0.2,
+        "prediction_length_mean": 1.8,
+        "prediction_length_median": 2.0,
+        "retrieval_evidence_hit_rate": 0.4
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 3.0,
+          "prediction_length_median": 3.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.031746031746031744,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.031746031746031744,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 2,
+          "exact_match": 0.0,
+          "token_f1": 0.015873015873015872,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 2.5,
+          "prediction_length_median": 2.5,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": 0.0,
+          "yes_no_questions": 1,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "what": {
+          "questions": 4,
+          "exact_match": 0.25,
+          "token_f1": 0.2579365079365079,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.25,
+          "prediction_length_mean": 2.0,
+          "prediction_length_median": 2.5,
+          "retrieval_evidence_hit_rate": 0.5
+        },
+        "how": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    }
+  ],
+  "per_method_records": {
+    "adjacency": [
+      {
+        "paper_id": "1907.01468",
+        "question_id": "d6ea7a30b0b61ae126b00b59d2a14fff2ef887bf",
+        "question_index": 0,
+        "question": "What approaches do they use towards text analysis?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "Computational approaches",
+        "normalized_prediction": "computational approaches",
+        "gold_answers": [
+          "Domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them.",
+          "connect to multiple disciplines",
+          "dual use",
+          "Modeling considerations:  the variables (both predictors and outcomes)  are rarely simply binary or categorical;  using a particular classification scheme means deciding which variations are visible,; Supervised and unsupervised learning are the most common approaches to learning from data;  the unit of text that we are labeling (or annotating, or coding), either automatic or manual, can sometimes be different than one's final unit of analysis."
+        ],
+        "normalized_gold_answers": [
+          "domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them",
+          "connect to multiple disciplines",
+          "dual use",
+          "modeling considerations variables both predictors and outcomes are rarely simply binary or categorical using particular classification scheme means deciding which variations are visible supervised and unsupervised learning are most common approaches to learning from data unit of text that we are labeling or annotating or coding either automatic or manual can sometimes be different than one s final unit of analysis"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.031746031746031744,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "f903396d943541a8cc65edefb04ca37814ed30dd",
+        "question_index": 1,
+        "question": "What dataset do they use for analysis?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "rich textual data",
+        "normalized_prediction": "rich textual data",
+        "gold_answers": [
+          ""
+        ],
+        "normalized_gold_answers": [
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "ba28ce9a2f7e8524243adf288cc3f11055e667bb",
+        "question_index": 2,
+        "question": "Do they demonstrate why interdisciplinary insights are important?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "no"
+        ],
+        "normalized_gold_answers": [
+          "no"
+        ],
+        "answer_type": "yes_no",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "boolean",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "975e60535724f4149c7488699a199ba2920a062c",
+        "question_index": 3,
+        "question": "What background do they have?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "",
+        "normalized_prediction": "",
+        "gold_answers": [
+          ""
+        ],
+        "normalized_gold_answers": [
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 1.0,
+        "token_f1": 1.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "b970f48d30775d3468952795bc72976baab3438e",
+        "question_index": 4,
+        "question": "What kind of issues (that are not on the forefront of computational text analysis) do they tackle?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "cultural and social",
+        "normalized_prediction": "cultural and social",
+        "gold_answers": [
+          "identifying the questions we wish to explore",
+          "Can text analysis provide a new perspective on a \u201cbig question\u201d that has been attracting interest for years?",
+          "How can we explain what we observe?",
+          "hope to connect to multiple disciplines"
+        ],
+        "normalized_gold_answers": [
+          "identifying questions we wish to explore",
+          "can text analysis provide new perspective on big question that has been attracting interest for years",
+          "how can we explain what we observe",
+          "hope to connect to multiple disciplines"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ],
+    "bridge_final": [
+      {
+        "paper_id": "1907.01468",
+        "question_id": "d6ea7a30b0b61ae126b00b59d2a14fff2ef887bf",
+        "question_index": 0,
+        "question": "What approaches do they use towards text analysis?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "Computational approaches",
+        "normalized_prediction": "computational approaches",
+        "gold_answers": [
+          "Domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them.",
+          "connect to multiple disciplines",
+          "dual use",
+          "Modeling considerations:  the variables (both predictors and outcomes)  are rarely simply binary or categorical;  using a particular classification scheme means deciding which variations are visible,; Supervised and unsupervised learning are the most common approaches to learning from data;  the unit of text that we are labeling (or annotating, or coding), either automatic or manual, can sometimes be different than one's final unit of analysis."
+        ],
+        "normalized_gold_answers": [
+          "domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them",
+          "connect to multiple disciplines",
+          "dual use",
+          "modeling considerations variables both predictors and outcomes are rarely simply binary or categorical using particular classification scheme means deciding which variations are visible supervised and unsupervised learning are most common approaches to learning from data unit of text that we are labeling or annotating or coding either automatic or manual can sometimes be different than one s final unit of analysis"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.031746031746031744,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "f903396d943541a8cc65edefb04ca37814ed30dd",
+        "question_index": 1,
+        "question": "What dataset do they use for analysis?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "rich textual data",
+        "normalized_prediction": "rich textual data",
+        "gold_answers": [
+          ""
+        ],
+        "normalized_gold_answers": [
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "ba28ce9a2f7e8524243adf288cc3f11055e667bb",
+        "question_index": 2,
+        "question": "Do they demonstrate why interdisciplinary insights are important?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "no"
+        ],
+        "normalized_gold_answers": [
+          "no"
+        ],
+        "answer_type": "yes_no",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "boolean",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "975e60535724f4149c7488699a199ba2920a062c",
+        "question_index": 3,
+        "question": "What background do they have?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "",
+        "normalized_prediction": "",
+        "gold_answers": [
+          ""
+        ],
+        "normalized_gold_answers": [
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 1.0,
+        "token_f1": 1.0,
+        "retrieval_evidence_hit": false,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1907.01468",
+        "question_id": "b970f48d30775d3468952795bc72976baab3438e",
+        "question_index": 4,
+        "question": "What kind of issues (that are not on the forefront of computational text analysis) do they tackle?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "cultural and social",
+        "normalized_prediction": "cultural and social",
+        "gold_answers": [
+          "identifying the questions we wish to explore",
+          "Can text analysis provide a new perspective on a \u201cbig question\u201d that has been attracting interest for years?",
+          "How can we explain what we observe?",
+          "hope to connect to multiple disciplines"
+        ],
+        "normalized_gold_answers": [
+          "identifying questions we wish to explore",
+          "can text analysis provide new perspective on big question that has been attracting interest for years",
+          "how can we explain what we observe",
+          "hope to connect to multiple disciplines"
+        ],
+        "answer_type": "extractive",
+        "answerer_kind": "local_qa",
+        "answerer_model_name": "distilbert-base-cased-distilled-squad",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ]
+  },
+  "per_question_records": [
+    {
+      "paper_id": "1907.01468",
+      "question_id": "d6ea7a30b0b61ae126b00b59d2a14fff2ef887bf",
+      "question_index": 0,
+      "question": "What approaches do they use towards text analysis?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "Computational approaches",
+      "normalized_prediction": "computational approaches",
+      "gold_answers": [
+        "Domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them.",
+        "connect to multiple disciplines",
+        "dual use",
+        "Modeling considerations:  the variables (both predictors and outcomes)  are rarely simply binary or categorical;  using a particular classification scheme means deciding which variations are visible,; Supervised and unsupervised learning are the most common approaches to learning from data;  the unit of text that we are labeling (or annotating, or coding), either automatic or manual, can sometimes be different than one's final unit of analysis."
+      ],
+      "normalized_gold_answers": [
+        "domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them",
+        "connect to multiple disciplines",
+        "dual use",
+        "modeling considerations variables both predictors and outcomes are rarely simply binary or categorical using particular classification scheme means deciding which variations are visible supervised and unsupervised learning are most common approaches to learning from data unit of text that we are labeling or annotating or coding either automatic or manual can sometimes be different than one s final unit of analysis"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.031746031746031744,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "f903396d943541a8cc65edefb04ca37814ed30dd",
+      "question_index": 1,
+      "question": "What dataset do they use for analysis?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "rich textual data",
+      "normalized_prediction": "rich textual data",
+      "gold_answers": [
+        ""
+      ],
+      "normalized_gold_answers": [
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "ba28ce9a2f7e8524243adf288cc3f11055e667bb",
+      "question_index": 2,
+      "question": "Do they demonstrate why interdisciplinary insights are important?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "no"
+      ],
+      "normalized_gold_answers": [
+        "no"
+      ],
+      "answer_type": "yes_no",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "boolean",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "975e60535724f4149c7488699a199ba2920a062c",
+      "question_index": 3,
+      "question": "What background do they have?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "gold_answers": [
+        ""
+      ],
+      "normalized_gold_answers": [
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 1.0,
+      "token_f1": 1.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "b970f48d30775d3468952795bc72976baab3438e",
+      "question_index": 4,
+      "question": "What kind of issues (that are not on the forefront of computational text analysis) do they tackle?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "cultural and social",
+      "normalized_prediction": "cultural and social",
+      "gold_answers": [
+        "identifying the questions we wish to explore",
+        "Can text analysis provide a new perspective on a \u201cbig question\u201d that has been attracting interest for years?",
+        "How can we explain what we observe?",
+        "hope to connect to multiple disciplines"
+      ],
+      "normalized_gold_answers": [
+        "identifying questions we wish to explore",
+        "can text analysis provide new perspective on big question that has been attracting interest for years",
+        "how can we explain what we observe",
+        "hope to connect to multiple disciplines"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "d6ea7a30b0b61ae126b00b59d2a14fff2ef887bf",
+      "question_index": 0,
+      "question": "What approaches do they use towards text analysis?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "Computational approaches",
+      "normalized_prediction": "computational approaches",
+      "gold_answers": [
+        "Domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them.",
+        "connect to multiple disciplines",
+        "dual use",
+        "Modeling considerations:  the variables (both predictors and outcomes)  are rarely simply binary or categorical;  using a particular classification scheme means deciding which variations are visible,; Supervised and unsupervised learning are the most common approaches to learning from data;  the unit of text that we are labeling (or annotating, or coding), either automatic or manual, can sometimes be different than one's final unit of analysis."
+      ],
+      "normalized_gold_answers": [
+        "domain experts and fellow researchers can provide feedback on questions and help with dynamically revising them",
+        "connect to multiple disciplines",
+        "dual use",
+        "modeling considerations variables both predictors and outcomes are rarely simply binary or categorical using particular classification scheme means deciding which variations are visible supervised and unsupervised learning are most common approaches to learning from data unit of text that we are labeling or annotating or coding either automatic or manual can sometimes be different than one s final unit of analysis"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.031746031746031744,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "f903396d943541a8cc65edefb04ca37814ed30dd",
+      "question_index": 1,
+      "question": "What dataset do they use for analysis?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "rich textual data",
+      "normalized_prediction": "rich textual data",
+      "gold_answers": [
+        ""
+      ],
+      "normalized_gold_answers": [
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "ba28ce9a2f7e8524243adf288cc3f11055e667bb",
+      "question_index": 2,
+      "question": "Do they demonstrate why interdisciplinary insights are important?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "no"
+      ],
+      "normalized_gold_answers": [
+        "no"
+      ],
+      "answer_type": "yes_no",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "boolean",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "975e60535724f4149c7488699a199ba2920a062c",
+      "question_index": 3,
+      "question": "What background do they have?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "gold_answers": [
+        ""
+      ],
+      "normalized_gold_answers": [
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 1.0,
+      "token_f1": 1.0,
+      "retrieval_evidence_hit": false,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1907.01468",
+      "question_id": "b970f48d30775d3468952795bc72976baab3438e",
+      "question_index": 4,
+      "question": "What kind of issues (that are not on the forefront of computational text analysis) do they tackle?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "cultural and social",
+      "normalized_prediction": "cultural and social",
+      "gold_answers": [
+        "identifying the questions we wish to explore",
+        "Can text analysis provide a new perspective on a \u201cbig question\u201d that has been attracting interest for years?",
+        "How can we explain what we observe?",
+        "hope to connect to multiple disciplines"
+      ],
+      "normalized_gold_answers": [
+        "identifying questions we wish to explore",
+        "can text analysis provide new perspective on big question that has been attracting interest for years",
+        "how can we explain what we observe",
+        "hope to connect to multiple disciplines"
+      ],
+      "answer_type": "extractive",
+      "answerer_kind": "local_qa",
+      "answerer_model_name": "distilbert-base-cased-distilled-squad",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    }
+  ],
+  "run_progress": {
+    "adjacency": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 5,
+      "skipped_existing": 0,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_validation_localqa\\adjacency",
+      "legacy_cache_path": null
+    },
+    "bridge_final": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 5,
+      "skipped_existing": 0,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_validation_localqa\\bridge_final",
+      "legacy_cache_path": null
+    }
+  }
+}

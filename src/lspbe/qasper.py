@@ -14,6 +14,7 @@ from .expansion import (
     bridge_v21_expand_with_details,
 )
 from .mve import QAExample
+from .structure_repr import collapse_retrieved_to_backbone
 from .types import DocumentSegment, RetrievedSegment
 
 
@@ -196,16 +197,18 @@ def apply_qasper_method(
 ) -> tuple[list[DocumentSegment], dict[tuple[str, int], object], set[tuple[str, int]], set[tuple[str, int]], dict[str, object]]:
     """Apply one named method and return retrieved context plus bridge metadata."""
 
+    normalized_rank = collapse_retrieved_to_backbone(rank, segments_by_doc, max_results=config.k)
+
     if config.method == "adjacency":
-        retrieved = adjacency_expand(rank, segments_by_doc, context_budget=config.context_budget)
+        retrieved = adjacency_expand(normalized_rank, segments_by_doc, context_budget=config.context_budget)
         keys = {(segment.doc_id, segment.segment_id) for segment in retrieved}
         return retrieved, {}, keys, set(), {}
 
     if config.method == "bridge_v1":
-        adjacency_segments = adjacency_expand(rank, segments_by_doc, context_budget=config.context_budget)
+        adjacency_segments = adjacency_expand(normalized_rank, segments_by_doc, context_budget=config.context_budget)
         adjacency_keys = {(segment.doc_id, segment.segment_id) for segment in adjacency_segments}
         retrieved, details = bridge_expand_with_details(
-            rank,
+            normalized_rank,
             segments_by_doc,
             context_budget=config.context_budget,
             radius=config.radius,
@@ -219,7 +222,7 @@ def apply_qasper_method(
 
     if config.method == "bridge_v2":
         retrieved, details, adjacency_keys, bridge_keys = bridge_v2_expand_with_details(
-            rank,
+            normalized_rank,
             segments_by_doc,
             context_budget=config.context_budget,
             query_vector=query_vector,
@@ -235,7 +238,7 @@ def apply_qasper_method(
 
     if config.method == "bridge_final":
         return bridge_final_expand_with_details(
-            seeds=rank,
+            seeds=normalized_rank,
             segments_by_doc=segments_by_doc,
             context_budget=config.context_budget,
             query=qa.query,
@@ -246,7 +249,7 @@ def apply_qasper_method(
 
     if config.method == "bridge_v21":
         return bridge_v21_expand_with_details(
-            rank,
+            normalized_rank,
             segments_by_doc,
             context_budget=config.context_budget,
             query=qa.query,

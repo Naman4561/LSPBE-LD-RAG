@@ -1,0 +1,50 @@
+{
+  "script_name": "run_qasper_answer_eval.py",
+  "started_at": "2026-04-20T04:44:28Z",
+  "ended_at": "2026-04-20T04:44:52Z",
+  "duration_seconds": 24.0,
+  "status": "completed",
+  "resumed": true,
+  "output_paths": {
+    "json": "artifacts\\current\\environment\\resume_step2.json",
+    "markdown": "artifacts\\current\\environment\\resume_step2.md",
+    "csv": "artifacts\\current\\environment\\resume_step2.csv",
+    "manifest_json": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_proof_train5.run_manifest.json",
+    "manifest_md": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_proof_train5.run_manifest.md"
+  },
+  "config": {
+    "dataset_path": "data/qasper_train_fast50.json",
+    "split": "train",
+    "methods": [
+      "adjacency",
+      "bridge_final"
+    ],
+    "segmentation_mode": "seg_paragraph_pair",
+    "max_questions": 5,
+    "max_papers": 1000000,
+    "start_index": 0,
+    "chunk_size": 5,
+    "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+    "cache_tag": "buckete_resume_proof_train5",
+    "save_every": 1,
+    "overwrite": false
+  },
+  "counters": {
+    "adjacency": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 3,
+      "skipped_existing": 2,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\adjacency",
+      "legacy_cache_path": null
+    },
+    "bridge_final": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 3,
+      "skipped_existing": 2,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\bridge_final",
+      "legacy_cache_path": null
+    }
+  }
+}

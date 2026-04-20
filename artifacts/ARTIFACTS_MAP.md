@@ -29,6 +29,9 @@
 `artifacts/current/bucket2_answer_eval/`
 - destination for Bucket 2 answer-evaluation artifacts
 
+`artifacts/current/environment/`
+- Bucket E environment preflight, local-model audit, run manifests, and resume smoke-test outputs
+
 ## Legacy Layout
 
 `artifacts/legacy_pre_redo/final_locked_qasper/`
@@ -51,3 +54,7 @@
 Write new Bucket 2 outputs under:
 
 - `artifacts/current/bucket2_answer_eval/`
+
+Write Bucket E environment stabilization outputs under:
+
+- `artifacts/current/environment/`

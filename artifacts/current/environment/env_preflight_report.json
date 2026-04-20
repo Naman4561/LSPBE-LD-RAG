@@ -1,0 +1,143 @@
+{
+  "repo_root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG",
+  "python": {
+    "executable": "C:\\Users\\naman\\anaconda3\\envs\\lspbe310\\python.exe",
+    "version": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "version_info": [
+      3,
+      10,
+      20
+    ],
+    "requires_python": ">=3.10",
+    "requires_python_satisfied": true
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "version": "10.0.26200",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+  },
+  "packages": {
+    "pytest": {
+      "installed": true,
+      "version": "9.0.3"
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.11.0"
+    },
+    "transformers": {
+      "installed": true,
+      "version": "4.44.2"
+    },
+    "datasets": {
+      "installed": true,
+      "version": "4.8.4"
+    },
+    "sentence-transformers": {
+      "installed": true,
+      "version": "5.4.1"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.7.2"
+    }
+  },
+  "commands": {
+    "pytest_cli": {
+      "ok": false,
+      "returncode": null,
+      "stdout": "",
+      "stderr": "FileNotFoundError: [WinError 2] The system cannot find the file specified",
+      "command": [
+        "pytest",
+        "--version"
+      ]
+    },
+    "pytest_module": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "pytest 9.0.3",
+      "stderr": "",
+      "command": [
+        "C:\\Users\\naman\\anaconda3\\envs\\lspbe310\\python.exe",
+        "-m",
+        "pytest",
+        "--version"
+      ]
+    },
+    "git_status": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "M README.md\n M artifacts/ARTIFACTS_MAP.md\n M scripts/README.md\n M src/lspbe/qasper.py\n M src/lspbe/qasper_eval.py\n M src/lspbe/subsets.py\n M src/lspbe/types.py\n?? .gitignore\n?? .vscode/\n?? artifacts/current/bucket2_answer_eval/_smoke_train5.json\n?? artifacts/current/bucket2_answer_eval/_smoke_train5.md\n?? artifacts/current/bucket2_answer_eval/_validation_adjacency_only.json\n?? artifacts/current/bucket2_answer_eval/_validation_adjacency_only.md\n?? artifacts/current/bucket2_answer_eval/bucket2_answer_eval_summary.md\n?? artifacts/current/bucket2_answer_eval/bucket2_recovery_pass_note.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_train_fast50.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_train_fast50.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_smoke.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_smoke.md\n?? artifacts/current/environment/\n?? docs/answer_eval_protocol.md\n?? docs/runtime_run_policy.md\n?? scripts/audit_local_models.py\n?? scripts/run_env_preflight.py\n?? scripts/run_qasper_answer_eval.py\n?? scripts/run_qasper_structure_repr_study.py\n?? src/lspbe.egg-info/\n?? src/lspbe/qasper_answer_eval.py\n?? src/lspbe/qasper_structure_repr.py\n?? src/lspbe/run_control.py\n?? src/lspbe/structure_repr.py\n?? tests/test_answer_eval.py",
+      "stderr": "",
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ]
+    }
+  },
+  "environment_variables": {
+    "HF_HOME": null,
+    "TRANSFORMERS_CACHE": null,
+    "HF_HUB_OFFLINE": null,
+    "TRANSFORMERS_OFFLINE": null
+  },
+  "key_dataset_files": {
+    "train_fast50": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_train_fast50.json",
+      "exists": true
+    },
+    "validation": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_validation_full.json",
+      "exists": true
+    },
+    "test": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_test_full.json",
+      "exists": true
+    },
+    "train_dev": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_train_dev.json",
+      "exists": true
+    },
+    "train_lockbox": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_train_lockbox.json",
+      "exists": true
+    }
+  },
+  "active_artifact_dirs": {
+    "bucket1_protocol": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket1_protocol",
+      "exists": true
+    },
+    "manual_review": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\manual_review",
+      "exists": true
+    },
+    "bucket2_answer_eval": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval",
+      "exists": true
+    },
+    "bucket2_cache": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "exists": true
+    },
+    "environment": {
+      "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\environment",
+      "exists": true
+    }
+  },
+  "disk_space": {
+    "total_bytes": 510473007104,
+    "used_bytes": 491603103744,
+    "free_bytes": 18869903360
+  },
+  "repo_healthy_for_long_runs": true,
+  "notes": []
+}

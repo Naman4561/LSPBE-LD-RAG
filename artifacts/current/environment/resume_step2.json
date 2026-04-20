@@ -1,0 +1,836 @@
+{
+  "metadata": {
+    "split": "train",
+    "dataset_path": "data/qasper_train_fast50.json",
+    "segmentation_mode": "seg_paragraph_pair",
+    "total_questions_available": 5,
+    "questions": 5,
+    "max_qas_requested": 5,
+    "max_papers_requested": 1000000,
+    "start_index": 0,
+    "end_index": 5,
+    "chunk_size": 5,
+    "methods": [
+      "adjacency",
+      "bridge_final"
+    ],
+    "answerer": {
+      "kind": "deterministic_extractive",
+      "reason": "No practical cached offline QA/generation model was available; Bucket 2 freezes a deterministic fallback."
+    },
+    "subset_counts": {
+      "adjacency_easy": 4,
+      "skip_local": 1,
+      "multi_span": 1,
+      "float_table": 4,
+      "boolean": 1,
+      "what": 3,
+      "how": 1,
+      "which": 0,
+      "other": 0
+    },
+    "cache_layout": {
+      "root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "run_name": "buckete_resume_proof_train5",
+      "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}"
+    }
+  },
+  "methods": [
+    {
+      "method": "adjacency",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.0,
+        "token_f1": 0.1900990099009901,
+        "yes_no_accuracy": null,
+        "yes_no_questions": 0,
+        "empty_prediction_rate": 0.0,
+        "prediction_length_mean": 29.8,
+        "prediction_length_median": 30.0,
+        "retrieval_evidence_hit_rate": 1.0
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.2376237623762376,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 31.0,
+          "prediction_length_median": 37.5,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 25.0,
+          "prediction_length_median": 25.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 25.0,
+          "prediction_length_median": 25.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.2376237623762376,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 26.0,
+          "prediction_length_median": 27.5,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "what": {
+          "questions": 3,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 33.333333333333336,
+          "prediction_length_median": 30.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "how": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.9504950495049505,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 48.0,
+          "prediction_length_median": 48.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    },
+    {
+      "method": "bridge_final",
+      "overall": {
+        "questions": 5,
+        "exact_match": 0.0,
+        "token_f1": 0.20203930840845277,
+        "yes_no_accuracy": null,
+        "yes_no_questions": 0,
+        "empty_prediction_rate": 0.0,
+        "prediction_length_mean": 41.6,
+        "prediction_length_median": 53.0,
+        "retrieval_evidence_hit_rate": 1.0
+      },
+      "subset_metrics": {
+        "adjacency_easy": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.2376237623762376,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 38.75,
+          "prediction_length_median": 50.5,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "skip_local": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.05970149253731343,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 53.0,
+          "prediction_length_median": 53.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "multi_span": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.05970149253731343,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 53.0,
+          "prediction_length_median": 53.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "float_table": {
+          "questions": 4,
+          "exact_match": 0.0,
+          "token_f1": 0.25254913551056596,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 38.75,
+          "prediction_length_median": 50.5,
+          "retrieval_evidence_hit_rate": 1.0
+        }
+      },
+      "question_type_metrics": {
+        "boolean": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 1.0,
+          "prediction_length_median": 1.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "what": {
+          "questions": 3,
+          "exact_match": 0.0,
+          "token_f1": 0.01990049751243781,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 53.0,
+          "prediction_length_median": 53.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "how": {
+          "questions": 1,
+          "exact_match": 0.0,
+          "token_f1": 0.9504950495049505,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 48.0,
+          "prediction_length_median": 48.0,
+          "retrieval_evidence_hit_rate": 1.0
+        },
+        "which": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        },
+        "other": {
+          "questions": 0,
+          "exact_match": 0.0,
+          "token_f1": 0.0,
+          "yes_no_accuracy": null,
+          "yes_no_questions": 0,
+          "empty_prediction_rate": 0.0,
+          "prediction_length_mean": 0.0,
+          "prediction_length_median": 0.0,
+          "retrieval_evidence_hit_rate": 0.0
+        }
+      }
+    }
+  ],
+  "per_method_records": {
+    "adjacency": [
+      {
+        "paper_id": "1908.06606",
+        "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+        "question_index": 0,
+        "question": "What data is the language model pretrained on?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "Recently, some works focused on pre-trained language representation models to capture language information from text and then utilizing the information to improve the performance of specific natural language processing tasks BIBREF24, BIBREF25, BIBREF26, BIBREF27 which makes language model a shared model to all natural language processing tasks.",
+        "normalized_prediction": "recently some works focused on pre trained language representation models to capture language information from text and then utilizing information to improve performance of specific natural language processing tasks bibref24 bibref25 bibref26 bibref27 which makes language model shared model to all natural language processing tasks",
+        "gold_answers": [
+          "Chinese general corpus",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "chinese general corpus",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+        "question_index": 1,
+        "question": "What baselines is the proposed model compared against?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "To tell the model $Q$ and $X$ is two different sentence, a sentence type input is generated which is a binary label sequence to denote what sentence each character in the input belongs to.",
+        "normalized_prediction": "to tell model q and x is two different sentence sentence type input is generated which is binary label sequence to denote what sentence each character in input belongs to",
+        "gold_answers": [
+          "BERT-Base",
+          "QANet",
+          "QANet BIBREF39",
+          "BERT-Base BIBREF26"
+        ],
+        "normalized_gold_answers": [
+          "bert base",
+          "qanet",
+          "qanet bibref39",
+          "bert base bibref26"
+        ],
+        "answer_type": "extractive",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+        "question_index": 2,
+        "question": "How is the clinical text structuring task defined?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "normalized_prediction": "critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "gold_answers": [
+          "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+          "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+          "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+        ],
+        "normalized_gold_answers": [
+          "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+          "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+          "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+        ],
+        "answer_type": "extractive",
+        "exact_match": 0.0,
+        "token_f1": 0.9504950495049505,
+        "retrieval_evidence_hit": true,
+        "question_type": "how",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+        "question_index": 3,
+        "question": "What are the specific tasks being unified?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "The models are trained by Adam optimization algorithm BIBREF38 whose parameters are the same as the default settings except for learning rate set to $5\\times 10^{-5}$.",
+        "normalized_prediction": "models are trained by adam optimization algorithm bibref38 whose parameters are same as default settings except for learning rate set to 5 times 10 5",
+        "gold_answers": [
+          "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "three types of questions namely tumor size proximal resection margin and distal resection margin",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+        "question_index": 4,
+        "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+        "retrieval_method": "adjacency",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "normalized_gold_answers": [
+          "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "answer_type": "free_form",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "boolean",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ],
+    "bridge_final": [
+      {
+        "paper_id": "1908.06606",
+        "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+        "question_index": 0,
+        "question": "What data is the language model pretrained on?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "gold_answers": [
+          "Chinese general corpus",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "chinese general corpus",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": false
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+        "question_index": 1,
+        "question": "What baselines is the proposed model compared against?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "gold_answers": [
+          "BERT-Base",
+          "QANet",
+          "QANet BIBREF39",
+          "BERT-Base BIBREF26"
+        ],
+        "normalized_gold_answers": [
+          "bert base",
+          "qanet",
+          "qanet bibref39",
+          "bert base bibref26"
+        ],
+        "answer_type": "extractive",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+        "question_index": 2,
+        "question": "How is the clinical text structuring task defined?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "normalized_prediction": "critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "gold_answers": [
+          "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+          "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+          "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+        ],
+        "normalized_gold_answers": [
+          "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+          "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+          "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+        ],
+        "answer_type": "extractive",
+        "exact_match": 0.0,
+        "token_f1": 0.9504950495049505,
+        "retrieval_evidence_hit": true,
+        "question_type": "how",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+        "question_index": 3,
+        "question": "What are the specific tasks being unified?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "gold_answers": [
+          "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+          ""
+        ],
+        "normalized_gold_answers": [
+          "three types of questions namely tumor size proximal resection margin and distal resection margin",
+          ""
+        ],
+        "answer_type": "unanswerable",
+        "exact_match": 0.0,
+        "token_f1": 0.05970149253731343,
+        "retrieval_evidence_hit": true,
+        "question_type": "what",
+        "adjacency_easy": false,
+        "skip_local": true,
+        "multi_span": true,
+        "float_table": true
+      },
+      {
+        "paper_id": "1908.06606",
+        "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+        "question_index": 4,
+        "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+        "retrieval_method": "bridge_final",
+        "predicted_answer": "yes",
+        "normalized_prediction": "yes",
+        "gold_answers": [
+          "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "normalized_gold_answers": [
+          "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+        ],
+        "answer_type": "free_form",
+        "exact_match": 0.0,
+        "token_f1": 0.0,
+        "retrieval_evidence_hit": true,
+        "question_type": "boolean",
+        "adjacency_easy": true,
+        "skip_local": false,
+        "multi_span": false,
+        "float_table": true
+      }
+    ]
+  },
+  "per_question_records": [
+    {
+      "paper_id": "1908.06606",
+      "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+      "question_index": 0,
+      "question": "What data is the language model pretrained on?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "Recently, some works focused on pre-trained language representation models to capture language information from text and then utilizing the information to improve the performance of specific natural language processing tasks BIBREF24, BIBREF25, BIBREF26, BIBREF27 which makes language model a shared model to all natural language processing tasks.",
+      "normalized_prediction": "recently some works focused on pre trained language representation models to capture language information from text and then utilizing information to improve performance of specific natural language processing tasks bibref24 bibref25 bibref26 bibref27 which makes language model shared model to all natural language processing tasks",
+      "gold_answers": [
+        "Chinese general corpus",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "chinese general corpus",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+      "question_index": 1,
+      "question": "What baselines is the proposed model compared against?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "To tell the model $Q$ and $X$ is two different sentence, a sentence type input is generated which is a binary label sequence to denote what sentence each character in the input belongs to.",
+      "normalized_prediction": "to tell model q and x is two different sentence sentence type input is generated which is binary label sequence to denote what sentence each character in input belongs to",
+      "gold_answers": [
+        "BERT-Base",
+        "QANet",
+        "QANet BIBREF39",
+        "BERT-Base BIBREF26"
+      ],
+      "normalized_gold_answers": [
+        "bert base",
+        "qanet",
+        "qanet bibref39",
+        "bert base bibref26"
+      ],
+      "answer_type": "extractive",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+      "question_index": 2,
+      "question": "How is the clinical text structuring task defined?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+      "normalized_prediction": "critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+      "gold_answers": [
+        "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+        "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+      ],
+      "normalized_gold_answers": [
+        "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+        "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+      ],
+      "answer_type": "extractive",
+      "exact_match": 0.0,
+      "token_f1": 0.9504950495049505,
+      "retrieval_evidence_hit": true,
+      "question_type": "how",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+      "question_index": 3,
+      "question": "What are the specific tasks being unified?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "The models are trained by Adam optimization algorithm BIBREF38 whose parameters are the same as the default settings except for learning rate set to $5\\times 10^{-5}$.",
+      "normalized_prediction": "models are trained by adam optimization algorithm bibref38 whose parameters are same as default settings except for learning rate set to 5 times 10 5",
+      "gold_answers": [
+        "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "three types of questions namely tumor size proximal resection margin and distal resection margin",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+      "question_index": 4,
+      "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+      "retrieval_method": "adjacency",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "normalized_gold_answers": [
+        "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "answer_type": "free_form",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "boolean",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "71a7153e12879defa186bfb6dbafe79c74265e10",
+      "question_index": 0,
+      "question": "What data is the language model pretrained on?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+      "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+      "gold_answers": [
+        "Chinese general corpus",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "chinese general corpus",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": false
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "85d1831c28d3c19c84472589a252e28e9884500f",
+      "question_index": 1,
+      "question": "What baselines is the proposed model compared against?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+      "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+      "gold_answers": [
+        "BERT-Base",
+        "QANet",
+        "QANet BIBREF39",
+        "BERT-Base BIBREF26"
+      ],
+      "normalized_gold_answers": [
+        "bert base",
+        "qanet",
+        "qanet bibref39",
+        "bert base bibref26"
+      ],
+      "answer_type": "extractive",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "1959e0ebc21fafdf1dd20c6ea054161ba7446f61",
+      "question_index": 2,
+      "question": "How is the clinical text structuring task defined?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+      "normalized_prediction": "critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+      "gold_answers": [
+        "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+        "Unlike the traditional CTS task, our QA-CTS task aims to discover the most related text from original paragraph text.",
+        "CTS is extracting structural data from medical research data (unstructured). Authors define QA-CTS task that aims to discover most related text from original text."
+      ],
+      "normalized_gold_answers": [
+        "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+        "unlike traditional cts task our qa cts task aims to discover most related text from original paragraph text",
+        "cts is extracting structural data from medical research data unstructured authors define qa cts task that aims to discover most related text from original text"
+      ],
+      "answer_type": "extractive",
+      "exact_match": 0.0,
+      "token_f1": 0.9504950495049505,
+      "retrieval_evidence_hit": true,
+      "question_type": "how",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "77cf4379106463b6ebcb5eb8fa5bb25450fa5fb8",
+      "question_index": 3,
+      "question": "What are the specific tasks being unified?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "Clinical text structuring (CTS) is a critical task for fetching medical research data from electronic health records (EHRs), where structural patient medical data, such as whether the patient has specific symptoms, diseases, or what the tumor size is, how far from the tumor is cut at during the surgery, or what the specific laboratory test result is, are obtained.",
+      "normalized_prediction": "clinical text structuring cts is critical task for fetching medical research data from electronic health records ehrs where structural patient medical data such as whether patient has specific symptoms diseases or what tumor size is how far from tumor is cut at during surgery or what specific laboratory test result is are obtained",
+      "gold_answers": [
+        "three types of questions, namely tumor size, proximal resection margin and distal resection margin",
+        ""
+      ],
+      "normalized_gold_answers": [
+        "three types of questions namely tumor size proximal resection margin and distal resection margin",
+        ""
+      ],
+      "answer_type": "unanswerable",
+      "exact_match": 0.0,
+      "token_f1": 0.05970149253731343,
+      "retrieval_evidence_hit": true,
+      "question_type": "what",
+      "adjacency_easy": false,
+      "skip_local": true,
+      "multi_span": true,
+      "float_table": true
+    },
+    {
+      "paper_id": "1908.06606",
+      "question_id": "06095a4dee77e9a570837b35fc38e77228664f91",
+      "question_index": 4,
+      "question": "Is all text in this dataset a question, or are there unrelated sentences in between questions?",
+      "retrieval_method": "bridge_final",
+      "predicted_answer": "yes",
+      "normalized_prediction": "yes",
+      "gold_answers": [
+        "the dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "normalized_gold_answers": [
+        "dataset consists of pathology reports including sentences and questions and answers about tumor size and resection margins so it does include additional sentences"
+      ],
+      "answer_type": "free_form",
+      "exact_match": 0.0,
+      "token_f1": 0.0,
+      "retrieval_evidence_hit": true,
+      "question_type": "boolean",
+      "adjacency_easy": true,
+      "skip_local": false,
+      "multi_span": false,
+      "float_table": true
+    }
+  ],
+  "run_progress": {
+    "adjacency": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 3,
+      "skipped_existing": 2,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\adjacency",
+      "legacy_cache_path": null
+    },
+    "bridge_final": {
+      "target_questions": 5,
+      "completed_questions": 5,
+      "computed_this_run": 3,
+      "skipped_existing": 2,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\bridge_final",
+      "legacy_cache_path": null
+    }
+  }
+}

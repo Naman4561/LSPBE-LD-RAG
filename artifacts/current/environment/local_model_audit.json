@@ -1,0 +1,82 @@
+{
+  "cache_roots": [
+    "C:\\Users\\naman\\.cache\\huggingface",
+    "C:\\Users\\naman\\.cache\\huggingface\\hub"
+  ],
+  "transformers_available": true,
+  "models_found": 3,
+  "class_counts": {
+    "embeddings": 2,
+    "qa": 1,
+    "generation": 0,
+    "unknown": 0
+  },
+  "models": [
+    {
+      "repo_name": "BAAI/bge-base-en-v1.5",
+      "cache_root": "C:\\Users\\naman\\.cache\\huggingface\\hub",
+      "snapshot_dir": "C:\\Users\\naman\\.cache\\huggingface\\hub\\models--BAAI--bge-base-en-v1.5\\snapshots\\a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+      "classification": "embeddings",
+      "offline_load": {
+        "config": {
+          "ok": true,
+          "error": null
+        },
+        "tokenizer": {
+          "ok": true,
+          "error": null
+        }
+      },
+      "has_modules_json": true,
+      "has_config_json": true,
+      "model_type": "bert",
+      "architectures": [
+        "BertModel"
+      ]
+    },
+    {
+      "repo_name": "distilbert-base-cased-distilled-squad",
+      "cache_root": "C:\\Users\\naman\\.cache\\huggingface\\hub",
+      "snapshot_dir": "C:\\Users\\naman\\.cache\\huggingface\\hub\\models--distilbert-base-cased-distilled-squad\\snapshots\\564e9b582944a57a3e586bbb98fd6f0a4118db7f",
+      "classification": "qa",
+      "offline_load": {
+        "config": {
+          "ok": true,
+          "error": null
+        },
+        "tokenizer": {
+          "ok": true,
+          "error": null
+        }
+      },
+      "has_modules_json": false,
+      "has_config_json": true,
+      "model_type": "distilbert",
+      "architectures": [
+        "DistilBertForQuestionAnswering"
+      ]
+    },
+    {
+      "repo_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "cache_root": "C:\\Users\\naman\\.cache\\huggingface\\hub",
+      "snapshot_dir": "C:\\Users\\naman\\.cache\\huggingface\\hub\\models--sentence-transformers--all-MiniLM-L6-v2\\snapshots\\c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "classification": "embeddings",
+      "offline_load": {
+        "config": {
+          "ok": true,
+          "error": null
+        },
+        "tokenizer": {
+          "ok": true,
+          "error": null
+        }
+      },
+      "has_modules_json": true,
+      "has_config_json": true,
+      "model_type": "bert",
+      "architectures": [
+        "BertModel"
+      ]
+    }
+  ]
+}

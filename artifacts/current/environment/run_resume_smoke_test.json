@@ -1,0 +1,43 @@
+{
+  "smoke_test_name": "bucket_e_answer_eval_resume_smoke",
+  "dataset_path": "data/qasper_train_fast50.json",
+  "split": "train",
+  "cache_tag": "buckete_resume_proof_train5",
+  "step1": {
+    "description": "Initial chunked run over the first 2 questions.",
+    "manifest_path": "artifacts\\current\\environment\\resume_step1.run_manifest.json",
+    "computed_this_run": {
+      "adjacency": 2,
+      "bridge_final": 2
+    },
+    "skipped_existing": {
+      "adjacency": 0,
+      "bridge_final": 0
+    },
+    "completed_questions": {
+      "adjacency": 2,
+      "bridge_final": 2
+    }
+  },
+  "step2": {
+    "description": "Resume run expanded the target slice to 5 questions using the same cache tag.",
+    "manifest_path": "artifacts\\current\\environment\\resume_step2.run_manifest.json",
+    "computed_this_run": {
+      "adjacency": 3,
+      "bridge_final": 3
+    },
+    "skipped_existing": {
+      "adjacency": 2,
+      "bridge_final": 2
+    },
+    "completed_questions": {
+      "adjacency": 5,
+      "bridge_final": 5
+    }
+  },
+  "resume_confirmed": true,
+  "cache_state_files": {
+    "adjacency": "artifacts/current/bucket2_answer_eval/cache/buckete_resume_proof_train5/adjacency/state.json",
+    "bridge_final": "artifacts/current/bucket2_answer_eval/cache/buckete_resume_proof_train5/bridge_final/state.json"
+  }
+}

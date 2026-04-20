@@ -1,0 +1,55 @@
+{
+  "script_name": "run_qasper_answer_eval.py",
+  "started_at": "2026-04-20T09:17:18Z",
+  "ended_at": "2026-04-20T09:46:52Z",
+  "duration_seconds": 1774.0,
+  "status": "completed",
+  "resumed": true,
+  "output_paths": {
+    "json": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_validation.json",
+    "markdown": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_validation.md",
+    "csv": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_validation_per_question.csv",
+    "manifest_json": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.json",
+    "manifest_md": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.md"
+  },
+  "config": {
+    "dataset_path": "data/qasper_validation_full.json",
+    "split": "validation",
+    "methods": [
+      "adjacency",
+      "bridge_final"
+    ],
+    "answerer": {
+      "kind": "local_qa",
+      "reason": "Offline QA model 'distilbert-base-cased-distilled-squad' loaded successfully from the local Hugging Face cache.",
+      "model_name": "distilbert-base-cased-distilled-squad"
+    },
+    "segmentation_mode": "seg_paragraph_pair",
+    "max_questions": 1000000,
+    "max_papers": 1000000,
+    "start_index": 0,
+    "chunk_size": null,
+    "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+    "cache_tag": "bucket2_recovery_validation_localqa",
+    "save_every": 10,
+    "overwrite": false
+  },
+  "counters": {
+    "adjacency": {
+      "target_questions": 1005,
+      "completed_questions": 1005,
+      "computed_this_run": 0,
+      "skipped_existing": 1005,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_validation_localqa\\adjacency",
+      "legacy_cache_path": null
+    },
+    "bridge_final": {
+      "target_questions": 1005,
+      "completed_questions": 1005,
+      "computed_this_run": 0,
+      "skipped_existing": 1005,
+      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_validation_localqa\\bridge_final",
+      "legacy_cache_path": null
+    }
+  }
+}

@@ -10,6 +10,7 @@ from .mve import QAExample, _build_segments_by_doc
 from .qasper import QasperMethodConfig, apply_qasper_method
 from .retrieval import BGERetriever
 from .segmentation import segment_document_with_mode
+from .structure_repr import build_structure_representation, collapse_retrieved_to_backbone
 from .subsets import (
     build_subset_label,
     evidence_coverage,
@@ -25,9 +26,10 @@ from .types import DocumentSegment, RetrievedSegment
 def _load_qasper_eval_records(
     path: str | Path,
     segmentation_mode: str,
+    representation_mode: str = "current",
     max_papers: int = 100,
     max_qas: int = 300,
-) -> tuple[list[DocumentSegment], list[QAExample], list[dict[str, object]]]:
+) -> tuple[list[DocumentSegment], list[DocumentSegment], list[QAExample], list[dict[str, object]], dict[str, dict[str, object]]]:
     raw = json.loads(Path(path).read_text(encoding="utf-8"))
     papers = list(raw.values()) if isinstance(raw, dict) else raw
 
@@ -38,22 +40,46 @@ def _load_qasper_eval_records(
     }
     segment_mode = mode_lookup[segmentation_mode]
 
-    segments: list[DocumentSegment] = []
+    retrieval_segments: list[DocumentSegment] = []
+    backbone_segments: list[DocumentSegment] = []
     qas: list[QAExample] = []
     qa_records: list[dict[str, object]] = []
+    structure_docs: dict[str, dict[str, object]] = {}
 
     for paper_index, paper in enumerate(papers[:max_papers]):
-        doc_id = str(paper.get("paper_id") or paper.get("id") or len(segments))
+        doc_id = str(paper.get("paper_id") or paper.get("id") or len(backbone_segments))
         full_text = paper.get("full_text", [])
-        doc_text_parts: list[str] = []
-        for section in full_text:
-            section_name = section.get("section_name") or "SECTION"
-            doc_text_parts.append(f"# {section_name}")
-            doc_text_parts.extend(section.get("paragraphs", []))
-            doc_text_parts.append("")
-
-        doc_text = "\n".join(doc_text_parts)
-        segments.extend(segment_document_with_mode(doc_id, doc_text, mode=segment_mode))
+        if segmentation_mode == "seg_paragraph_pair":
+            structure_repr = build_structure_representation(
+                doc_id=doc_id,
+                full_text=list(full_text),
+                representation_mode=representation_mode,
+            )
+            retrieval_segments.extend(structure_repr.retrieval_segments)
+            backbone_segments.extend(structure_repr.backbone_segments)
+            structure_docs[doc_id] = {
+                "links": structure_repr.links,
+                "metadata": structure_repr.doc_metadata,
+            }
+        else:
+            doc_text_parts: list[str] = []
+            for section in full_text:
+                section_name = section.get("section_name") or "SECTION"
+                doc_text_parts.append(f"# {section_name}")
+                doc_text_parts.extend(section.get("paragraphs", []))
+                doc_text_parts.append("")
+            doc_text = "\n".join(doc_text_parts)
+            doc_segments = segment_document_with_mode(doc_id, doc_text, mode=segment_mode)
+            retrieval_segments.extend(doc_segments)
+            backbone_segments.extend(doc_segments)
+            structure_docs[doc_id] = {
+                "links": [],
+                "metadata": {
+                    "representation_mode": "current",
+                    "unit_type_counts": {"paragraph": len(doc_segments)},
+                    "link_count": 0,
+                },
+            }
 
         for question_index, qa in enumerate(paper.get("qas", [])):
             if len(qas) >= max_qas:
@@ -76,7 +102,7 @@ def _load_qasper_eval_records(
         if len(qas) >= max_qas:
             break
 
-    return segments, qas, qa_records
+    return retrieval_segments, backbone_segments, qas, qa_records, structure_docs
 
 
 def load_qasper_eval_context(
@@ -84,19 +110,26 @@ def load_qasper_eval_context(
     max_papers: int = 50,
     max_qas: int = 10_000,
     segmentation_mode: str = "seg_paragraph",
+    representation_mode: str = "current",
 ) -> dict[str, object]:
-    segments, qas, qa_records = _load_qasper_eval_records(
+    retrieval_segments, backbone_segments, qas, qa_records, structure_docs = _load_qasper_eval_records(
         subset_path,
         segmentation_mode=segmentation_mode,
+        representation_mode=representation_mode,
         max_papers=max_papers,
         max_qas=max_qas,
     )
-    retriever = BGERetriever(segments)
-    segments_by_doc = _build_segments_by_doc(segments)
-    idf_map = build_segment_idf(segments)
+    retriever = BGERetriever(retrieval_segments)
+    segments_by_doc = _build_segments_by_doc(backbone_segments)
+    retrieval_segments_by_doc = _build_segments_by_doc(retrieval_segments)
+    idf_map = build_segment_idf(backbone_segments)
+    retrieval_index_by_key = {
+        (segment.doc_id, segment.segment_id): index
+        for index, segment in enumerate(retrieval_segments)
+    }
     segment_vectors = {
-        (segment.doc_id, segment.segment_id): retriever._segment_matrix[index]
-        for index, segment in enumerate(segments)
+        (segment.doc_id, segment.segment_id): retriever._segment_matrix[retrieval_index_by_key[(segment.doc_id, segment.segment_id)]]
+        for segment in backbone_segments
     }
     subset_labels = [
         build_subset_label(
@@ -109,15 +142,19 @@ def load_qasper_eval_context(
         for record in qa_records
     ]
     return {
-        "segments": segments,
+        "segments": retrieval_segments,
+        "backbone_segments": backbone_segments,
         "qas": qas,
         "qa_records": qa_records,
         "subset_labels": subset_labels,
         "retriever": retriever,
         "segments_by_doc": segments_by_doc,
+        "retrieval_segments_by_doc": retrieval_segments_by_doc,
         "idf_map": idf_map,
         "segment_vectors": segment_vectors,
         "segmentation_mode": segmentation_mode,
+        "representation_mode": representation_mode,
+        "structure_docs": structure_docs,
     }
 
 
@@ -127,13 +164,14 @@ def load_qasper_subset_labels(
     max_qas: int = 10_000,
     segmentation_mode: str = "seg_paragraph",
 ) -> dict[str, object]:
-    segments, _, qa_records = _load_qasper_eval_records(
+    _, backbone_segments, _, qa_records, _ = _load_qasper_eval_records(
         subset_path,
         segmentation_mode=segmentation_mode,
+        representation_mode="current",
         max_papers=max_papers,
         max_qas=max_qas,
     )
-    segments_by_doc = _build_segments_by_doc(segments)
+    segments_by_doc = _build_segments_by_doc(backbone_segments)
     subset_labels = [
         build_subset_label(
             qa_id=str(record["qa_id"]),
@@ -164,6 +202,7 @@ def build_rank_cache(
     query_matrix = retriever.embedder.encode([qa.query for qa in qas])
     sparse_queries = [retriever.sparse_query_vector(qa.query) for qa in qas]
     cache: dict[tuple[int, tuple[int, str, float, float]], list[RetrievedSegment]] = {}
+    has_auxiliary_units = any(segment.unit_type not in {"paragraph", "paragraph_pair"} for segment in retriever.segments)
 
     for qa_index, qa in enumerate(qas):
         allowed_idx = retriever._doc_to_indices.get(qa.doc_id, [])
@@ -193,12 +232,13 @@ def build_rank_cache(
             else:
                 raise ValueError(f"Unsupported seed retrieval mode: {seed_mode}")
 
+            raw_k = min(len(allowed_idx), max(k * 4, k + 10)) if has_auxiliary_units else min(len(allowed_idx), k)
             top_local = list(
                 sorted(
                     range(len(allowed_idx)),
                     key=lambda idx: float(final_scores[idx]),
                     reverse=True,
-                )[:k]
+                )[:raw_k]
             )
             cache[(qa_index, request)] = [
                 RetrievedSegment(
@@ -268,6 +308,7 @@ def _evaluate_single_method(
     for qa_index in qa_indices:
         qa = qas[qa_index]
         rank = rank_cache[(qa_index, config.seed_request)]
+        collapsed_rank = collapse_retrieved_to_backbone(rank, context["segments_by_doc"], max_results=config.k)
         retrieved, _, _, _, _ = apply_qasper_method(
             config,
             qa,
@@ -278,7 +319,7 @@ def _evaluate_single_method(
             context["idf_map"],
         )
         evidence_ids = evidence_ids_by_qa[qa_index]
-        first_rank = first_evidence_rank(rank, evidence_ids)
+        first_rank = first_evidence_rank(collapsed_rank, evidence_ids)
         if first_rank is not None:
             seed_hits += 1
             mrr_sum += 1.0 / first_rank
@@ -321,7 +362,16 @@ def evaluate_methods_detailed(
     beyond_indices = {
         qa_index
         for qa_index, _ in enumerate(qas)
-        if (distance := min_seed_distance(rank_cache[(qa_index, anchor.seed_request)], evidence_ids_by_qa[qa_index])) is not None
+        if (
+            distance := min_seed_distance(
+                collapse_retrieved_to_backbone(
+                    rank_cache[(qa_index, anchor.seed_request)],
+                    context["segments_by_doc"],
+                    max_results=anchor.k,
+                ),
+                evidence_ids_by_qa[qa_index],
+            )
+        ) is not None
         and distance >= 2
     }
 
