@@ -37,7 +37,7 @@ from lspbe.qasper_model_selection import (
     write_json,
     write_markdown,
 )
-from lspbe.run_control import build_run_manifest, utc_now_iso
+from lspbe.run_control import build_run_manifest, portable_path_text, utc_now_iso
 
 CURRENT_BUCKET4_5_DIR = ROOT / "artifacts" / "current" / "bucket4_5_bridge_repair"
 CURRENT_BUCKET4_DIR = ROOT / "artifacts" / "current" / "bucket4_model_selection"
@@ -157,7 +157,7 @@ def _run_single_stage(
         progress_every_seconds=progress_every_seconds,
         screening_subset=None,
     )
-    payload["metadata"]["artifact_path"] = str(output_json)
+    payload["metadata"]["artifact_path"] = portable_path_text(output_json, repo_root=ROOT)
     if baseline_validation is not None:
         payload = attach_baseline_reference(payload, baseline_validation)
     write_json(output_json, payload)
@@ -361,6 +361,7 @@ def main() -> int:
             "stage2_smoke_questions": None if stage2_smoke_payload is None else stage2_smoke_payload["metadata"]["questions"],
             "stage2_validation_questions": None if stage2_validation_payload is None else stage2_validation_payload["metadata"]["questions"],
         },
+        repo_root=ROOT,
     )
     write_json(paths["manifest_json"], manifest)
     logger.log("Bucket 4.5 complete")

@@ -1,5 +1,5 @@
-{
-  "dataset": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+﻿{
+  "dataset": "data//qasper_subset_debug_50.json",
   "segmentations": {
     "seg_paragraph": {
       "description": "Current section-aware paragraph segmentation.",

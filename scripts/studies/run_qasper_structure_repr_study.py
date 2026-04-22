@@ -230,6 +230,7 @@ def main() -> int:
             "smoke_questions": smoke_payload["metadata"]["max_questions"],
             "validation_questions": full_payload["metadata"]["max_questions"],
         },
+        repo_root=ROOT,
     )
     write_json(output_dir / "qasper_structure_repr_study.run_manifest.json", manifest)
 

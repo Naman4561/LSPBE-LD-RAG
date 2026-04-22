@@ -1,4 +1,4 @@
-{
+﻿{
   "metadata": {
     "split": "train",
     "dataset_path": "data/qasper_train_fast50.json",
@@ -30,7 +30,7 @@
       "other": 0
     },
     "cache_layout": {
-      "root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "root": "artifacts//current//bucket2_answer_eval//cache",
       "run_name": "buckete_resume_proof_train5",
       "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}"
     }
@@ -509,7 +509,7 @@
       "completed_questions": 2,
       "computed_this_run": 2,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\adjacency",
+      "cache_dir": "artifacts//current//bucket2_answer_eval//cache//buckete_resume_proof_train5//adjacency",
       "legacy_cache_path": null
     },
     "bridge_final": {
@@ -517,7 +517,7 @@
       "completed_questions": 2,
       "computed_this_run": 2,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_proof_train5\\bridge_final",
+      "cache_dir": "artifacts//current//bucket2_answer_eval//cache//buckete_resume_proof_train5//bridge_final",
       "legacy_cache_path": null
     }
   }

@@ -55,6 +55,6 @@
 
 ## Baseline Reference
 
-- source: `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_model_selection\qasper_model_selection_validation.json`
+- source: `artifacts/current/bucket4_model_selection/qasper_model_selection_validation.json`
 - `flat_hybrid_current`: hit `0.8617`, coverage `0.7833`, seed_hit `0.8617`, first_rank `4.1813`
 - `bridge_final_current`: hit `0.8438`, coverage `0.7567`, seed_hit `0.7741`, first_rank `3.0707`

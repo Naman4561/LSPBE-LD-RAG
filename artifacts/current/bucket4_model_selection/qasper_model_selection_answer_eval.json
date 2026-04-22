@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "dataset_path": "data\\qasper_validation_full.json",
+    "dataset_path": "data/\qasper_validation_full.json",
     "split": "validation",
     "questions": 1005,
     "answerer": {
@@ -70142,14 +70142,14 @@
       "completed_questions": 1005,
       "computed_this_run": 1005,
       "skipped_existing": 0,
-      "cache_dir": "artifacts\\current\\bucket4_model_selection\\cache\\answer_eval\\flat_hybrid_current"
+      "cache_dir": "artifacts/\current\\bucket4_model_selection\\cache\\answer_eval\\flat_hybrid_current"
     },
     "bridge_final_current": {
       "target_questions": 1005,
       "completed_questions": 1005,
       "computed_this_run": 1005,
       "skipped_existing": 0,
-      "cache_dir": "artifacts\\current\\bucket4_model_selection\\cache\\answer_eval\\bridge_final_current"
+      "cache_dir": "artifacts/\current\\bucket4_model_selection\\cache\\answer_eval\\bridge_final_current"
     }
   }
 }

@@ -1,7 +1,7 @@
 # QASPER Model Selection Screen
 
 - stage: `screening retrieval`
-- dataset_path: `data\qasper_validation_full.json`
+- dataset_path: `data/qasper_validation_full.json`
 - questions: `240`
 - papers: `238`
 - main_representation: `current`

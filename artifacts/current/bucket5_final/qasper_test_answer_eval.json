@@ -1,4 +1,4 @@
-{
+﻿{
   "metadata": {
     "dataset_path": "data/qasper_test_full.json",
     "split": "test",
@@ -104721,14 +104721,14 @@
       "completed_questions": 1451,
       "computed_this_run": 1451,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\cache\\answer_eval\\flat_hybrid_current"
+      "cache_dir": "artifacts//current//bucket5_final//cache//answer_eval//flat_hybrid_current"
     },
     "bridge_final_current": {
       "target_questions": 1451,
       "completed_questions": 1451,
       "computed_this_run": 1451,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\cache\\answer_eval\\bridge_final_current"
+      "cache_dir": "artifacts//current//bucket5_final//cache//answer_eval//bridge_final_current"
     }
   }
 }

@@ -87,6 +87,6 @@
 
 ## Key Outputs
 
-- final validation JSON: [qasper_answer_eval_validation.json](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json)
-- final validation Markdown: [qasper_answer_eval_validation.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md)
-- final validation CSV: [qasper_answer_eval_validation_per_question.csv](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv)
+- final validation JSON: [qasper_answer_eval_validation.json](artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json)
+- final validation Markdown: [qasper_answer_eval_validation.md](artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md)
+- final validation CSV: [qasper_answer_eval_validation_per_question.csv](artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv)

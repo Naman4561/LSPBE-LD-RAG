@@ -2,9 +2,9 @@
 
 Run this sequence before any serious offline QASPER job:
 
-1. Run `C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/diagnostics/run_env_preflight.py`.
-2. Confirm `git status` works and check the preflight report for whether `pytest` is actually runnable in the active interpreter.
-3. If answer-eval or local-model loading matters, run `C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/final/audit_local_models.py`.
+1. Run `python scripts/diagnostics/run_env_preflight.py`.
+2. Confirm `git status` works and check the preflight report for whether `pytest` is runnable in the active environment.
+3. If answer-eval or local-model loading matters, run `python scripts/final/audit_local_models.py`.
 4. Do a smoke run first with `--max-questions`, `--chunk-size`, and `--save-every 1`.
 5. Use a stable `--cache-tag` for a long run so restarts can reuse the same cache state.
 
@@ -20,7 +20,7 @@ Cache convention for the retrofitted answer-eval path:
 - root: `artifacts/support/cache/bucket2_answer_eval/<cache_tag_or_dataset_stem>/`
 - per method: `<method>/metadata.json`, `<method>/records.jsonl`, `<method>/state.json`
 - `state.json` is the resumable checkpoint source of truth
-- final JSON/Markdown/CSV outputs are derived from the cached per-question records
+- final JSON, Markdown, CSV, and manifest outputs are written separately under `artifacts/current/bucket2_answer_eval/` unless an alternate `--output-dir` is provided
 
 If a run is interrupted:
 
@@ -28,3 +28,8 @@ If a run is interrupted:
 2. Re-run with `--resume`.
 3. Increase `--chunk-size` or remove it when you are ready to continue farther.
 4. Check the run manifest and the per-method `state.json` files before starting a brand-new cache tag.
+
+General portability rule:
+
+- use the active project environment plus repo-root-relative commands such as `python scripts/...`
+- avoid machine-specific interpreter paths, home-directory assumptions, or bucket-local cache folders in new docs and examples

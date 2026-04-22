@@ -1,55 +1,48 @@
 # Answer Eval Protocol
 
-Bucket 2 adds one fixed answer-evaluation layer on top of the locked retrieval setup and the Bucket 1 split protocol.
+Answer evaluation in this repo is a fixed secondary layer on top of the cleaned QASPER retrieval protocol. Its job is to check whether retrieval differences still point in the same direction once a single answerer is applied to the retrieved context. It is useful for diagnosis and communication, but it is not the main model-selection criterion.
 
-## Scope
+## Purpose
 
-- use one fixed answerer across compared retrieval methods
-- compare at least `adjacency` vs `bridge_final`
-- run `train_fast50` only as a sanity check
-- use `validation` for answer comparison
-- keep `test` reserved for later final reporting
+- keep the retrieval comparison scientifically primary
+- apply one fixed answer layer across compared retrieval methods
+- measure whether better evidence recovery also tends to support better answer behavior
+- preserve a method-comparable answer readout without turning answer noise into the selector
 
-Bucket 2 does not redesign retrieval, does not sweep many answer models, and does not move outputs outside `artifacts/current/bucket2_answer_eval/`.
+## Relation To The Cleaned Split Protocol
+
+The retrieval protocol is the main story of the serious-redo project:
+
+- `validation` is the model-selection split
+- `test` is reserved for final held-out reporting
+- `train_fast50` is a smoke/debug convenience slice, not headline evidence
+
+Answer evaluation was added after the split cleanup and stayed subordinate to it. Bucket 2 introduced the answer-eval layer, Bucket 4 used retrieval-first validation ranking to choose finalists, and Bucket 5 kept answer metrics as supporting evidence in the final held-out comparison.
 
 ## Canonical Runner
 
-Use:
+Use the current categorized runner:
 
 ```bash
-python scripts/final/run_qasper_answer_eval.py --dataset-path data/qasper_validation_full.json --split validation --methods adjacency,bridge_final --json-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json --md-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md --csv-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv
+python scripts/final/run_qasper_answer_eval.py \
+  --dataset-path data/qasper_validation_full.json \
+  --split validation \
+  --methods adjacency,bridge_final \
+  --output-dir artifacts/current/bucket2_answer_eval \
+  --cache-dir artifacts/support/cache/bucket2_answer_eval \
+  --cache-tag validation_main
 ```
 
-Useful flags:
+Common operational flags:
 
-- `--max-questions`: smoke-test a modest subset first
-- `--cache-dir`: retrieval cache root, defaults to `artifacts/support/cache/bucket2_answer_eval`
-- `--cache-tag`: explicit cache key so smoke and full runs do not overwrite each other
+- `--max-questions` for bounded smoke runs
+- `--start-index` and `--chunk-size` for chunked recovery
+- `--save-every` for checkpoint frequency
+- `--resume` to reuse cached per-question state
+- `--overwrite` only when intentionally resetting an existing cache tag
+- `--json-out`, `--md-out`, and `--csv-out` if you need explicit output filenames
 
-## Gold Answers
-
-The cleaned repo JSON files keep question text and evidence, but not the original answer strings. Bucket 2 therefore reads gold answers from the locally cached original QASPER Hugging Face arrow files when they are available offline.
-
-Supported gold-answer shapes:
-
-- unanswerable
-- yes/no
-- extractive spans
-- free-form answers
-- multiple acceptable annotations
-
-## Fixed Answerer
-
-Bucket 2 freezes a deterministic extractive fallback answerer because no practical cached offline QA or generation model was available in the current environment.
-
-The answerer:
-
-- selects from the retrieved context only
-- uses one fixed heuristic path for all compared retrieval methods
-- keeps boolean handling deterministic
-- does not tune per method
-
-## Metrics
+## Supported Metrics
 
 Required answer metrics:
 
@@ -60,12 +53,10 @@ Additional diagnostics:
 
 - yes/no accuracy on yes/no gold questions
 - empty prediction rate
-- prediction length stats
-- retrieval evidence hit rate carried alongside answer metrics
+- prediction length behavior in the per-question records
+- retrieval evidence hit rate carried alongside the answer metrics
 
-## Subset Reporting
-
-Bucket 2 reports answer metrics by:
+Subset reporting is preserved for:
 
 - `adjacency_easy`
 - `skip_local`
@@ -73,4 +64,44 @@ Bucket 2 reports answer metrics by:
 - `float_table`
 - `question_type`
 
-Treat `float_table` as a coarse subset label, not a perfectly precise category.
+Treat `float_table` as a coarse label rather than a perfectly precise category.
+
+## Answerer And Fallback Behavior
+
+The repo no longer needs to be described as a deterministic-fallback-only project state. The active runner supports:
+
+- `auto`
+- `deterministic_extractive`
+- `local_qa`
+
+In practice, the answer layer is still deliberately fixed per comparison. When a usable offline QA model is available in the active environment, `local_qa` can be used; otherwise the runner falls back to deterministic extraction from the retrieved context. That fallback behavior is historical context for why answer evaluation stayed conservative, not the defining story of the final repo.
+
+## Why Answer Eval Stayed Secondary
+
+Answer evaluation remained secondary throughout the final project state because:
+
+- retrieval metrics map more directly to the long-document evidence-recovery problem
+- retrieval failures are easier to interpret than answer-generation failures
+- answer quality still depends on a comparatively weak local answer layer
+- empty or brittle answer behavior can obscure real retrieval differences
+
+The final selected model therefore remains `flat_hybrid_current` based on retrieval-first evidence from validation and held-out test, with answer evaluation acting as supporting confirmation rather than the selection rule.
+
+## Outputs And Locations
+
+Current answer-eval outputs live in:
+
+- `artifacts/current/bucket2_answer_eval/` for canonical saved reports
+- `artifacts/support/cache/bucket2_answer_eval/` for resumable per-method caches
+
+The runner writes:
+
+- a main JSON payload
+- a Markdown summary
+- a per-question CSV
+- a run manifest
+- resumable cache records under the selected cache tag
+
+## Final Interpretation
+
+Use answer evaluation to answer a narrow question: given a locked retrieval comparison and one fixed answerer, do answer-level metrics broadly support the same conclusion? In this repo, they did not overturn the retrieval-first story, so answer evaluation remains an informative secondary layer rather than the project's main decision surface.

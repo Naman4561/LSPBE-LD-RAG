@@ -7,8 +7,8 @@
     "seed": 20260420,
     "retrieval_questions": 1005,
     "answer_questions": 1005,
-    "retrieval_source": "data\\qasper_validation_full.json",
-    "answer_source": "data\\qasper_validation_full.json"
+    "retrieval_source": "data/\qasper_validation_full.json",
+    "answer_source": "data/\qasper_validation_full.json"
   },
   "metrics": {
     "evidence_hit_rate": {

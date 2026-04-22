@@ -168,6 +168,7 @@ def main() -> int:
             "overwrite": bool(args.overwrite),
         },
         counters=payload["run_progress"],
+        repo_root=ROOT,
     )
     write_json(outputs["manifest_json"], manifest)
     write_markdown(outputs["manifest_md"], _build_manifest_markdown(manifest))

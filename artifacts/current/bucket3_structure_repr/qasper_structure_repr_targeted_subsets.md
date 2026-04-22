@@ -1,6 +1,6 @@
 # QASPER Structure-Aware Targeted Subsets
 
-- dataset_path: `data\qasper_validation_full.json`
+- dataset_path: `data/qasper_validation_full.json`
 - segmentation_mode: `seg_paragraph_pair`
 - representation_modes: `current, structure_aware`
 - methods: `bridge_final`

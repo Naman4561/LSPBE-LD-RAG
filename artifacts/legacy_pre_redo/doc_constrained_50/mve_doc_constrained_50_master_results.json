@@ -1,8 +1,8 @@
-{
-  "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+﻿{
+  "subset_path": "data//qasper_subset_debug_50.json",
   "results": [
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=3|radius=1|top_m=2|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -16,7 +16,7 @@
       "evidence_hit_rate": 0.576530612244898
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=1|top_m=1|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -30,7 +30,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=1|top_m=2|context_budget=10",
       "method": "adjacency",
       "weights": "na",
@@ -44,7 +44,7 @@
       "evidence_hit_rate": 0.6377551020408163
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=1|top_m=2|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -58,7 +58,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=1|top_m=2|context_budget=30",
       "method": "adjacency",
       "weights": "na",
@@ -72,7 +72,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=1|top_m=3|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -86,7 +86,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=2|top_m=2|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -100,7 +100,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=5|radius=3|top_m=2|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -114,7 +114,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency|weights=na|k=8|radius=1|top_m=2|context_budget=20",
       "method": "adjacency",
       "weights": "na",
@@ -128,7 +128,7 @@
       "evidence_hit_rate": 0.7704081632653061
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=0.25,1.00,0.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "0.25,1.00,0.00",
@@ -142,7 +142,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=0.50,1.00,0.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "0.50,1.00,0.00",
@@ -156,7 +156,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=1.00,0.50,0.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "1.00,0.50,0.00",
@@ -170,7 +170,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=1.00,1.00,0.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "1.00,1.00,0.00",
@@ -184,7 +184,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=1.00,1.00,0.00|k=5|radius=2|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "1.00,1.00,0.00",
@@ -198,7 +198,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=1.00,1.00,0.00|k=5|radius=3|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "1.00,1.00,0.00",
@@ -212,7 +212,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_entity|weights=1.00,2.00,0.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_entity",
       "weights": "1.00,2.00,0.00",
@@ -226,7 +226,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=0.25,0.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "0.25,0.00,1.00",
@@ -240,7 +240,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=0.50,0.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "0.50,0.00,1.00",
@@ -254,7 +254,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=1.00,0.00,0.50|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "1.00,0.00,0.50",
@@ -268,7 +268,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=1.00,0.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "1.00,0.00,1.00",
@@ -282,7 +282,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=1.00,0.00,1.00|k=5|radius=2|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "1.00,0.00,1.00",
@@ -296,7 +296,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=1.00,0.00,1.00|k=5|radius=3|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "1.00,0.00,1.00",
@@ -310,7 +310,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_adj_section|weights=1.00,0.00,2.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_adj_section",
       "weights": "1.00,0.00,2.00",
@@ -324,7 +324,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=0.25,1.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "0.25,1.00,1.00",
@@ -338,7 +338,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=0.50,1.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "0.50,1.00,1.00",
@@ -352,7 +352,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=0.50,1.00,2.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "0.50,1.00,2.00",
@@ -366,7 +366,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=0.50,2.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "0.50,2.00,1.00",
@@ -380,7 +380,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=0.50,2.00,2.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "0.50,2.00,2.00",
@@ -394,7 +394,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,0.50,0.50|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,0.50,0.50",
@@ -408,7 +408,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=3|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -422,7 +422,7 @@
       "evidence_hit_rate": 0.576530612244898
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=1|top_m=1|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -436,7 +436,7 @@
       "evidence_hit_rate": 0.6683673469387755
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=1|top_m=2|context_budget=10",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -450,7 +450,7 @@
       "evidence_hit_rate": 0.673469387755102
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -464,7 +464,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=1|top_m=2|context_budget=30",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -478,7 +478,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=1|top_m=3|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -492,7 +492,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=2|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -506,7 +506,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=5|radius=3|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -520,7 +520,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,1.00|k=8|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,1.00",
@@ -534,7 +534,7 @@
       "evidence_hit_rate": 0.7704081632653061
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,1.00,2.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,1.00,2.00",
@@ -548,7 +548,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,2.00,1.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,2.00,1.00",
@@ -562,7 +562,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_full|weights=1.00,2.00,2.00|k=5|radius=1|top_m=2|context_budget=20",
       "method": "bridge_full",
       "weights": "1.00,2.00,2.00",
@@ -576,7 +576,7 @@
       "evidence_hit_rate": 0.6938775510204082
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "flat|weights=na|k=3|radius=1|top_m=2|context_budget=20",
       "method": "flat",
       "weights": "na",
@@ -590,7 +590,7 @@
       "evidence_hit_rate": 0.46938775510204084
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "flat|weights=na|k=5|radius=1|top_m=2|context_budget=10",
       "method": "flat",
       "weights": "na",
@@ -604,7 +604,7 @@
       "evidence_hit_rate": 0.5918367346938775
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "flat|weights=na|k=5|radius=1|top_m=2|context_budget=20",
       "method": "flat",
       "weights": "na",
@@ -618,7 +618,7 @@
       "evidence_hit_rate": 0.5918367346938775
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "flat|weights=na|k=5|radius=1|top_m=2|context_budget=30",
       "method": "flat",
       "weights": "na",
@@ -632,7 +632,7 @@
       "evidence_hit_rate": 0.5918367346938775
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "flat|weights=na|k=8|radius=1|top_m=2|context_budget=20",
       "method": "flat",
       "weights": "na",

@@ -5,6 +5,20 @@ import json
 import os
 from pathlib import Path
 
+
+def _portable_path(path: str | Path) -> str:
+    candidate = Path(path)
+    resolved = candidate.resolve(strict=False)
+    try:
+        return resolved.relative_to(ROOT).as_posix()
+    except ValueError:
+        pass
+    try:
+        return f"~/{resolved.relative_to(Path.home().resolve()).as_posix()}"
+    except ValueError:
+        return resolved.as_posix()
+
+
 def _repo_root() -> Path:
     for parent in Path(__file__).resolve().parents:
         if (parent / "pyproject.toml").exists() and (parent / "src").exists():
@@ -60,7 +74,7 @@ def main() -> int:
         from transformers import AutoConfig, AutoTokenizer
     except Exception as exc:
         payload = {
-            "cache_roots": [str(path) for path in candidate_cache_roots()],
+            "cache_roots": [_portable_path(path) for path in candidate_cache_roots()],
             "transformers_available": False,
             "error": f"{type(exc).__name__}: {exc}",
             "models": [],
@@ -110,8 +124,8 @@ def main() -> int:
             models.append(
                 {
                     "repo_name": repo_name,
-                    "cache_root": str(root),
-                    "snapshot_dir": str(snapshot_dir),
+                    "cache_root": _portable_path(root),
+                    "snapshot_dir": _portable_path(snapshot_dir),
                     "classification": classify_model(repo_name, snapshot_dir, config_payload),
                     "offline_load": {
                         "config": config_status,
@@ -125,7 +139,7 @@ def main() -> int:
             )
 
     summary = {
-        "cache_roots": [str(path) for path in candidate_cache_roots()],
+        "cache_roots": [_portable_path(path) for path in candidate_cache_roots()],
         "transformers_available": True,
         "models_found": len(models),
         "class_counts": {
@@ -166,7 +180,7 @@ def main() -> int:
 
     (ARTIFACT_DIR / "local_model_audit.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     (ARTIFACT_DIR / "local_model_audit.md").write_text("\n".join(markdown_lines), encoding="utf-8")
-    print(json.dumps({"json": str(ARTIFACT_DIR / "local_model_audit.json"), "md": str(ARTIFACT_DIR / "local_model_audit.md")}, indent=2))
+    print(json.dumps({"json": _portable_path(ARTIFACT_DIR / "local_model_audit.json"), "md": _portable_path(ARTIFACT_DIR / "local_model_audit.md")}, indent=2))
     return 0
 
 

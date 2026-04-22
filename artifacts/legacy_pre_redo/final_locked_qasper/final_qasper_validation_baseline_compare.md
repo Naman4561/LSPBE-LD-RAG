@@ -1,6 +1,6 @@
 # QASPER Baseline Comparison
 
-- subset_path: `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_validation_full.json`
+- subset_path: `data/qasper_validation_full.json`
 - segmentation_mode: `seg_paragraph_pair`
 
 ## Results

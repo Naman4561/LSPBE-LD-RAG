@@ -11,6 +11,20 @@ import sys
 from importlib import metadata
 from pathlib import Path
 
+
+def _portable_path(path: str | Path) -> str:
+    candidate = Path(path)
+    resolved = candidate.resolve(strict=False)
+    try:
+        return resolved.relative_to(ROOT).as_posix()
+    except ValueError:
+        pass
+    try:
+        return f"~/{resolved.relative_to(Path.home().resolve()).as_posix()}"
+    except ValueError:
+        return resolved.as_posix()
+
+
 def _repo_root() -> Path:
     for parent in Path(__file__).resolve().parents:
         if (parent / "pyproject.toml").exists() and (parent / "src").exists():
@@ -133,9 +147,9 @@ def main() -> int:
         notes.append("The environment is not fully healthy for long runs. Inspect the failing checks before starting a heavy job.")
 
     payload = {
-        "repo_root": str(ROOT),
+        "repo_root": ".",
         "python": {
-            "executable": sys.executable,
+            "executable": _portable_path(sys.executable),
             "version": sys.version,
             "version_info": list(sys.version_info[:3]),
             "requires_python": python_requirement,
@@ -160,8 +174,8 @@ def main() -> int:
             "HF_HUB_OFFLINE": os.environ.get("HF_HUB_OFFLINE"),
             "TRANSFORMERS_OFFLINE": os.environ.get("TRANSFORMERS_OFFLINE"),
         },
-        "key_dataset_files": {name: {"path": str(path), "exists": path.exists()} for name, path in key_dataset_files.items()},
-        "active_artifact_dirs": {name: {"path": str(path), "exists": path.exists()} for name, path in active_artifact_dirs.items()},
+        "key_dataset_files": {name: {"path": _portable_path(path), "exists": path.exists()} for name, path in key_dataset_files.items()},
+        "active_artifact_dirs": {name: {"path": _portable_path(path), "exists": path.exists()} for name, path in active_artifact_dirs.items()},
         "disk_space": {
             "total_bytes": disk_root.total,
             "used_bytes": disk_root.used,
@@ -215,7 +229,7 @@ def main() -> int:
     )
 
     write_outputs(payload, markdown)
-    print(json.dumps({"json": str(ARTIFACT_DIR / "env_preflight_report.json"), "md": str(ARTIFACT_DIR / "env_preflight_report.md")}, indent=2))
+    print(json.dumps({"json": _portable_path(ARTIFACT_DIR / "env_preflight_report.json"), "md": _portable_path(ARTIFACT_DIR / "env_preflight_report.md")}, indent=2))
     return 0
 
 

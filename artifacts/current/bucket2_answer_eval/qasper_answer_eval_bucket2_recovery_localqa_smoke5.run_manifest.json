@@ -6,11 +6,11 @@
   "status": "completed",
   "resumed": true,
   "output_paths": {
-    "json": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.json",
-    "markdown": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.md",
-    "csv": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5_per_question.csv",
-    "manifest_json": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.json",
-    "manifest_md": "artifacts\\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.md"
+    "json": "artifacts/\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.json",
+    "markdown": "artifacts/\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.md",
+    "csv": "artifacts/\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5_per_question.csv",
+    "manifest_json": "artifacts/\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.json",
+    "manifest_md": "artifacts/\current\\bucket2_answer_eval\\qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.md"
   },
   "config": {
     "dataset_path": "data/qasper_train_fast50.json",
@@ -29,7 +29,7 @@
     "max_papers": 1000000,
     "start_index": 0,
     "chunk_size": 5,
-    "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+    "cache_dir": "artifacts/current/bucket2_answer_eval/cache",
     "cache_tag": "bucket2_recovery_localqa_smoke5",
     "save_every": 1,
     "overwrite": false
@@ -40,7 +40,7 @@
       "completed_questions": 5,
       "computed_this_run": 0,
       "skipped_existing": 5,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5\\adjacency",
+      "cache_dir": "artifacts/current/bucket2_answer_eval/cache/bucket2_recovery_localqa_smoke5/adjacency",
       "legacy_cache_path": null
     },
     "bridge_final": {
@@ -48,7 +48,7 @@
       "completed_questions": 5,
       "computed_this_run": 0,
       "skipped_existing": 5,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5\\bridge_final",
+      "cache_dir": "artifacts/current/bucket2_answer_eval/cache/bucket2_recovery_localqa_smoke5/bridge_final",
       "legacy_cache_path": null
     }
   }

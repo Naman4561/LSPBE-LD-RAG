@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -52,6 +53,60 @@ def duration_seconds(started_at: str, ended_at: str) -> float:
     started = datetime.fromisoformat(started_at.replace("Z", "+00:00"))
     ended = datetime.fromisoformat(ended_at.replace("Z", "+00:00"))
     return max((ended - started).total_seconds(), 0.0)
+
+
+_WINDOWS_DRIVE_RE = re.compile(r"^[A-Za-z]:[\\/]")
+
+
+def portable_path_text(path: str | Path, repo_root: str | Path | None = None) -> str:
+    raw = str(path)
+    normalized = raw.replace("\\", "/")
+    candidate = Path(raw)
+    repo = Path(repo_root).resolve() if repo_root is not None else None
+    home = Path.home().resolve()
+
+    if candidate.is_absolute():
+        resolved = candidate.resolve(strict=False)
+        if repo is not None:
+            try:
+                return resolved.relative_to(repo).as_posix()
+            except ValueError:
+                pass
+        try:
+            relative_home = resolved.relative_to(home)
+        except ValueError:
+            return resolved.as_posix()
+        return f"~/{relative_home.as_posix()}"
+
+    if repo is not None and not _WINDOWS_DRIVE_RE.match(raw):
+        try:
+            resolved = (repo / candidate).resolve(strict=False)
+            return resolved.relative_to(repo).as_posix()
+        except ValueError:
+            return normalized
+
+    return normalized
+
+
+def sanitize_portable_value(value: Any, repo_root: str | Path | None = None) -> Any:
+    if isinstance(value, Path):
+        return portable_path_text(value, repo_root=repo_root)
+    if isinstance(value, dict):
+        return {key: sanitize_portable_value(item, repo_root=repo_root) for key, item in value.items()}
+    if isinstance(value, list):
+        return [sanitize_portable_value(item, repo_root=repo_root) for item in value]
+    if isinstance(value, tuple):
+        return [sanitize_portable_value(item, repo_root=repo_root) for item in value]
+    if isinstance(value, str):
+        looks_path_like = (
+            "/" in value
+            or "\\" in value
+            or value.startswith(".")
+            or value.startswith("~")
+            or bool(_WINDOWS_DRIVE_RE.match(value))
+        )
+        return portable_path_text(value, repo_root=repo_root) if looks_path_like else value
+    return value
 
 
 def reset_directory_contents(path: str | Path) -> None:
@@ -139,6 +194,7 @@ def build_run_manifest(
     output_paths: dict[str, str | None],
     config: dict[str, Any],
     counters: dict[str, Any],
+    repo_root: str | Path | None = None,
 ) -> dict[str, Any]:
     return {
         "script_name": script_name,
@@ -147,7 +203,7 @@ def build_run_manifest(
         "duration_seconds": duration_seconds(started_at, ended_at),
         "status": status,
         "resumed": resumed,
-        "output_paths": output_paths,
-        "config": config,
-        "counters": counters,
+        "output_paths": sanitize_portable_value(output_paths, repo_root=repo_root),
+        "config": sanitize_portable_value(config, repo_root=repo_root),
+        "counters": sanitize_portable_value(counters, repo_root=repo_root),
     }

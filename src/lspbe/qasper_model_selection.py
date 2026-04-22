@@ -27,7 +27,7 @@ from .qasper_answer_eval import (
 from .qasper_eval import build_rank_cache, load_qasper_eval_context
 from .qasper_protocol import LOCKED_SEGMENTATION_MODE
 from .retrieval import BGERetriever
-from .run_control import IndexedJsonlStore, atomic_write_json, atomic_write_text, utc_now_iso
+from .run_control import IndexedJsonlStore, atomic_write_json, atomic_write_text, portable_path_text, utc_now_iso
 from .structure_repr import collapse_retrieved_to_backbone
 from .subsets import evidence_coverage, evidence_hit, summarize_first_evidence_ranks
 from .types import DocumentSegment, RetrievedSegment
@@ -43,6 +43,16 @@ DEFAULT_SAVE_EVERY = 25
 DEFAULT_BOOTSTRAP_SAMPLES = 2000
 QUESTION_TYPES = ("boolean", "what", "how", "which", "other")
 TARGET_SUBSETS = ("skip_local", "multi_span", "float_table")
+
+
+def _repo_root() -> Path:
+    for parent in Path(__file__).resolve().parents:
+        if (parent / "pyproject.toml").exists() and (parent / "src").exists():
+            return parent
+    return Path(__file__).resolve().parents[-1]
+
+
+_REPO_ROOT = _repo_root()
 
 
 def _format_elapsed(seconds: float) -> str:
@@ -577,7 +587,7 @@ def prepare_bucket4_bundle(
         query_vectors_by_index[name] = query_vectors
 
     return {
-        "dataset_path": str(dataset_path),
+        "dataset_path": portable_path_text(dataset_path, repo_root=_REPO_ROOT),
         "questions": questions,
         "contexts": contexts,
         "rank_cache_by_index": rank_cache_by_index,
@@ -873,7 +883,7 @@ def _cache_records_for_stage(
             "schema_version": 1,
             "kind": "bucket4_retrieval_cache",
             "stage": stage_name,
-            "dataset_path": bundle["dataset_path"],
+            "dataset_path": portable_path_text(bundle["dataset_path"], repo_root=_REPO_ROOT),
             "method": method_spec.name,
             "index": method_spec.index_name,
             "config": method_spec.config.as_dict(),
@@ -927,7 +937,7 @@ def _cache_records_for_stage(
         "completed_questions": len(records),
         "computed_this_run": tracker.computed_this_run,
         "skipped_existing": tracker.skipped_existing,
-        "cache_dir": str(method_cache_dir),
+        "cache_dir": portable_path_text(method_cache_dir, repo_root=_REPO_ROOT),
     }
     return records, progress
 
@@ -1053,7 +1063,7 @@ def run_answer_eval_stage(
             {
                 "schema_version": 1,
                 "kind": "bucket4_answer_eval_cache",
-                "dataset_path": bundle["dataset_path"],
+                "dataset_path": portable_path_text(bundle["dataset_path"], repo_root=_REPO_ROOT),
                 "method": method_spec.name,
                 "answerer": {
                     "kind": answerer.kind,
@@ -1136,12 +1146,12 @@ def run_answer_eval_stage(
             "completed_questions": len(records),
             "computed_this_run": tracker.computed_this_run,
             "skipped_existing": tracker.skipped_existing,
-            "cache_dir": str(method_cache_dir),
+            "cache_dir": portable_path_text(method_cache_dir, repo_root=_REPO_ROOT),
         }
 
     payload = {
         "metadata": {
-            "dataset_path": bundle["dataset_path"],
+            "dataset_path": portable_path_text(bundle["dataset_path"], repo_root=_REPO_ROOT),
             "split": split_name,
             "questions": len(questions),
             "answerer": {

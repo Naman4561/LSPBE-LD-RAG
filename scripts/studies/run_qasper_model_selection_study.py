@@ -277,6 +277,7 @@ def main() -> int:
             "validation_questions": validation_payload["metadata"]["questions"],
             "answer_eval_questions": answer_payload["metadata"]["questions"],
         },
+        repo_root=ROOT,
     )
     write_json(manifest_json, manifest)
     write_markdown(manifest_md, _build_manifest_markdown(manifest))

@@ -1,7 +1,7 @@
 # QASPER Model Selection Validation
 
 - stage: `full validation retrieval`
-- dataset_path: `data\qasper_validation_full.json`
+- dataset_path: `data/qasper_validation_full.json`
 - questions: `1005`
 - papers: `281`
 - main_representation: `current`

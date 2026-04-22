@@ -1,4 +1,4 @@
-{
+﻿{
   "script_name": "run_qasper_answer_eval.py",
   "started_at": "2026-04-20T04:42:55Z",
   "ended_at": "2026-04-20T04:43:21Z",
@@ -6,11 +6,11 @@
   "status": "completed",
   "resumed": true,
   "output_paths": {
-    "json": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.json",
-    "markdown": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.md",
-    "csv": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5_per_question.csv",
-    "manifest_json": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.run_manifest.json",
-    "manifest_md": "artifacts\\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.run_manifest.md"
+    "json": "artifacts/\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.json",
+    "markdown": "artifacts/\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.md",
+    "csv": "artifacts/\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5_per_question.csv",
+    "manifest_json": "artifacts/\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.run_manifest.json",
+    "manifest_md": "artifacts/\current\\environment\\qasper_answer_eval_buckete_resume_smoke_train5.run_manifest.md"
   },
   "config": {
     "dataset_path": "data/qasper_train_fast50.json",
@@ -24,7 +24,7 @@
     "max_papers": 1000000,
     "start_index": 0,
     "chunk_size": 5,
-    "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+    "cache_dir": "artifacts//current//bucket2_answer_eval//cache",
     "cache_tag": "buckete_resume_smoke_train5",
     "save_every": 1,
     "overwrite": false
@@ -35,7 +35,7 @@
       "completed_questions": 5,
       "computed_this_run": 0,
       "skipped_existing": 5,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_smoke_train5\\adjacency",
+      "cache_dir": "artifacts//current//bucket2_answer_eval//cache//buckete_resume_smoke_train5//adjacency",
       "legacy_cache_path": null
     },
     "bridge_final": {
@@ -43,7 +43,7 @@
       "completed_questions": 5,
       "computed_this_run": 0,
       "skipped_existing": 5,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\buckete_resume_smoke_train5\\bridge_final",
+      "cache_dir": "artifacts//current//bucket2_answer_eval//cache//buckete_resume_smoke_train5//bridge_final",
       "legacy_cache_path": null
     }
   }

@@ -33,10 +33,12 @@ The root `scripts/*.py` files are compatibility wrappers. Use the categorized su
 
 - `scripts/diagnostics/run_env_preflight.py`
 - `scripts/diagnostics/run_qasper_diagnostics.py`
+- `scripts/diagnostics/audit_hardcoded_paths.py`
 
 ## Utility Scripts
 
 - `scripts/utilities/convert_qasper_hf_to_subset.py`
+- `scripts/utilities/sanitize_artifact_paths.py`
 
 ## Legacy Scripts
 

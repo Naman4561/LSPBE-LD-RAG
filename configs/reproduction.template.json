@@ -1,0 +1,22 @@
+{
+  "python_command": "python",
+  "preflight_command": "python scripts/diagnostics/run_env_preflight.py",
+  "model_audit_command": "python scripts/final/audit_local_models.py",
+  "dataset_paths": {
+    "train_fast50": "data/qasper_train_fast50.json",
+    "validation": "data/qasper_validation_full.json",
+    "test": "data/qasper_test_full.json"
+  },
+  "output_dirs": {
+    "bucket2_answer_eval": "artifacts/current/bucket2_answer_eval",
+    "bucket4_model_selection": "artifacts/current/bucket4_model_selection",
+    "bucket4_5_bridge_repair": "artifacts/current/bucket4_5_bridge_repair",
+    "bucket5_final": "artifacts/current/bucket5_final"
+  },
+  "cache_dirs": {
+    "bucket2_answer_eval": "artifacts/support/cache/bucket2_answer_eval",
+    "bucket4_model_selection": "artifacts/support/cache/bucket4_model_selection",
+    "bucket4_5_bridge_repair": "artifacts/support/cache/bucket4_5_bridge_repair",
+    "bucket5_final": "artifacts/support/cache/bucket5_final"
+  }
+}

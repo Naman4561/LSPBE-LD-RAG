@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "baseline_validation_source": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_model_selection\\qasper_model_selection_validation.json",
-    "stage1_validation_source": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage1_validation.json",
-    "stage2_validation_source": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage2_validation.json",
+    "baseline_validation_source": "artifacts/current/bucket4_model_selection/qasper_model_selection_validation.json",
+    "stage1_validation_source": "artifacts/current/bucket4_5_bridge_repair/qasper_bridge_repair_stage1_validation.json",
+    "stage2_validation_source": "artifacts/current/bucket4_5_bridge_repair/qasper_bridge_repair_stage2_validation.json",
     "representation_mode": "current",
     "segmentation_mode": "seg_paragraph_pair"
   },

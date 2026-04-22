@@ -6,17 +6,17 @@
   "status": "completed",
   "resumed": false,
   "output_paths": {
-    "smoke_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_validation_smoke.json",
-    "smoke_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_validation_smoke.md",
-    "targeted_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_targeted_subsets.json",
-    "targeted_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_targeted_subsets.md",
-    "validation_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_validation.json",
-    "validation_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_validation.md",
-    "validation_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\qasper_structure_repr_validation_per_question.csv",
-    "summary_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket3_structure_repr\\bucket3_structure_repr_summary.md"
+    "smoke_json": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation_smoke.json",
+    "smoke_md": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation_smoke.md",
+    "targeted_json": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_targeted_subsets.json",
+    "targeted_md": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_targeted_subsets.md",
+    "validation_json": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation.json",
+    "validation_md": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation.md",
+    "validation_csv": "artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation_per_question.csv",
+    "summary_md": "artifacts/current/bucket3_structure_repr/bucket3_structure_repr_summary.md"
   },
   "config": {
-    "dataset_path": "data\\qasper_validation_full.json",
+    "dataset_path": "data/\qasper_validation_full.json",
     "split": "validation",
     "methods": [
       "bridge_final"

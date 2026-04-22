@@ -379,6 +379,7 @@ def main() -> int:
             "answer_eval_questions": answer_payload["metadata"]["questions"],
             "audit_examples": len(audit_rows),
         },
+        repo_root=ROOT,
     )
     write_json(manifest_json, manifest)
     write_markdown(manifest_md, _manifest_markdown(manifest))

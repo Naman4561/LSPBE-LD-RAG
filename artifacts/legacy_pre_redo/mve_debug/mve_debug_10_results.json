@@ -1,5 +1,5 @@
 {
-  "subset_path": "data\\qasper_subset_debug_10.json",
+  "subset_path": "data/\qasper_subset_debug_10.json",
   "embedder": "bge",
   "max_papers": 10,
   "max_qas": 1000,

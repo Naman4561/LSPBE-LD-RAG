@@ -14,6 +14,7 @@ from .qasper_model_selection import (
     build_retrieval_markdown,
 )
 from .qasper_protocol import LOCKED_SEGMENTATION_MODE
+from .run_control import portable_path_text
 
 TARGET_REPAIR_METHODS = (
     "flat_hybrid_current",
@@ -117,6 +118,8 @@ def method_specs_for_stage(
 
 def load_bucket4_baseline_validation(path: str | Path) -> dict[str, object]:
     payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    path_obj = Path(path)
+    repo_root = next((parent for parent in path_obj.resolve(strict=False).parents if (parent / "pyproject.toml").exists()), None)
     methods = {
         row["method"]: row
         for row in payload.get("methods", [])
@@ -126,7 +129,7 @@ def load_bucket4_baseline_validation(path: str | Path) -> dict[str, object]:
     if missing:
         raise ValueError(f"Missing Bucket 4 baseline methods in {path}: {sorted(missing)}")
     return {
-        "source_path": str(path),
+        "source_path": portable_path_text(path_obj, repo_root=repo_root),
         "metadata": payload.get("metadata", {}),
         "methods": methods,
     }

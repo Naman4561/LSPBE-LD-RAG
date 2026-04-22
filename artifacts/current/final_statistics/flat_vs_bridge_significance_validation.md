@@ -3,8 +3,8 @@
 - split: `validation`
 - compared_methods: `flat_hybrid_current` vs `bridge_final_current`
 - bootstrap_samples: `2000`
-- retrieval_source: `data\qasper_validation_full.json`
-- answer_source: `data\qasper_validation_full.json`
+- retrieval_source: `data/qasper_validation_full.json`
+- answer_source: `data/qasper_validation_full.json`
 
 ## Metric Deltas
 

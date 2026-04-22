@@ -5,7 +5,7 @@
   "cache_tag": "buckete_resume_proof_train5",
   "step1": {
     "description": "Initial chunked run over the first 2 questions.",
-    "manifest_path": "artifacts\\current\\environment\\resume_step1.run_manifest.json",
+    "manifest_path": "artifacts/\current\\environment\\resume_step1.run_manifest.json",
     "computed_this_run": {
       "adjacency": 2,
       "bridge_final": 2
@@ -21,7 +21,7 @@
   },
   "step2": {
     "description": "Resume run expanded the target slice to 5 questions using the same cache tag.",
-    "manifest_path": "artifacts\\current\\environment\\resume_step2.run_manifest.json",
+    "manifest_path": "artifacts/\current\\environment\\resume_step2.run_manifest.json",
     "computed_this_run": {
       "adjacency": 3,
       "bridge_final": 3

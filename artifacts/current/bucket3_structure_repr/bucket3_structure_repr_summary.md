@@ -8,9 +8,9 @@
 
 ## Retrieval Outcome
 
-- smoke retrieval artifact: [qasper_structure_repr_validation_smoke.md](C:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation_smoke.md)
-- targeted subset artifact: [qasper_structure_repr_targeted_subsets.md](C:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket3_structure_repr/qasper_structure_repr_targeted_subsets.md)
-- full validation artifact: [qasper_structure_repr_validation.md](C:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation.md)
+- smoke retrieval artifact: [qasper_structure_repr_validation_smoke.md](artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation_smoke.md)
+- targeted subset artifact: [qasper_structure_repr_targeted_subsets.md](artifacts/current/bucket3_structure_repr/qasper_structure_repr_targeted_subsets.md)
+- full validation artifact: [qasper_structure_repr_validation.md](artifacts/current/bucket3_structure_repr/qasper_structure_repr_validation.md)
 - `bridge_final` current -> structure_aware: seed-hit `-0.0040`, evidence-hit `-0.0030`, coverage `+0.0001`, first-rank `-0.0216`
 - strongest subset deltas under `bridge_final`:
 - `skip_local`: evidence-hit `+0.0000`, coverage `+0.0079`

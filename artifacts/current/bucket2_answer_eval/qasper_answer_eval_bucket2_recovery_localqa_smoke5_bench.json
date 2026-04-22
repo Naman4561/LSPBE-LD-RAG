@@ -31,7 +31,7 @@
       "other": 0
     },
     "cache_layout": {
-      "root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache",
+      "root": "artifacts/current/bucket2_answer_eval/cache",
       "run_name": "bucket2_recovery_localqa_smoke5_bench",
       "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}"
     }
@@ -862,7 +862,7 @@
       "completed_questions": 5,
       "computed_this_run": 5,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5_bench\\adjacency",
+      "cache_dir": "artifacts/current/bucket2_answer_eval/cache/bucket2_recovery_localqa_smoke5_bench/adjacency",
       "legacy_cache_path": null
     },
     "bridge_final": {
@@ -870,7 +870,7 @@
       "completed_questions": 5,
       "computed_this_run": 5,
       "skipped_existing": 0,
-      "cache_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket2_answer_eval\\cache\\bucket2_recovery_localqa_smoke5_bench\\bridge_final",
+      "cache_dir": "artifacts/current/bucket2_answer_eval/cache/bucket2_recovery_localqa_smoke5_bench/bridge_final",
       "legacy_cache_path": null
     }
   }

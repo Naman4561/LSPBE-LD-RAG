@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "dataset_path": "data\\qasper_validation_full.json",
+    "dataset_path": "data/\qasper_validation_full.json",
     "segmentation_mode": "seg_paragraph_pair",
     "representation_modes": [
       "current",
@@ -14,7 +14,7 @@
   "payloads_by_representation": {
     "current": {
       "metadata": {
-        "dataset_path": "data\\qasper_validation_full.json",
+        "dataset_path": "data/\qasper_validation_full.json",
         "segmentation_mode": "seg_paragraph_pair",
         "representation_mode": "current",
         "questions": 1005,
@@ -28316,7 +28316,7 @@
     },
     "structure_aware": {
       "metadata": {
-        "dataset_path": "data\\qasper_validation_full.json",
+        "dataset_path": "data/\qasper_validation_full.json",
         "segmentation_mode": "seg_paragraph_pair",
         "representation_mode": "structure_aware",
         "questions": 1005,

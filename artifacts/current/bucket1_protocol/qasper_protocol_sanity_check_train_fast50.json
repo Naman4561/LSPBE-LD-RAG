@@ -1,6 +1,6 @@
 {
   "split": "train_fast50",
-  "path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_train_fast50.json",
+  "path": "data/qasper_train_fast50.json",
   "segmentation_mode": "seg_paragraph_pair",
   "results": [
     {

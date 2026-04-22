@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 artifacts/support/cache/
 artifacts/support/logs/
+artifacts/current/bucket4_model_selection/qasper_model_selection_validation.json

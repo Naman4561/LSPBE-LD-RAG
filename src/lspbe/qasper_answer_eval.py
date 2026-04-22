@@ -13,7 +13,7 @@ from typing import Any
 from .qasper import QasperMethodConfig, apply_qasper_method
 from .qasper_eval import build_rank_cache, load_qasper_eval_context
 from .qasper_protocol import LOCKED_SEGMENTATION_MODE
-from .run_control import IndexedJsonlStore, atomic_write_json, atomic_write_text, build_run_manifest, utc_now_iso
+from .run_control import IndexedJsonlStore, atomic_write_json, atomic_write_text, build_run_manifest, portable_path_text, utc_now_iso
 from .subsets import build_subset_label, evidence_hit
 
 _ARTICLE_RE = re.compile(r"\b(a|an|the)\b")
@@ -36,6 +36,16 @@ _ANSWER_PATTERNS = [
     re.compile(r"\b(?:is|are|was|were|refers to|defined as|called)\s+(.+)$", re.IGNORECASE),
     re.compile(r"\b(?:uses|use|used|achieves|achieved|shows|showed|show|reports|reported|contains|contained)\s+(.+)$", re.IGNORECASE),
 ]
+
+
+def _repo_root() -> Path:
+    for parent in Path(__file__).resolve().parents:
+        if (parent / "pyproject.toml").exists() and (parent / "src").exists():
+            return parent
+    return Path(__file__).resolve().parents[-1]
+
+
+_REPO_ROOT = _repo_root()
 
 
 @dataclass(frozen=True)
@@ -756,7 +766,7 @@ def build_answer_eval_inputs(
 
     metadata = {
         "split": split_name,
-        "dataset_path": str(dataset_path),
+        "dataset_path": portable_path_text(dataset_path, repo_root=_REPO_ROOT),
         "segmentation_mode": segmentation_mode,
         "total_questions_available": total_questions,
         "questions": len(selected_contexts),
@@ -951,7 +961,7 @@ def load_or_build_retrieval_cache(
                 json.dumps(
                     {
                         "split": split_name,
-                        "dataset_path": str(dataset_path),
+                        "dataset_path": portable_path_text(dataset_path, repo_root=_REPO_ROOT),
                         "segmentation_mode": segmentation_mode,
                         "max_qas": max_qas,
                         "method": config.name,
@@ -964,7 +974,7 @@ def load_or_build_retrieval_cache(
 
     metadata = {
         "split": split_name,
-        "dataset_path": str(dataset_path),
+        "dataset_path": portable_path_text(dataset_path, repo_root=_REPO_ROOT),
         "segmentation_mode": segmentation_mode,
         "questions": len(contexts),
         "methods": [config.name for config in methods],
@@ -1123,7 +1133,7 @@ def run_answer_eval_resumable(
                     "schema_version": 1,
                     "kind": "qasper_answer_eval_cache",
                     "split": split_name,
-                    "dataset_path": str(dataset_path),
+                    "dataset_path": portable_path_text(dataset_path, repo_root=_REPO_ROOT),
                     "segmentation_mode": segmentation_mode,
                     "max_qas_requested": max_qas,
                     "max_papers_requested": max_papers,
@@ -1201,15 +1211,15 @@ def run_answer_eval_resumable(
             "completed_questions": len(filtered_records),
             "computed_this_run": computed,
             "skipped_existing": skipped,
-            "cache_dir": str(cache_root) if cache_root is not None else None,
-            "legacy_cache_path": str(legacy_path) if legacy_path is not None and legacy_path.exists() else None,
+            "cache_dir": portable_path_text(cache_root, repo_root=_REPO_ROOT) if cache_root is not None else None,
+            "legacy_cache_path": portable_path_text(legacy_path, repo_root=_REPO_ROOT) if legacy_path is not None and legacy_path.exists() else None,
         }
 
     payload = build_answer_eval_payload_from_records(
         metadata={
             **prepared["metadata"],
             "cache_layout": {
-                "root": str(cache_dir) if cache_dir is not None else None,
+                "root": portable_path_text(cache_dir, repo_root=_REPO_ROOT) if cache_dir is not None else None,
                 "run_name": cache_run_name(cache_tag, dataset_path),
                 "format": "cache/<run_name>/<method>/{metadata.json,records.jsonl,state.json}",
             },

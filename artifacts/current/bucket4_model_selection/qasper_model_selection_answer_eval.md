@@ -1,7 +1,7 @@
 # QASPER Model Selection Answer Eval
 
 - split: `validation`
-- dataset_path: `data\qasper_validation_full.json`
+- dataset_path: `data/qasper_validation_full.json`
 - questions: `1005`
 - answerer: `local_qa`
 - answerer_note: Offline QA model 'distilbert-base-cased-distilled-squad' loaded successfully from the local Hugging Face cache.

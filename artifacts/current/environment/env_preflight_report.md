@@ -1,7 +1,7 @@
 # Environment Preflight
 
-- repo_root: `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG`
-- python_executable: `C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe`
+- repo_root: `.`
+- python_executable: `python`
 - python_version: `[3, 9, 5]`
 - requires_python: `>=3.10`
 - requires_python_satisfied: `False`
@@ -26,11 +26,11 @@
 
 ## Dataset Files
 
-- `train_fast50`: exists `True` at `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_train_fast50.json`
-- `validation`: exists `True` at `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_validation_full.json`
-- `test`: exists `True` at `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_test_full.json`
-- `train_dev`: exists `True` at `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_train_dev.json`
-- `train_lockbox`: exists `True` at `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\data\qasper_train_lockbox.json`
+- `train_fast50`: exists `True` at `data/qasper_train_fast50.json`
+- `validation`: exists `True` at `data/qasper_validation_full.json`
+- `test`: exists `True` at `data/qasper_test_full.json`
+- `train_dev`: exists `True` at `data/qasper_train_dev.json`
+- `train_lockbox`: exists `True` at `data/qasper_train_lockbox.json`
 
 ## Notes
 

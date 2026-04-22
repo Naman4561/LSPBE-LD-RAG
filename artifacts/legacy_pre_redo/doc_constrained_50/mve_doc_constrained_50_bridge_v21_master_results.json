@@ -1,8 +1,8 @@
-{
-  "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+﻿{
+  "subset_path": "data//qasper_subset_debug_50.json",
   "results": [
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "adjacency_baseline|method=adjacency|k=8|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "adjacency_baseline",
       "method": "adjacency",
@@ -28,7 +28,7 @@
       "evidence_hit_rate": 0.7704081632653061
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_v1_baseline|method=bridge_v1_full|k=8|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "bridge_v1_baseline",
       "method": "bridge_v1_full",
@@ -54,7 +54,7 @@
       "evidence_hit_rate": 0.7704081632653061
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "bridge_v2_baseline|method=bridge_v2_baseline|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "bridge_v2_baseline",
       "method": "bridge_v2_baseline",
@@ -80,7 +80,7 @@
       "evidence_hit_rate": 0.8112244897959183
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "continuity_query_weighted|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=query_weighted_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "continuity_query_weighted",
       "method": "bridge_v21",
@@ -106,7 +106,7 @@
       "evidence_hit_rate": 0.8112244897959183
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "diversify_only|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=1:0.15",
       "name": "diversify_only",
       "method": "bridge_v21",
@@ -132,7 +132,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "full_upgraded_pipeline|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=0.50|cont=idf_overlap|trigger=low_confidence:0.72|rerank=lightweight|diversify=1:0.15",
       "name": "full_upgraded_pipeline",
       "method": "bridge_v21",
@@ -158,7 +158,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "hybrid_equal|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=1.00|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "hybrid_equal",
       "method": "bridge_v21",
@@ -184,7 +184,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "hybrid_soft|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=0.50|cont=idf_overlap|trigger=always:0.72|rerank=none|diversify=0:0.15",
       "name": "hybrid_soft",
       "method": "bridge_v21",
@@ -210,7 +210,7 @@
       "evidence_hit_rate": 0.8214285714285714
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "rerank_only|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=lightweight|diversify=0:0.15",
       "name": "rerank_only",
       "method": "bridge_v21",
@@ -236,7 +236,7 @@
       "evidence_hit_rate": 0.8061224489795918
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "rerank_plus_diversify|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=always:0.72|rerank=lightweight|diversify=1:0.15",
       "name": "rerank_plus_diversify",
       "method": "bridge_v21",
@@ -262,7 +262,7 @@
       "evidence_hit_rate": 0.8112244897959183
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "tier1_combo|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=0.50|cont=idf_overlap|trigger=low_confidence:0.72|rerank=none|diversify=0:0.15",
       "name": "tier1_combo",
       "method": "bridge_v21",
@@ -288,7 +288,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "tier1_plus_diversify|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=0.50|cont=idf_overlap|trigger=low_confidence:0.72|rerank=none|diversify=1:0.15",
       "name": "tier1_plus_diversify",
       "method": "bridge_v21",
@@ -314,7 +314,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "tier1_plus_rerank|method=bridge_v21|k=10|context_budget=20|seed_mode=hybrid|dense_w=1.00|sparse_w=0.50|cont=idf_overlap|trigger=low_confidence:0.72|rerank=lightweight|diversify=0:0.15",
       "name": "tier1_plus_rerank",
       "method": "bridge_v21",
@@ -340,7 +340,7 @@
       "evidence_hit_rate": 0.8163265306122449
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "trigger_low_conf|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=low_confidence:0.72|rerank=none|diversify=0:0.15",
       "name": "trigger_low_conf",
       "method": "bridge_v21",
@@ -366,7 +366,7 @@
       "evidence_hit_rate": 0.8112244897959183
     },
     {
-      "subset_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\data\\qasper_subset_debug_50.json",
+      "subset_path": "data//qasper_subset_debug_50.json",
       "config_id": "trigger_small_gap|method=bridge_v21|k=10|context_budget=20|seed_mode=dense|dense_w=1.00|sparse_w=0.00|cont=idf_overlap|trigger=small_gap:0.05|rerank=none|diversify=0:0.15",
       "name": "trigger_small_gap",
       "method": "bridge_v21",
