@@ -1,4 +1,5 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-artifacts/current/bucket2_answer_eval/cache/
+artifacts/support/cache/
+artifacts/support/logs/

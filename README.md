@@ -1,156 +1,79 @@
-# LSPBE-LD-RAG
+﻿# LSPBE-LD-RAG
 
-Lightweight long-document retrieval for QASPER using local bridge expansion.
+Long-document evidence retrieval for QASPER, ending in a retrieval-first serious-redo workflow whose final selected method is `flat_hybrid_current`.
 
-The legacy repo history still preserves the earlier `bridge_final` path, but the serious QASPER redo now finishes with a different locked final reporting model:
+## Final State
 
-- paper-level train split redesign
-- method-independent hard subsets
-- retrieval-side headline metrics centered on evidence recovery and coverage
-- structure-aware representation study for captions, inline references, and float-linked evidence
-- explicit split roles for development, lockbox checks, validation, and final test reporting
+The repo's final selected path is locked:
+
+- final method: `flat_hybrid_current`
+- comparison baseline: `bridge_final_current`
+- representation: `current`
+- segmentation: `seg_paragraph_pair`
+- selection split: `validation`
+- final report split: `test`
+
+The important conclusion did not come from a single experiment. It came from a protocol reset plus a sequence of increasingly narrower studies:
+
+- Bucket 1 reset split roles and subset labeling.
+- Bucket 2 added an answer-eval layer but kept retrieval primary.
+- Bucket 3 checked structure-aware representation and did not overturn the mainline.
+- Bucket 4 selected `flat_hybrid_current` on validation.
+- Bucket 4.5 repaired bridge fairness and still did not overturn the Bucket 4 winner.
+- Bucket 5 confirmed the same winner on held-out test.
+- Bucket 6 cleaned the repo, archived clutter, and added a direct flat-vs-bridge paired-bootstrap addendum.
 
 ## Start Here
 
-Read these first for the serious redo path:
+Read these first if you want the final story instead of the full research trail:
 
-- [docs/eval_protocol.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/eval_protocol.md)
-- [docs/answer_eval_protocol.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/answer_eval_protocol.md)
-- [docs/retrieval_metrics.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/retrieval_metrics.md)
-- [docs/runtime_run_policy.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/runtime_run_policy.md)
-- [docs/subset_definitions.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/subset_definitions.md)
+- [docs/final_research_record.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/final_research_record.md)
+- [docs/final_repo_guide.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/final_repo_guide.md)
+- [docs/retrospective_analysis.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/retrospective_analysis.md)
+- [artifacts/current/final_project_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/final_project_summary.md)
+- [artifacts/current/final_statistics/flat_vs_bridge_significance_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/final_statistics/flat_vs_bridge_significance_summary.md)
 - [artifacts/ARTIFACTS_MAP.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/ARTIFACTS_MAP.md)
-- [bucket1_protocol_reset_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket1_protocol/bucket1_protocol_reset_summary.md)
 
-## Serious Redo Protocol
+## Canonical Repo Layout
 
-Use these split roles going forward:
+- `src/lspbe/`: library code for retrieval, protocol handling, studies, and reporting.
+- `scripts/final/`: canonical rerun and release-prep scripts.
+- `scripts/studies/`: important serious-redo studies that led to the final decision.
+- `scripts/diagnostics/`: environment and sanity helpers.
+- `scripts/utilities/`: format conversion and other support utilities.
+- `scripts/legacy/`: preserved pre-redo and superseded runners.
+- `artifacts/current/`: final serious-redo artifacts and release summaries.
+- `artifacts/support/`: caches and logs kept separate from headline artifacts.
+- `artifacts/archive_serious_redo/`: archived smoke or low-value serious-redo byproducts.
+- `artifacts/legacy_pre_redo/`: pre-redo historical artifacts.
+- `data/`: canonical current datasets and split manifests.
+- `data/archive_debug/`: debug-only archived datasets retained for provenance.
 
-- `train_fast50`: quick debugging only
-- `train_dev`: development and ablations
-- `train_lockbox`: occasional milestone checks only
-- `validation`: model selection
-- `test`: final reporting only
+Compatibility wrappers remain in `scripts/` so older commands still resolve, but the categorized subfolders are now the canonical script locations.
 
-The train split is now materialized at:
-
-- `data/qasper_train_dev.json`
-- `data/qasper_train_lockbox.json`
-- `data/qasper_train_fast50.json`
-
-The paper manifests live at:
-
-- `data/splits/train_dev_papers.json`
-- `data/splits/train_lockbox_papers.json`
-- `data/splits/train_fast50_papers.json`
-
-## Canonical Final Model
-
-Bucket 5 keeps the serious-redo final model locked as:
-
-- method `flat_hybrid_current`
-- representation `current`
-- segmentation `seg_paragraph_pair`
-- top-20 hybrid paragraph-pair seeds
-- no local expansion
-
-## Main Commands
-
-Build the split manifests, materialized train subsets, and cached subset labels:
+## Canonical Commands
 
 ```bash
-python scripts/build_qasper_protocol_assets.py
+C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/diagnostics/run_env_preflight.py
+C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/final/audit_local_models.py
+python scripts/final/build_qasper_protocol_assets.py
+python scripts/final/run_qasper_protocol_sanity_check.py --also-validation
+python scripts/studies/run_qasper_model_selection_study.py --dataset-path data/qasper_validation_full.json
+python scripts/studies/run_qasper_bridge_repair_study.py --validation-dataset-path data/qasper_validation_full.json --smoke-dataset-path data/qasper_train_fast50.json
+python scripts/final/run_qasper_final_reporting_bundle.py --dataset-path data/qasper_test_full.json
+python scripts/final/run_flat_vs_bridge_significance.py
 ```
 
-Run the canonical serious-redo sanity check on `train_fast50`:
+## Where To Look For Results
 
-```bash
-python scripts/run_qasper_protocol_sanity_check.py
-```
+- [artifacts/current/final_project_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/final_project_summary.md)
+- [artifacts/current/bucket5_final/bucket5_final_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/bucket5_final/bucket5_final_summary.md)
+- [artifacts/current/final_statistics/flat_vs_bridge_significance_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/current/final_statistics/flat_vs_bridge_significance_summary.md)
+- [docs/retrospective_analysis.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/retrospective_analysis.md)
 
-Optionally add validation to the sanity pass:
+## Legacy And Archived Material
 
-```bash
-python scripts/run_qasper_protocol_sanity_check.py --also-validation
-```
-
-Run the canonical Bucket 2 answer-eval layer on a validation-first split:
-
-```bash
-python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_validation_full.json --split validation --methods adjacency,bridge_final --json-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json --md-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md --csv-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv
-```
-
-Run the canonical Bucket 3 structure-aware representation study on validation:
-
-```bash
-python scripts/run_qasper_structure_repr_study.py --dataset-path data/qasper_validation_full.json --methods bridge_final --smoke-max-questions 150 --full-max-questions 1005 --skip-smoke
-```
-
-Run the canonical Bucket 4 validation-only method-comparison and model-selection study:
-
-```bash
-python scripts/run_qasper_model_selection_study.py --dataset-path data/qasper_validation_full.json
-```
-
-Run the Bucket 4.5 retrieval-only bridge-repair study that reuses Bucket 4 baselines and tests bridge from flat seeds before selective expansion:
-
-```bash
-python scripts/run_qasper_bridge_repair_study.py --validation-dataset-path data/qasper_validation_full.json --smoke-dataset-path data/qasper_train_fast50.json
-```
-
-Run the canonical Bucket 5 final held-out reporting bundle for the locked final model plus one compact bridge-family baseline:
-
-```bash
-python scripts/run_qasper_final_reporting_bundle.py --dataset-path data/qasper_test_full.json
-```
-
-Preflight and environment audit before long runs:
-
-```bash
-C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/run_env_preflight.py
-C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe scripts/audit_local_models.py
-```
-
-For resumable answer-eval smoke or chunked runs, reuse a stable cache tag and opt into resume:
-
-```bash
-python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_train_fast50.json --split train --methods adjacency,bridge_final --max-questions 5 --chunk-size 2 --save-every 1 --cache-tag train_fast50_smoke --output-dir artifacts/current/environment
-python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_train_fast50.json --split train --methods adjacency,bridge_final --max-questions 5 --chunk-size 5 --save-every 1 --cache-tag train_fast50_smoke --resume --output-dir artifacts/current/environment
-```
-
-Active serious-redo outputs now live under:
-
-- `artifacts/current/bucket1_protocol/`
-- `artifacts/current/manual_review/`
-- `artifacts/current/bucket2_answer_eval/`
-- `artifacts/current/bucket3_structure_repr/`
-- `artifacts/current/bucket4_model_selection/`
-- `artifacts/current/bucket4_5_bridge_repair/`
-- `artifacts/current/bucket5_final/`
-- `artifacts/current/environment/`
-
-## Legacy Context
-
-The repo still preserves the earlier pre-redo artifacts and runners for reproducibility, including the old all-splits full-train reporting story. Those results remain useful context, but they are no longer the gold-standard evaluation path for the serious redo.
-
-Legacy examples:
-
-- [final_qasper_model_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_model_summary.md)
-- [final_qasper_all_splits_summary.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_all_splits_summary.md)
-- `scripts/run_qasper_eval_bundle.py`
-- `scripts/run_qasper_full_final_eval.py`
-- `scripts/run_qasper_all_splits_final_eval.py`
-
-## Repo Layout
-
-Key protocol files:
-
-- [src/lspbe/qasper_protocol.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_protocol.py)
-- [src/lspbe/subsets.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/subsets.py)
-- [src/lspbe/qasper_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_eval.py)
-- [src/lspbe/qasper_answer_eval.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper_answer_eval.py)
-
-Key model/config files:
-
-- [src/lspbe/qasper.py](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/src/lspbe/qasper.py)
-- [docs/algorithm_spec.md](/c:/Users/naman/OneDrive/Documents/GitHub/LSPBE-LD-RAG/docs/algorithm_spec.md)
+- `artifacts/legacy_pre_redo/` preserves the older project story before the serious redo.
+- `artifacts/archive_serious_redo/` preserves smoke or low-value redo byproducts that are worth keeping but not worth foregrounding.
+- `docs/archive/` keeps older plan documents that are still useful for provenance.
+- `data/archive_debug/` keeps debug-only dataset slices used by superseded scripts.

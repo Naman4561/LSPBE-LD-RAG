@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "split": "validation",
+    "left_method": "flat_hybrid_current",
+    "right_method": "bridge_final_current",
+    "bootstrap_samples": 2000,
+    "seed": 20260420,
+    "retrieval_questions": 1005,
+    "answer_questions": 1005,
+    "retrieval_source": "data\\qasper_validation_full.json",
+    "answer_source": "data\\qasper_validation_full.json"
+  },
+  "metrics": {
+    "evidence_hit_rate": {
+      "n": 1005,
+      "mean_delta": 0.01791044776119403,
+      "ci_low": 0.006965174129353234,
+      "ci_high": 0.029850746268656716,
+      "left_mean": 0.8616915422885573,
+      "right_mean": 0.8437810945273632
+    },
+    "evidence_coverage_rate": {
+      "n": 1005,
+      "mean_delta": 0.02666665114426307,
+      "ci_low": 0.015340330638838108,
+      "ci_high": 0.03874857315155822,
+      "left_mean": 0.783339655802342,
+      "right_mean": 0.7566730046580793
+    },
+    "answer_f1": {
+      "n": 1005,
+      "mean_delta": 0.08435644882877129,
+      "ci_low": 0.06322771110943662,
+      "ci_high": 0.10514909796623771,
+      "left_mean": 0.2502668769788867,
+      "right_mean": 0.1659104281501151
+    },
+    "empty_prediction_rate": {
+      "n": 1005,
+      "mean_delta": -0.19402985074626866,
+      "ci_low": -0.22885572139303484,
+      "ci_high": -0.15920398009950248,
+      "left_mean": 0.26865671641791045,
+      "right_mean": 0.4626865671641791
+    }
+  }
+}

@@ -64,9 +64,9 @@ Examples:
 
 - `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_model_summary.md`
 - `artifacts/legacy_pre_redo/final_locked_qasper/final_qasper_all_splits_summary.md`
-- `scripts/run_qasper_eval_bundle.py`
-- `scripts/run_qasper_full_final_eval.py`
-- `scripts/run_qasper_all_splits_final_eval.py`
+- `scripts/legacy/run_qasper_eval_bundle.py`
+- `scripts/legacy/run_qasper_full_final_eval.py`
+- `scripts/legacy/run_qasper_all_splits_final_eval.py`
 
 ## Fixed Settings In Bucket 1
 

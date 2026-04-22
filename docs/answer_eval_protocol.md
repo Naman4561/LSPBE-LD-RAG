@@ -17,13 +17,13 @@ Bucket 2 does not redesign retrieval, does not sweep many answer models, and doe
 Use:
 
 ```bash
-python scripts/run_qasper_answer_eval.py --dataset-path data/qasper_validation_full.json --split validation --methods adjacency,bridge_final --json-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json --md-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md --csv-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv
+python scripts/final/run_qasper_answer_eval.py --dataset-path data/qasper_validation_full.json --split validation --methods adjacency,bridge_final --json-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json --md-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md --csv-out artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv
 ```
 
 Useful flags:
 
 - `--max-questions`: smoke-test a modest subset first
-- `--cache-dir`: retrieval cache root, defaults to `artifacts/current/bucket2_answer_eval/cache`
+- `--cache-dir`: retrieval cache root, defaults to `artifacts/support/cache/bucket2_answer_eval`
 - `--cache-tag`: explicit cache key so smoke and full runs do not overwrite each other
 
 ## Gold Answers
