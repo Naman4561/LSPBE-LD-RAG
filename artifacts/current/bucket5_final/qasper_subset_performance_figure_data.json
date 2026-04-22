@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "method": "flat_hybrid_current",
+      "subset": "overall",
+      "queries": 1451,
+      "evidence_hit": 0.889,
+      "evidence_coverage": 0.7862,
+      "seed_hit": 0.889,
+      "EM": 0.2074,
+      "F1": 0.3022,
+      "empty_rate": 0.2419
+    },
+    {
+      "method": "flat_hybrid_current",
+      "subset": "skip_local",
+      "queries": 626,
+      "evidence_hit": 0.9904,
+      "evidence_coverage": 0.8456,
+      "seed_hit": 0.9904,
+      "EM": 0.1981,
+      "F1": 0.3013,
+      "empty_rate": 0.2268
+    },
+    {
+      "method": "flat_hybrid_current",
+      "subset": "multi_span",
+      "queries": 459,
+      "evidence_hit": 0.9891,
+      "evidence_coverage": 0.8418,
+      "seed_hit": 0.9891,
+      "EM": 0.1983,
+      "F1": 0.2971,
+      "empty_rate": 0.2353
+    },
+    {
+      "method": "flat_hybrid_current",
+      "subset": "float_table",
+      "queries": 808,
+      "evidence_hit": 0.9443,
+      "evidence_coverage": 0.7967,
+      "seed_hit": 0.9443,
+      "EM": 0.1832,
+      "F1": 0.2764,
+      "empty_rate": 0.2512
+    },
+    {
+      "method": "bridge_final_current",
+      "subset": "overall",
+      "queries": 1451,
+      "evidence_hit": 0.8739,
+      "evidence_coverage": 0.769,
+      "seed_hit": 0.8119,
+      "EM": 0.1992,
+      "F1": 0.2343,
+      "empty_rate": 0.4431
+    },
+    {
+      "method": "bridge_final_current",
+      "subset": "skip_local",
+      "queries": 626,
+      "evidence_hit": 0.984,
+      "evidence_coverage": 0.8302,
+      "seed_hit": 0.9185,
+      "EM": 0.1789,
+      "F1": 0.2261,
+      "empty_rate": 0.4185
+    },
+    {
+      "method": "bridge_final_current",
+      "subset": "multi_span",
+      "queries": 459,
+      "evidence_hit": 0.9891,
+      "evidence_coverage": 0.822,
+      "seed_hit": 0.9216,
+      "EM": 0.1808,
+      "F1": 0.2248,
+      "empty_rate": 0.4096
+    },
+    {
+      "method": "bridge_final_current",
+      "subset": "float_table",
+      "queries": 808,
+      "evidence_hit": 0.9319,
+      "evidence_coverage": 0.7822,
+      "seed_hit": 0.8738,
+      "EM": 0.1547,
+      "F1": 0.1903,
+      "empty_rate": 0.4678
+    }
+  ]
+}

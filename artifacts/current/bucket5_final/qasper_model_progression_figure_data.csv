@@ -1,0 +1,8 @@
+EM,F1,evidence_coverage,evidence_hit,method,seed_hit,source,split,story_step
+0.1682,0.2503,0.7833,0.8617,flat_hybrid_current,0.8617,bucket4_validation,validation,earlier flat baseline
+,,0.7459,0.8358,adjacency_hybrid_current,0.7741,bucket4_validation,validation,adjacency
+,,0.7525,0.8388,bridge_v2_hybrid_current,0.7741,bucket4_validation,validation,bridge_v2
+0.1343,0.1659,0.7567,0.8438,bridge_final_current,0.7741,bucket4_validation,validation,bridge_final
+0.1682,0.2503,0.7833,0.8617,flat_hybrid_current,0.8617,bucket4_validation,validation,final selected flat
+,,0.7647,0.8418,bridge_from_flat_seeds_current,0.8617,bucket4_5_stage1,validation,bridge repair stage 1
+,,0.7627,0.8398,bridge_from_flat_seeds_selective_current,0.8617,bucket4_5_stage2,validation,bridge repair stage 2

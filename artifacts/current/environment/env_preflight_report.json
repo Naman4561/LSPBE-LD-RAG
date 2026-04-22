@@ -1,15 +1,15 @@
 {
   "repo_root": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG",
   "python": {
-    "executable": "C:\\Users\\naman\\anaconda3\\envs\\lspbe310\\python.exe",
-    "version": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "C:\\Users\\naman\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "version": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
     "version_info": [
       3,
-      10,
-      20
+      9,
+      5
     ],
     "requires_python": ">=3.10",
-    "requires_python_satisfied": true
+    "requires_python_satisfied": false
   },
   "platform": {
     "system": "Windows",
@@ -20,32 +20,32 @@
   },
   "packages": {
     "pytest": {
-      "installed": true,
-      "version": "9.0.3"
+      "installed": false,
+      "version": null
     },
     "numpy": {
       "installed": true,
-      "version": "2.2.6"
+      "version": "2.0.2"
     },
     "torch": {
       "installed": true,
-      "version": "2.11.0"
+      "version": "2.8.0"
     },
     "transformers": {
       "installed": true,
-      "version": "4.44.2"
+      "version": "4.57.6"
     },
     "datasets": {
       "installed": true,
-      "version": "4.8.4"
+      "version": "3.6.0"
     },
     "sentence-transformers": {
       "installed": true,
-      "version": "5.4.1"
+      "version": "5.1.2"
     },
     "scikit-learn": {
       "installed": true,
-      "version": "1.7.2"
+      "version": "1.6.1"
     }
   },
   "commands": {
@@ -60,12 +60,12 @@
       ]
     },
     "pytest_module": {
-      "ok": true,
-      "returncode": 0,
-      "stdout": "pytest 9.0.3",
-      "stderr": "",
+      "ok": false,
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "C:\\Users\\naman\\AppData\\Local\\Programs\\Python\\Python39\\python.exe: No module named pytest",
       "command": [
-        "C:\\Users\\naman\\anaconda3\\envs\\lspbe310\\python.exe",
+        "C:\\Users\\naman\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
         "-m",
         "pytest",
         "--version"
@@ -74,7 +74,7 @@
     "git_status": {
       "ok": true,
       "returncode": 0,
-      "stdout": "M README.md\n M artifacts/ARTIFACTS_MAP.md\n M scripts/README.md\n M src/lspbe/qasper.py\n M src/lspbe/qasper_eval.py\n M src/lspbe/subsets.py\n M src/lspbe/types.py\n?? .gitignore\n?? .vscode/\n?? artifacts/current/bucket2_answer_eval/_smoke_train5.json\n?? artifacts/current/bucket2_answer_eval/_smoke_train5.md\n?? artifacts/current/bucket2_answer_eval/_validation_adjacency_only.json\n?? artifacts/current/bucket2_answer_eval/_validation_adjacency_only.md\n?? artifacts/current/bucket2_answer_eval/bucket2_answer_eval_summary.md\n?? artifacts/current/bucket2_answer_eval/bucket2_recovery_pass_note.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_bench_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_localqa_smoke5_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa.run_manifest.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_bucket2_recovery_validation_localqa_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_train_fast50.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_train_fast50.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation.md\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_per_question.csv\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_smoke.json\n?? artifacts/current/bucket2_answer_eval/qasper_answer_eval_validation_smoke.md\n?? artifacts/current/environment/\n?? docs/answer_eval_protocol.md\n?? docs/runtime_run_policy.md\n?? scripts/audit_local_models.py\n?? scripts/run_env_preflight.py\n?? scripts/run_qasper_answer_eval.py\n?? scripts/run_qasper_structure_repr_study.py\n?? src/lspbe.egg-info/\n?? src/lspbe/qasper_answer_eval.py\n?? src/lspbe/qasper_structure_repr.py\n?? src/lspbe/run_control.py\n?? src/lspbe/structure_repr.py\n?? tests/test_answer_eval.py",
+      "stdout": "M README.md\n M scripts/README.md\n M src/lspbe/__pycache__/expansion.cpython-39.pyc\n M src/lspbe/__pycache__/qasper.cpython-39.pyc\n M src/lspbe/__pycache__/qasper_eval.cpython-39.pyc\n M src/lspbe/__pycache__/subsets.cpython-39.pyc\n M src/lspbe/__pycache__/types.cpython-39.pyc\n M src/lspbe/expansion.py\n M src/lspbe/qasper.py\n?? artifacts/current/bucket4_model_selection/\n?? artifacts/current/bucket4_model_selection_smoke/\n?? scripts/run_qasper_bridge_repair_study.py\n?? scripts/run_qasper_model_selection_study.py\n?? src/lspbe/qasper_bridge_repair.py\n?? src/lspbe/qasper_model_selection.py",
       "stderr": "",
       "command": [
         "git",
@@ -135,9 +135,13 @@
   },
   "disk_space": {
     "total_bytes": 510473007104,
-    "used_bytes": 491603103744,
-    "free_bytes": 18869903360
+    "used_bytes": 493018193920,
+    "free_bytes": 17454813184
   },
-  "repo_healthy_for_long_runs": true,
-  "notes": []
+  "repo_healthy_for_long_runs": false,
+  "notes": [
+    "`pytest` is not runnable in this runtime. Use direct Python smoke checks until it is installed into the active interpreter.",
+    "The active interpreter is Python 3.9, but `pyproject.toml` requires `>=3.10`.",
+    "The environment is not fully healthy for long runs. Inspect the failing checks before starting a heavy job."
+  ]
 }

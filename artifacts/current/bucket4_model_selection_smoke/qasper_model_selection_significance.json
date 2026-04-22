@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "bootstrap_samples": 2000,
+    "seed": 20260420,
+    "comparison_source": "full_validation_retrieval"
+  },
+  "comparisons": [
+    {
+      "left_method": "flat_hybrid_current",
+      "right_method": "adjacency_hybrid_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 20,
+          "mean_delta": 0.05,
+          "ci_low": 0.0,
+          "ci_high": 0.15
+        },
+        "evidence_hit": {
+          "n": 20,
+          "mean_delta": 0.05,
+          "ci_low": 0.0,
+          "ci_high": 0.15
+        },
+        "evidence_coverage": {
+          "n": 20,
+          "mean_delta": 0.05,
+          "ci_low": -0.0375,
+          "ci_high": 0.175
+        },
+        "first_evidence_rank": {
+          "n": 17,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    },
+    {
+      "left_method": "adjacency_hybrid_current",
+      "right_method": "bridge_v2_hybrid_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 20,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "evidence_hit": {
+          "n": 20,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "evidence_coverage": {
+          "n": 20,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "first_evidence_rank": {
+          "n": 17,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    },
+    {
+      "left_method": "bridge_v2_hybrid_current",
+      "right_method": "bridge_final_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 20,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "evidence_hit": {
+          "n": 20,
+          "mean_delta": -0.05,
+          "ci_low": -0.15,
+          "ci_high": 0.0
+        },
+        "evidence_coverage": {
+          "n": 20,
+          "mean_delta": -0.05,
+          "ci_low": -0.15,
+          "ci_high": 0.0
+        },
+        "first_evidence_rank": {
+          "n": 17,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    },
+    {
+      "left_method": "fixed_chunk_bridge_final",
+      "right_method": "bridge_final_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 20,
+          "mean_delta": -0.05,
+          "ci_low": -0.15,
+          "ci_high": 0.0
+        },
+        "evidence_hit": {
+          "n": 20,
+          "mean_delta": 0.05,
+          "ci_low": 0.0,
+          "ci_high": 0.15
+        },
+        "evidence_coverage": {
+          "n": 20,
+          "mean_delta": 0.025,
+          "ci_low": 0.0,
+          "ci_high": 0.075
+        },
+        "first_evidence_rank": {
+          "n": 16,
+          "mean_delta": -0.3125,
+          "ci_low": -0.9375,
+          "ci_high": 0.3125
+        }
+      }
+    }
+  ]
+}

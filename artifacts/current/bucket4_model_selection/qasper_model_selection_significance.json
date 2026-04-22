@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "bootstrap_samples": 2000,
+    "seed": 20260420,
+    "comparison_source": "full_validation_retrieval"
+  },
+  "comparisons": [
+    {
+      "left_method": "flat_hybrid_current",
+      "right_method": "adjacency_hybrid_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 1005,
+          "mean_delta": 0.08756218905472637,
+          "ci_low": 0.07064676616915423,
+          "ci_high": 0.1054726368159204
+        },
+        "evidence_hit": {
+          "n": 1005,
+          "mean_delta": 0.025870646766169153,
+          "ci_low": 0.013930348258706468,
+          "ci_high": 0.03980099502487562
+        },
+        "evidence_coverage": {
+          "n": 1005,
+          "mean_delta": 0.0374525193928179,
+          "ci_low": 0.024475350520126633,
+          "ci_high": 0.05072528818797476
+        },
+        "first_evidence_rank": {
+          "n": 778,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    },
+    {
+      "left_method": "adjacency_hybrid_current",
+      "right_method": "bridge_v2_hybrid_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 1005,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "evidence_hit": {
+          "n": 1005,
+          "mean_delta": -0.0029850746268656717,
+          "ci_low": -0.006965174129353234,
+          "ci_high": 0.0
+        },
+        "evidence_coverage": {
+          "n": 1005,
+          "mean_delta": -0.006632357303999096,
+          "ci_low": -0.010227829108426123,
+          "ci_high": -0.003501539919450367
+        },
+        "first_evidence_rank": {
+          "n": 778,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    },
+    {
+      "left_method": "bridge_v2_hybrid_current",
+      "right_method": "bridge_final_current",
+      "metrics": {
+        "seed_hit": {
+          "n": 1005,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "evidence_hit": {
+          "n": 1005,
+          "mean_delta": -0.004975124378109453,
+          "ci_low": -0.014925373134328358,
+          "ci_high": 0.003980099502487562
+        },
+        "evidence_coverage": {
+          "n": 1005,
+          "mean_delta": -0.004153510944555721,
+          "ci_low": -0.013599929644705765,
+          "ci_high": 0.005885184467274019
+        },
+        "first_evidence_rank": {
+          "n": 778,
+          "mean_delta": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        }
+      }
+    }
+  ]
+}

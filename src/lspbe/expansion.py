@@ -213,6 +213,7 @@ def bridge_v21_should_trigger(
     trigger_mode: str = "always",
     trigger_threshold: float = 0.6,
     question_type: str | None = None,
+    query_text: str | None = None,
 ) -> tuple[bool, str]:
     if trigger_mode == "always":
         return True, "always"
@@ -227,6 +228,15 @@ def bridge_v21_should_trigger(
         return gap < trigger_threshold, f"gap={gap:.3f}"
     if trigger_mode == "question_type":
         return question_type in {"how", "which"}, f"question_type={question_type or 'unknown'}"
+    if trigger_mode == "targeted_bridge_repair":
+        query_lower = (query_text or "").strip().lower()
+        if question_type in {"how", "which"}:
+            return True, f"question_type={question_type}"
+        if any(token in query_lower for token in ("table", "figure", "fig.", "compare", "comparison", "difference")):
+            return True, "query_marker"
+        next_score = seeds[1].score if len(seeds) > 1 else top_score
+        relative_gap = abs(top_score - next_score) / max(abs(top_score), 1e-6)
+        return relative_gap < trigger_threshold, f"relative_gap={relative_gap:.3f}"
     raise ValueError(f"Unsupported trigger mode: {trigger_mode}")
 
 
@@ -528,6 +538,7 @@ def bridge_v21_expand_with_details(
         trigger_mode=trigger_mode,
         trigger_threshold=trigger_threshold,
         question_type=question_type,
+        query_text=query,
     )
 
     if trigger_applied:

@@ -1,28 +1,28 @@
 # Environment Preflight
 
 - repo_root: `C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG`
-- python_executable: `C:\Users\naman\anaconda3\envs\lspbe310\python.exe`
-- python_version: `[3, 10, 20]`
+- python_executable: `C:\Users\naman\AppData\Local\Programs\Python\Python39\python.exe`
+- python_version: `[3, 9, 5]`
 - requires_python: `>=3.10`
-- requires_python_satisfied: `True`
+- requires_python_satisfied: `False`
 - platform: `Windows 10 AMD64`
-- repo_healthy_for_long_runs: `True`
+- repo_healthy_for_long_runs: `False`
 - pytest_cli_ok: `False`
-- pytest_module_ok: `True`
+- pytest_module_ok: `False`
 - git_status_ok: `True`
 - HF_HOME: `None`
 - TRANSFORMERS_CACHE: `None`
-- disk_free_bytes: `18869903360`
+- disk_free_bytes: `17454813184`
 
 ## Packages
 
-- `pytest`: installed `True`, version `9.0.3`
-- `numpy`: installed `True`, version `2.2.6`
-- `torch`: installed `True`, version `2.11.0`
-- `transformers`: installed `True`, version `4.44.2`
-- `datasets`: installed `True`, version `4.8.4`
-- `sentence-transformers`: installed `True`, version `5.4.1`
-- `scikit-learn`: installed `True`, version `1.7.2`
+- `pytest`: installed `False`, version `None`
+- `numpy`: installed `True`, version `2.0.2`
+- `torch`: installed `True`, version `2.8.0`
+- `transformers`: installed `True`, version `4.57.6`
+- `datasets`: installed `True`, version `3.6.0`
+- `sentence-transformers`: installed `True`, version `5.1.2`
+- `scikit-learn`: installed `True`, version `1.6.1`
 
 ## Dataset Files
 
@@ -34,4 +34,6 @@
 
 ## Notes
 
-- No blocking preflight notes.
+- `pytest` is not runnable in this runtime. Use direct Python smoke checks until it is installed into the active interpreter.
+- The active interpreter is Python 3.9, but `pyproject.toml` requires `>=3.10`.
+- The environment is not fully healthy for long runs. Inspect the failing checks before starting a heavy job.

@@ -1,0 +1,7 @@
+count,error_category,example_note,example_question,example_question_id,share
+8,wrong seed / retrieval miss,No gold evidence reached the final context; seed first-rank=miss.,What domain of text are they working with?,1603.07252::q0,0.16
+8,partial evidence recovery,"Retrieval hit succeeded but coverage stayed at 0.27, leaving part of the gold evidence unrecovered.",What are existing baseline models on these benchmark datasets?,2004.02214::q1,0.16
+8,multi-span miss,"Multi-span question with retrieval hit=True but coverage 0.04, so at least one needed span stayed out.",What models are explored in this paper?,2003.04978::q1,0.16
+10,float/table-related miss,Figure/table-linked case with coverage 0.11; predicted answer was all candidate answers INLINEFORM8.,What baseline do they compare against?,1603.01547::q2,0.2
+8,annotation ambiguity / evaluation ambiguity,"Correct evidence was present, but answer matching stayed soft (F1 0.50) against multiple or free-form golds.",Which widely used dataset did the authors use?,1810.12897::q2,0.16
+8,answerer failure despite correct evidence,Correct evidence was present but the answerer still produced yes (token F1 0.00).,"Are there any other standard linguistic features used, other than ngrams?",1605.05195::q2,0.16

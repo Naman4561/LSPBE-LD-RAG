@@ -1,0 +1,51 @@
+{
+  "script_name": "run_qasper_final_reporting_bundle.py",
+  "started_at": "2026-04-21T01:23:25Z",
+  "ended_at": "2026-04-21T03:25:07Z",
+  "duration_seconds": 7302.0,
+  "status": "completed",
+  "resumed": false,
+  "output_paths": {
+    "retrieval_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_final_results.json",
+    "retrieval_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_final_results.md",
+    "retrieval_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_final_results_per_question.csv",
+    "answer_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_answer_eval.json",
+    "answer_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_answer_eval.md",
+    "audit_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_error_audit.csv",
+    "audit_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_test_error_audit.md",
+    "presentation_bundle_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_presentation_bundle.md",
+    "slide_outline_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_presentation_slide_outline.md",
+    "main_results_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_presentation_main_results.csv",
+    "main_results_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_presentation_main_results.md",
+    "progression_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_model_progression_figure_data.csv",
+    "progression_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_model_progression_figure_data.json",
+    "subset_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_subset_performance_figure_data.csv",
+    "subset_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_subset_performance_figure_data.json",
+    "taxonomy_csv": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_error_taxonomy_summary.csv",
+    "taxonomy_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_error_taxonomy_summary.md",
+    "curated_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\qasper_curated_examples.md",
+    "summary_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\bucket5_final_summary.md",
+    "takeaway_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\final_project_takeaway.md",
+    "logs_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket5_final\\logs"
+  },
+  "config": {
+    "dataset_path": "data/qasper_test_full.json",
+    "split": "test",
+    "final_method": "flat_hybrid_current",
+    "baseline_method": "bridge_final_current",
+    "baseline_reason": "Preferred Bucket 5 comparator: strongest bridge-family validation baseline from Bucket 4.",
+    "max_questions": 1000000,
+    "max_papers": 1000000,
+    "answerer": "auto",
+    "qa_model_name": "distilbert-base-cased-distilled-squad",
+    "audit_size": 50,
+    "save_every": 25,
+    "progress_every_papers": 10,
+    "progress_every_seconds": 300
+  },
+  "counters": {
+    "retrieval_questions": 1451,
+    "answer_eval_questions": 1451,
+    "audit_examples": 50
+  }
+}

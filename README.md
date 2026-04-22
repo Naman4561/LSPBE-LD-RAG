@@ -2,7 +2,7 @@
 
 Lightweight long-document retrieval for QASPER using local bridge expansion.
 
-The repo keeps the locked `bridge_final` retrieval model, but the serious QASPER redo now uses a new protocol layer on top of it:
+The legacy repo history still preserves the earlier `bridge_final` path, but the serious QASPER redo now finishes with a different locked final reporting model:
 
 - paper-level train split redesign
 - method-independent hard subsets
@@ -44,22 +44,15 @@ The paper manifests live at:
 - `data/splits/train_lockbox_papers.json`
 - `data/splits/train_fast50_papers.json`
 
-## Canonical Model
+## Canonical Final Model
 
-The retrieval model itself is unchanged in Bucket 1.
+Bucket 5 keeps the serious-redo final model locked as:
 
-Locked QASPER configuration:
-
+- method `flat_hybrid_current`
+- representation `current`
 - segmentation `seg_paragraph_pair`
-- hybrid seed retrieval
-- dense weight `1.00`
-- sparse weight `0.50`
-- Bridge v2 skip-local expansion
-- continuity `idf_overlap`
-- no section scoring
-- no adaptive trigger
-- no reranker
-- no diversification
+- top-20 hybrid paragraph-pair seeds
+- no local expansion
 
 ## Main Commands
 
@@ -93,6 +86,24 @@ Run the canonical Bucket 3 structure-aware representation study on validation:
 python scripts/run_qasper_structure_repr_study.py --dataset-path data/qasper_validation_full.json --methods bridge_final --smoke-max-questions 150 --full-max-questions 1005 --skip-smoke
 ```
 
+Run the canonical Bucket 4 validation-only method-comparison and model-selection study:
+
+```bash
+python scripts/run_qasper_model_selection_study.py --dataset-path data/qasper_validation_full.json
+```
+
+Run the Bucket 4.5 retrieval-only bridge-repair study that reuses Bucket 4 baselines and tests bridge from flat seeds before selective expansion:
+
+```bash
+python scripts/run_qasper_bridge_repair_study.py --validation-dataset-path data/qasper_validation_full.json --smoke-dataset-path data/qasper_train_fast50.json
+```
+
+Run the canonical Bucket 5 final held-out reporting bundle for the locked final model plus one compact bridge-family baseline:
+
+```bash
+python scripts/run_qasper_final_reporting_bundle.py --dataset-path data/qasper_test_full.json
+```
+
 Preflight and environment audit before long runs:
 
 ```bash
@@ -113,6 +124,9 @@ Active serious-redo outputs now live under:
 - `artifacts/current/manual_review/`
 - `artifacts/current/bucket2_answer_eval/`
 - `artifacts/current/bucket3_structure_repr/`
+- `artifacts/current/bucket4_model_selection/`
+- `artifacts/current/bucket4_5_bridge_repair/`
+- `artifacts/current/bucket5_final/`
 - `artifacts/current/environment/`
 
 ## Legacy Context

@@ -1,0 +1,9 @@
+EM,F1,empty_rate,evidence_coverage,evidence_hit,method,queries,seed_hit,subset
+0.2074,0.3022,0.2419,0.7862,0.889,flat_hybrid_current,1451,0.889,overall
+0.1981,0.3013,0.2268,0.8456,0.9904,flat_hybrid_current,626,0.9904,skip_local
+0.1983,0.2971,0.2353,0.8418,0.9891,flat_hybrid_current,459,0.9891,multi_span
+0.1832,0.2764,0.2512,0.7967,0.9443,flat_hybrid_current,808,0.9443,float_table
+0.1992,0.2343,0.4431,0.769,0.8739,bridge_final_current,1451,0.8119,overall
+0.1789,0.2261,0.4185,0.8302,0.984,bridge_final_current,626,0.9185,skip_local
+0.1808,0.2248,0.4096,0.822,0.9891,bridge_final_current,459,0.9216,multi_span
+0.1547,0.1903,0.4678,0.7822,0.9319,bridge_final_current,808,0.8738,float_table

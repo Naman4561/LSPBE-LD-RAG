@@ -1,0 +1,81 @@
+{
+  "rows": [
+    {
+      "story_step": "earlier flat baseline",
+      "method": "flat_hybrid_current",
+      "source": "bucket4_validation",
+      "split": "validation",
+      "evidence_hit": 0.8617,
+      "evidence_coverage": 0.7833,
+      "seed_hit": 0.8617,
+      "EM": 0.1682,
+      "F1": 0.2503
+    },
+    {
+      "story_step": "adjacency",
+      "method": "adjacency_hybrid_current",
+      "source": "bucket4_validation",
+      "split": "validation",
+      "evidence_hit": 0.8358,
+      "evidence_coverage": 0.7459,
+      "seed_hit": 0.7741,
+      "EM": null,
+      "F1": null
+    },
+    {
+      "story_step": "bridge_v2",
+      "method": "bridge_v2_hybrid_current",
+      "source": "bucket4_validation",
+      "split": "validation",
+      "evidence_hit": 0.8388,
+      "evidence_coverage": 0.7525,
+      "seed_hit": 0.7741,
+      "EM": null,
+      "F1": null
+    },
+    {
+      "story_step": "bridge_final",
+      "method": "bridge_final_current",
+      "source": "bucket4_validation",
+      "split": "validation",
+      "evidence_hit": 0.8438,
+      "evidence_coverage": 0.7567,
+      "seed_hit": 0.7741,
+      "EM": 0.1343,
+      "F1": 0.1659
+    },
+    {
+      "story_step": "final selected flat",
+      "method": "flat_hybrid_current",
+      "source": "bucket4_validation",
+      "split": "validation",
+      "evidence_hit": 0.8617,
+      "evidence_coverage": 0.7833,
+      "seed_hit": 0.8617,
+      "EM": 0.1682,
+      "F1": 0.2503
+    },
+    {
+      "story_step": "bridge repair stage 1",
+      "method": "bridge_from_flat_seeds_current",
+      "source": "bucket4_5_stage1",
+      "split": "validation",
+      "evidence_hit": 0.8418,
+      "evidence_coverage": 0.7647,
+      "seed_hit": 0.8617,
+      "EM": null,
+      "F1": null
+    },
+    {
+      "story_step": "bridge repair stage 2",
+      "method": "bridge_from_flat_seeds_selective_current",
+      "source": "bucket4_5_stage2",
+      "split": "validation",
+      "evidence_hit": 0.8398,
+      "evidence_coverage": 0.7627,
+      "seed_hit": 0.8617,
+      "EM": null,
+      "F1": null
+    }
+  ]
+}

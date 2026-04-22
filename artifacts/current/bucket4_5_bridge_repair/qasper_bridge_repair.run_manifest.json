@@ -1,0 +1,48 @@
+{
+  "script_name": "run_qasper_bridge_repair_study.py",
+  "started_at": "2026-04-20T22:38:51Z",
+  "ended_at": "2026-04-20T23:56:12Z",
+  "duration_seconds": 4641.0,
+  "status": "completed",
+  "resumed": true,
+  "output_paths": {
+    "stage1_smoke_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage1_smoke.json",
+    "stage1_smoke_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage1_smoke.md",
+    "stage1_validation_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage1_validation.json",
+    "stage1_validation_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage1_validation.md",
+    "stage2_smoke_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage2_smoke.json",
+    "stage2_smoke_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage2_smoke.md",
+    "stage2_validation_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage2_validation.json",
+    "stage2_validation_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_stage2_validation.md",
+    "comparison_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_comparison.json",
+    "comparison_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair_comparison.md",
+    "summary_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\bucket4_5_bridge_repair_summary.md",
+    "takeaways_md": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\bridge_repair_takeaways.md",
+    "manifest_json": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\qasper_bridge_repair.run_manifest.json",
+    "logs_dir": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_5_bridge_repair\\logs"
+  },
+  "config": {
+    "smoke_dataset_path": "data/qasper_train_fast50.json",
+    "validation_dataset_path": "data/qasper_validation_full.json",
+    "bucket4_validation_path": "C:\\Users\\naman\\OneDrive\\Documents\\GitHub\\LSPBE-LD-RAG\\artifacts\\current\\bucket4_model_selection\\qasper_model_selection_validation.json",
+    "stage": "stage2",
+    "run_scope": "all",
+    "max_smoke_questions": 150,
+    "max_smoke_papers": 50,
+    "max_validation_questions": 1000000,
+    "max_validation_papers": 1000000,
+    "save_every": 25,
+    "progress_every_papers": 10,
+    "progress_every_seconds": 300,
+    "methods": [
+      "bridge_from_flat_seeds_current",
+      "bridge_from_flat_seeds_selective_current"
+    ]
+  },
+  "counters": {
+    "stage1_smoke_questions": 146,
+    "stage1_validation_questions": 1005,
+    "stage2_smoke_questions": 146,
+    "stage2_validation_questions": 1005
+  }
+}

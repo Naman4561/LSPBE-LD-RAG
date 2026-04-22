@@ -1,0 +1,362 @@
+[2026-04-20T21:18:58Z] starting Bucket 4.5 bridge-repair study
+[2026-04-20T21:18:58Z] stage marker start | loading baseline artifacts
+[2026-04-20T21:18:59Z] loaded prior baseline bundle | source=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_model_selection\qasper_model_selection_validation.json | methods=flat_hybrid_current,bridge_final_current
+[2026-04-20T21:18:59Z] stage marker end | loading baseline artifacts
+[2026-04-20T21:18:59Z] stage marker start | loading smoke retrieval bundle
+[2026-04-20T21:36:56Z] loaded retrieval bundle | dataset=data/qasper_train_fast50.json | questions=146 | papers=50 | methods=bridge_from_flat_seeds_current,bridge_from_flat_seeds_selective_current
+[2026-04-20T21:36:56Z] stage marker end | loading smoke retrieval bundle
+[2026-04-20T21:36:56Z] stage marker start | stage1 smoke retrieval
+[2026-04-20T21:36:56Z] starting retrieval stage=stage1 smoke retrieval, method=bridge_from_flat_seeds_current, representation=current, chunking=paragraph_pair
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=1/50 | questions=1/146 | cache_records=1
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=1/50 | questions=2/146 | cache_records=2
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=2/50 | questions=3/146 | cache_records=3
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=2/50 | questions=4/146 | cache_records=4
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=3/50 | questions=5/146 | cache_records=5
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=4/50 | questions=6/146 | cache_records=6
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=5/50 | questions=7/146 | cache_records=7
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=5/50 | questions=8/146 | cache_records=8
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=9/146 | cache_records=9
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=10/146 | cache_records=10
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=11/146 | cache_records=11
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=12/146 | cache_records=12
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=13/146 | cache_records=13
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=6/50 | questions=14/146 | cache_records=14
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=7/50 | questions=15/146 | cache_records=15
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=8/50 | questions=16/146 | cache_records=16
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=8/50 | questions=17/146 | cache_records=17
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=8/50 | questions=18/146 | cache_records=18
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=9/50 | questions=19/146 | cache_records=19
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=9/50 | questions=20/146 | cache_records=20
+[2026-04-20T21:36:56Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=10/50 | questions=21/146 | 14.4% | elapsed=00:00:00 | papers/min=1352.16 | q/min=2839.54 | eta=00:00:02 | new_cache=21 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:56Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=10/50 | questions=21/146 | cache_records=21
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=10/50 | questions=22/146 | cache_records=22
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=11/50 | questions=23/146 | cache_records=23
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=11/50 | questions=24/146 | cache_records=24
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=11/50 | questions=25/146 | cache_records=25
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=11/50 | questions=26/146 | cache_records=26
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=12/50 | questions=27/146 | cache_records=27
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=13/50 | questions=28/146 | cache_records=28
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=14/50 | questions=29/146 | cache_records=29
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=30/146 | cache_records=30
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=31/146 | cache_records=31
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=32/146 | cache_records=32
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=33/146 | cache_records=33
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=34/146 | cache_records=34
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=15/50 | questions=35/146 | cache_records=35
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=16/50 | questions=36/146 | cache_records=36
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=17/50 | questions=37/146 | cache_records=37
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=18/50 | questions=38/146 | cache_records=38
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=19/50 | questions=39/146 | cache_records=39
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=19/50 | questions=40/146 | cache_records=40
+[2026-04-20T21:36:57Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=20/50 | questions=41/146 | 28.1% | elapsed=00:00:00 | papers/min=1483.72 | q/min=3041.62 | eta=00:00:02 | new_cache=20 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=20/50 | questions=41/146 | cache_records=41
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=21/50 | questions=42/146 | cache_records=42
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=21/50 | questions=43/146 | cache_records=43
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=22/50 | questions=44/146 | cache_records=44
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=23/50 | questions=45/146 | cache_records=45
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=24/50 | questions=46/146 | cache_records=46
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=25/50 | questions=47/146 | cache_records=47
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=25/50 | questions=48/146 | cache_records=48
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=25/50 | questions=49/146 | cache_records=49
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=25/50 | questions=50/146 | cache_records=50
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=26/50 | questions=51/146 | cache_records=51
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=26/50 | questions=52/146 | cache_records=52
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=26/50 | questions=53/146 | cache_records=53
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=26/50 | questions=54/146 | cache_records=54
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=26/50 | questions=55/146 | cache_records=55
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=27/50 | questions=56/146 | cache_records=56
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=27/50 | questions=57/146 | cache_records=57
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=27/50 | questions=58/146 | cache_records=58
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=28/50 | questions=59/146 | cache_records=59
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=29/50 | questions=60/146 | cache_records=60
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=29/50 | questions=61/146 | cache_records=61
+[2026-04-20T21:36:57Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=62/146 | 42.5% | elapsed=00:00:01 | papers/min=1532.75 | q/min=3167.69 | eta=00:00:01 | new_cache=21 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=62/146 | cache_records=62
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=63/146 | cache_records=63
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=64/146 | cache_records=64
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=65/146 | cache_records=65
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=66/146 | cache_records=66
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=67/146 | cache_records=67
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=68/146 | cache_records=68
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=30/50 | questions=69/146 | cache_records=69
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=31/50 | questions=70/146 | cache_records=70
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=31/50 | questions=71/146 | cache_records=71
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=31/50 | questions=72/146 | cache_records=72
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=73/146 | cache_records=73
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=74/146 | cache_records=74
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=75/146 | cache_records=75
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=76/146 | cache_records=76
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=77/146 | cache_records=77
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=78/146 | cache_records=78
+[2026-04-20T21:36:57Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=79/146 | cache_records=79
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=80/146 | cache_records=80
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=81/146 | cache_records=81
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=82/146 | cache_records=82
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=83/146 | cache_records=83
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=32/50 | questions=84/146 | cache_records=84
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=33/50 | questions=85/146 | cache_records=85
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=33/50 | questions=86/146 | cache_records=86
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=33/50 | questions=87/146 | cache_records=87
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=33/50 | questions=88/146 | cache_records=88
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=34/50 | questions=89/146 | cache_records=89
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=34/50 | questions=90/146 | cache_records=90
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=34/50 | questions=91/146 | cache_records=91
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=35/50 | questions=92/146 | cache_records=92
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=36/50 | questions=93/146 | cache_records=93
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=36/50 | questions=94/146 | cache_records=94
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=95/146 | cache_records=95
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=96/146 | cache_records=96
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=97/146 | cache_records=97
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=98/146 | cache_records=98
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=99/146 | cache_records=99
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=100/146 | cache_records=100
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=37/50 | questions=101/146 | cache_records=101
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=38/50 | questions=102/146 | cache_records=102
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=103/146 | cache_records=103
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=104/146 | cache_records=104
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=105/146 | cache_records=105
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=106/146 | cache_records=106
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=107/146 | cache_records=107
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=39/50 | questions=108/146 | cache_records=108
+[2026-04-20T21:36:58Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=109/146 | 74.7% | elapsed=00:00:01 | papers/min=1209.85 | q/min=3296.83 | eta=00:00:00 | new_cache=47 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=109/146 | cache_records=109
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=110/146 | cache_records=110
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=111/146 | cache_records=111
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=112/146 | cache_records=112
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=40/50 | questions=113/146 | cache_records=113
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=41/50 | questions=114/146 | cache_records=114
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=41/50 | questions=115/146 | cache_records=115
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=41/50 | questions=116/146 | cache_records=116
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=41/50 | questions=117/146 | cache_records=117
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=118/146 | cache_records=118
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=119/146 | cache_records=119
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=120/146 | cache_records=120
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=121/146 | cache_records=121
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=122/146 | cache_records=122
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=42/50 | questions=123/146 | cache_records=123
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=43/50 | questions=124/146 | cache_records=124
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=44/50 | questions=125/146 | cache_records=125
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=126/146 | cache_records=126
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=127/146 | cache_records=127
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=128/146 | cache_records=128
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=129/146 | cache_records=129
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=130/146 | cache_records=130
+[2026-04-20T21:36:58Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=45/50 | questions=131/146 | cache_records=131
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=46/50 | questions=132/146 | cache_records=132
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=47/50 | questions=133/146 | cache_records=133
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=47/50 | questions=134/146 | cache_records=134
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=47/50 | questions=135/146 | cache_records=135
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=47/50 | questions=136/146 | cache_records=136
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=137/146 | cache_records=137
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=138/146 | cache_records=138
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=139/146 | cache_records=139
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=140/146 | cache_records=140
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=141/146 | cache_records=141
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=48/50 | questions=142/146 | cache_records=142
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=49/50 | questions=143/146 | cache_records=143
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=49/50 | questions=144/146 | cache_records=144
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=49/50 | questions=145/146 | cache_records=145
+[2026-04-20T21:36:59Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=50/50 | questions=146/146 | 100.0% | elapsed=00:00:02 | papers/min=1067.34 | q/min=3116.64 | eta=00:00:00 | new_cache=37 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:59Z] checkpoint saved | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=50/50 | questions=146/146 | cache_records=146
+[2026-04-20T21:36:59Z] stage1 smoke retrieval | method=bridge_from_flat_seeds_current | papers=50/50 | questions=146/146 | 100.0% | elapsed=00:00:02 | papers/min=1063.94 | q/min=3106.69 | eta=00:00:00 | new_cache=0 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T21:36:59Z] stage complete | stage=stage1 smoke retrieval | method=bridge_from_flat_seeds_current | computed_this_run=146 | skipped_existing=0 | cache_records=146
+[2026-04-20T21:36:59Z] completed retrieval bundle | stage=stage1 smoke retrieval | output_json=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage1_smoke.json | output_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage1_smoke.md
+[2026-04-20T21:36:59Z] stage marker end | stage1 smoke retrieval
+[2026-04-20T21:36:59Z] skipping consolidated comparison because stage1 and stage2 validation artifacts are both required
+[2026-04-20T21:36:59Z] Bucket 4.5 complete
+[2026-04-20T21:37:16Z] starting Bucket 4.5 bridge-repair study
+[2026-04-20T21:37:16Z] stage marker start | loading baseline artifacts
+[2026-04-20T21:37:17Z] loaded prior baseline bundle | source=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_model_selection\qasper_model_selection_validation.json | methods=flat_hybrid_current,bridge_final_current
+[2026-04-20T21:37:17Z] stage marker end | loading baseline artifacts
+[2026-04-20T21:37:17Z] stage marker start | loading validation retrieval bundle
+[2026-04-20T22:38:16Z] loaded retrieval bundle | dataset=data/qasper_validation_full.json | questions=1005 | papers=281 | methods=bridge_from_flat_seeds_current,bridge_from_flat_seeds_selective_current
+[2026-04-20T22:38:16Z] stage marker end | loading validation retrieval bundle
+[2026-04-20T22:38:16Z] stage marker start | stage1 full validation retrieval
+[2026-04-20T22:38:16Z] starting retrieval stage=stage1 full validation retrieval, method=bridge_from_flat_seeds_current, representation=current, chunking=paragraph_pair
+[2026-04-20T22:38:16Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=6/281 | questions=25/1005 | cache_records=25
+[2026-04-20T22:38:16Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=10/281 | questions=32/1005 | 3.2% | elapsed=00:00:00 | papers/min=2478.88 | q/min=7932.42 | eta=00:00:07 | new_cache=32 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:16Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=15/281 | questions=50/1005 | cache_records=50
+[2026-04-20T22:38:16Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=20/281 | questions=61/1005 | 6.1% | elapsed=00:00:00 | papers/min=3621.24 | q/min=11044.79 | eta=00:00:05 | new_cache=29 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=25/281 | questions=75/1005 | cache_records=75
+[2026-04-20T22:38:17Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=30/281 | questions=94/1005 | 9.4% | elapsed=00:00:00 | papers/min=2967.79 | q/min=9299.08 | eta=00:00:05 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=32/281 | questions=100/1005 | cache_records=100
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=39/281 | questions=125/1005 | cache_records=125
+[2026-04-20T22:38:17Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=40/281 | questions=127/1005 | 12.6% | elapsed=00:00:00 | papers/min=3037.76 | q/min=9644.90 | eta=00:00:05 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=46/281 | questions=150/1005 | cache_records=150
+[2026-04-20T22:38:17Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=50/281 | questions=163/1005 | 16.2% | elapsed=00:00:01 | papers/min=2999.72 | q/min=9779.09 | eta=00:00:05 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=53/281 | questions=175/1005 | cache_records=175
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=59/281 | questions=200/1005 | cache_records=200
+[2026-04-20T22:38:17Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=60/281 | questions=201/1005 | 20.0% | elapsed=00:00:01 | papers/min=3154.07 | q/min=10566.14 | eta=00:00:04 | new_cache=38 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=68/281 | questions=225/1005 | cache_records=225
+[2026-04-20T22:38:17Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=70/281 | questions=235/1005 | 23.4% | elapsed=00:00:01 | papers/min=3270.69 | q/min=10980.19 | eta=00:00:04 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:17Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=74/281 | questions=250/1005 | cache_records=250
+[2026-04-20T22:38:18Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=80/281 | questions=271/1005 | 27.0% | elapsed=00:00:01 | papers/min=3164.24 | q/min=10718.87 | eta=00:00:04 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=81/281 | questions=275/1005 | cache_records=275
+[2026-04-20T22:38:18Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=90/281 | questions=298/1005 | 29.7% | elapsed=00:00:01 | papers/min=3271.30 | q/min=10831.64 | eta=00:00:03 | new_cache=27 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=90/281 | questions=300/1005 | cache_records=300
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=98/281 | questions=325/1005 | cache_records=325
+[2026-04-20T22:38:18Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=100/281 | questions=331/1005 | 32.9% | elapsed=00:00:01 | papers/min=3308.82 | q/min=10952.21 | eta=00:00:03 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=106/281 | questions=350/1005 | cache_records=350
+[2026-04-20T22:38:18Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=110/281 | questions=366/1005 | 36.4% | elapsed=00:00:02 | papers/min=3217.90 | q/min=10706.84 | eta=00:00:03 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=113/281 | questions=375/1005 | cache_records=375
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=119/281 | questions=400/1005 | cache_records=400
+[2026-04-20T22:38:18Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=120/281 | questions=401/1005 | 39.9% | elapsed=00:00:02 | papers/min=3208.50 | q/min=10721.72 | eta=00:00:03 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:18Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=129/281 | questions=425/1005 | cache_records=425
+[2026-04-20T22:38:19Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=130/281 | questions=430/1005 | 42.8% | elapsed=00:00:02 | papers/min=3231.62 | q/min=10689.19 | eta=00:00:03 | new_cache=29 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=134/281 | questions=450/1005 | cache_records=450
+[2026-04-20T22:38:19Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=140/281 | questions=473/1005 | 47.1% | elapsed=00:00:02 | papers/min=3263.40 | q/min=11025.62 | eta=00:00:02 | new_cache=43 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=141/281 | questions=475/1005 | cache_records=475
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=147/281 | questions=500/1005 | cache_records=500
+[2026-04-20T22:38:19Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=150/281 | questions=514/1005 | 51.1% | elapsed=00:00:02 | papers/min=3285.86 | q/min=11259.56 | eta=00:00:02 | new_cache=41 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=154/281 | questions=525/1005 | cache_records=525
+[2026-04-20T22:38:19Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=160/281 | questions=545/1005 | 54.2% | elapsed=00:00:02 | papers/min=3267.44 | q/min=11129.73 | eta=00:00:02 | new_cache=31 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=163/281 | questions=550/1005 | cache_records=550
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=168/281 | questions=575/1005 | cache_records=575
+[2026-04-20T22:38:19Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=170/281 | questions=586/1005 | 58.3% | elapsed=00:00:03 | papers/min=3239.38 | q/min=11166.32 | eta=00:00:02 | new_cache=41 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=173/281 | questions=600/1005 | cache_records=600
+[2026-04-20T22:38:19Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=178/281 | questions=625/1005 | cache_records=625
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=180/281 | questions=631/1005 | 62.8% | elapsed=00:00:03 | papers/min=3173.94 | q/min=11126.43 | eta=00:00:02 | new_cache=45 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=184/281 | questions=650/1005 | cache_records=650
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=190/281 | questions=667/1005 | 66.4% | elapsed=00:00:03 | papers/min=3152.89 | q/min=11068.31 | eta=00:00:01 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=192/281 | questions=675/1005 | cache_records=675
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=200/281 | questions=697/1005 | 69.4% | elapsed=00:00:03 | papers/min=3157.54 | q/min=11004.03 | eta=00:00:01 | new_cache=30 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=201/281 | questions=700/1005 | cache_records=700
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=208/281 | questions=725/1005 | cache_records=725
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=210/281 | questions=731/1005 | 72.7% | elapsed=00:00:03 | papers/min=3221.10 | q/min=11212.50 | eta=00:00:01 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=213/281 | questions=750/1005 | cache_records=750
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=219/281 | questions=775/1005 | cache_records=775
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=220/281 | questions=777/1005 | 77.3% | elapsed=00:00:04 | papers/min=3189.23 | q/min=11263.77 | eta=00:00:01 | new_cache=46 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=227/281 | questions=800/1005 | cache_records=800
+[2026-04-20T22:38:20Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=230/281 | questions=812/1005 | 80.8% | elapsed=00:00:04 | papers/min=3234.62 | q/min=11419.62 | eta=00:00:01 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:20Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=233/281 | questions=825/1005 | cache_records=825
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=239/281 | questions=850/1005 | cache_records=850
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=240/281 | questions=851/1005 | 84.7% | elapsed=00:00:04 | papers/min=3200.55 | q/min=11348.61 | eta=00:00:00 | new_cache=39 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=245/281 | questions=875/1005 | cache_records=875
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=250/281 | questions=889/1005 | 88.5% | elapsed=00:00:04 | papers/min=3167.11 | q/min=11262.25 | eta=00:00:00 | new_cache=38 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=253/281 | questions=900/1005 | cache_records=900
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=257/281 | questions=925/1005 | cache_records=925
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=260/281 | questions=932/1005 | 92.7% | elapsed=00:00:04 | papers/min=3184.51 | q/min=11415.24 | eta=00:00:00 | new_cache=43 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=265/281 | questions=950/1005 | cache_records=950
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=270/281 | questions=966/1005 | 96.1% | elapsed=00:00:05 | papers/min=3156.84 | q/min=11294.46 | eta=00:00:00 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=273/281 | questions=975/1005 | cache_records=975
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=280/281 | questions=998/1005 | 99.3% | elapsed=00:00:05 | papers/min=3196.63 | q/min=11393.70 | eta=00:00:00 | new_cache=32 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=280/281 | questions=1000/1005 | cache_records=1000
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=281/281 | questions=1005/1005 | 100.0% | elapsed=00:00:05 | papers/min=3177.20 | q/min=11363.29 | eta=00:00:00 | new_cache=7 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] checkpoint saved | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=281/281 | questions=1005/1005 | cache_records=1005
+[2026-04-20T22:38:21Z] stage1 full validation retrieval | method=bridge_from_flat_seeds_current | papers=281/281 | questions=1005/1005 | 100.0% | elapsed=00:00:05 | papers/min=3171.94 | q/min=11344.47 | eta=00:00:00 | new_cache=0 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T22:38:21Z] stage complete | stage=stage1 full validation retrieval | method=bridge_from_flat_seeds_current | computed_this_run=1005 | skipped_existing=0 | cache_records=1005
+[2026-04-20T22:38:22Z] completed retrieval bundle | stage=stage1 full validation retrieval | output_json=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage1_validation.json | output_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage1_validation.md
+[2026-04-20T22:38:22Z] stage marker end | stage1 full validation retrieval
+[2026-04-20T22:38:22Z] skipping consolidated comparison because stage1 and stage2 validation artifacts are both required
+[2026-04-20T22:38:22Z] Bucket 4.5 complete
+[2026-04-20T22:38:51Z] starting Bucket 4.5 bridge-repair study
+[2026-04-20T22:38:51Z] stage marker start | loading baseline artifacts
+[2026-04-20T22:38:53Z] loaded prior baseline bundle | source=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_model_selection\qasper_model_selection_validation.json | methods=flat_hybrid_current,bridge_final_current
+[2026-04-20T22:38:53Z] stage marker end | loading baseline artifacts
+[2026-04-20T22:38:53Z] stage marker start | loading smoke retrieval bundle
+[2026-04-20T22:55:06Z] loaded retrieval bundle | dataset=data/qasper_train_fast50.json | questions=146 | papers=50 | methods=bridge_from_flat_seeds_current,bridge_from_flat_seeds_selective_current
+[2026-04-20T22:55:06Z] stage marker end | loading smoke retrieval bundle
+[2026-04-20T22:55:06Z] stage marker start | loading validation retrieval bundle
+[2026-04-20T23:56:03Z] loaded retrieval bundle | dataset=data/qasper_validation_full.json | questions=1005 | papers=281 | methods=bridge_from_flat_seeds_current,bridge_from_flat_seeds_selective_current
+[2026-04-20T23:56:03Z] stage marker end | loading validation retrieval bundle
+[2026-04-20T23:56:04Z] prior stage artifact status | stage1_validation_loaded=yes | stage1_smoke_loaded=yes
+[2026-04-20T23:56:04Z] stage marker start | stage2 smoke retrieval
+[2026-04-20T23:56:04Z] starting retrieval stage=stage2 smoke retrieval, method=bridge_from_flat_seeds_selective_current, representation=current, chunking=paragraph_pair
+[2026-04-20T23:56:04Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=10/50 | questions=21/146 | 14.4% | elapsed=00:00:00 | papers/min=2579.61 | q/min=5417.18 | eta=00:00:01 | new_cache=21 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:04Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=11/50 | questions=25/146 | cache_records=25
+[2026-04-20T23:56:04Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=20/50 | questions=41/146 | 28.1% | elapsed=00:00:00 | papers/min=2874.05 | q/min=5891.80 | eta=00:00:01 | new_cache=20 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:04Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=25/50 | questions=50/146 | cache_records=50
+[2026-04-20T23:56:04Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=30/50 | questions=62/146 | 42.5% | elapsed=00:00:00 | papers/min=2911.93 | q/min=6017.99 | eta=00:00:00 | new_cache=21 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:05Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=32/50 | questions=75/146 | cache_records=75
+[2026-04-20T23:56:05Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=37/50 | questions=100/146 | cache_records=100
+[2026-04-20T23:56:05Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=40/50 | questions=109/146 | 74.7% | elapsed=00:00:00 | papers/min=2545.27 | q/min=6935.85 | eta=00:00:00 | new_cache=47 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:05Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=44/50 | questions=125/146 | cache_records=125
+[2026-04-20T23:56:05Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=50/50 | questions=146/146 | 100.0% | elapsed=00:00:01 | papers/min=2316.65 | q/min=6764.61 | eta=00:00:00 | new_cache=37 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:05Z] checkpoint saved | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=50/50 | questions=146/146 | cache_records=146
+[2026-04-20T23:56:05Z] stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | papers=50/50 | questions=146/146 | 100.0% | elapsed=00:00:01 | papers/min=2292.70 | q/min=6694.69 | eta=00:00:00 | new_cache=0 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:05Z] stage complete | stage=stage2 smoke retrieval | method=bridge_from_flat_seeds_selective_current | computed_this_run=146 | skipped_existing=0 | cache_records=146
+[2026-04-20T23:56:05Z] completed retrieval bundle | stage=stage2 smoke retrieval | output_json=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage2_smoke.json | output_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage2_smoke.md
+[2026-04-20T23:56:05Z] stage marker end | stage2 smoke retrieval
+[2026-04-20T23:56:05Z] stage marker start | stage2 full validation retrieval
+[2026-04-20T23:56:05Z] starting retrieval stage=stage2 full validation retrieval, method=bridge_from_flat_seeds_selective_current, representation=current, chunking=paragraph_pair
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=6/281 | questions=25/1005 | cache_records=25
+[2026-04-20T23:56:06Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=10/281 | questions=32/1005 | 3.2% | elapsed=00:00:00 | papers/min=1655.34 | q/min=5297.10 | eta=00:00:11 | new_cache=32 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=15/281 | questions=50/1005 | cache_records=50
+[2026-04-20T23:56:06Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=20/281 | questions=61/1005 | 6.1% | elapsed=00:00:00 | papers/min=2578.88 | q/min=7865.58 | eta=00:00:07 | new_cache=29 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=25/281 | questions=75/1005 | cache_records=75
+[2026-04-20T23:56:06Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=30/281 | questions=94/1005 | 9.4% | elapsed=00:00:00 | papers/min=2516.41 | q/min=7884.75 | eta=00:00:06 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=32/281 | questions=100/1005 | cache_records=100
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=39/281 | questions=125/1005 | cache_records=125
+[2026-04-20T23:56:06Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=40/281 | questions=127/1005 | 12.6% | elapsed=00:00:00 | papers/min=2621.13 | q/min=8322.09 | eta=00:00:06 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:06Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=46/281 | questions=150/1005 | cache_records=150
+[2026-04-20T23:56:06Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=50/281 | questions=163/1005 | 16.2% | elapsed=00:00:01 | papers/min=2586.18 | q/min=8430.94 | eta=00:00:05 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=53/281 | questions=175/1005 | cache_records=175
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=59/281 | questions=200/1005 | cache_records=200
+[2026-04-20T23:56:07Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=60/281 | questions=201/1005 | 20.0% | elapsed=00:00:01 | papers/min=2677.18 | q/min=8968.55 | eta=00:00:05 | new_cache=38 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=68/281 | questions=225/1005 | cache_records=225
+[2026-04-20T23:56:07Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=70/281 | questions=235/1005 | 23.4% | elapsed=00:00:01 | papers/min=2711.37 | q/min=9102.46 | eta=00:00:05 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=74/281 | questions=250/1005 | cache_records=250
+[2026-04-20T23:56:07Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=80/281 | questions=271/1005 | 27.0% | elapsed=00:00:01 | papers/min=2632.14 | q/min=8916.37 | eta=00:00:04 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=81/281 | questions=275/1005 | cache_records=275
+[2026-04-20T23:56:07Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=90/281 | questions=298/1005 | 29.7% | elapsed=00:00:01 | papers/min=2720.05 | q/min=9006.39 | eta=00:00:04 | new_cache=27 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=90/281 | questions=300/1005 | cache_records=300
+[2026-04-20T23:56:07Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=98/281 | questions=325/1005 | cache_records=325
+[2026-04-20T23:56:07Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=100/281 | questions=331/1005 | 32.9% | elapsed=00:00:02 | papers/min=2836.22 | q/min=9387.88 | eta=00:00:04 | new_cache=33 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=106/281 | questions=350/1005 | cache_records=350
+[2026-04-20T23:56:08Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=110/281 | questions=366/1005 | 36.4% | elapsed=00:00:02 | papers/min=2749.07 | q/min=9146.90 | eta=00:00:04 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=113/281 | questions=375/1005 | cache_records=375
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=119/281 | questions=400/1005 | cache_records=400
+[2026-04-20T23:56:08Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=120/281 | questions=401/1005 | 39.9% | elapsed=00:00:02 | papers/min=2719.19 | q/min=9086.63 | eta=00:00:03 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=129/281 | questions=425/1005 | cache_records=425
+[2026-04-20T23:56:08Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=130/281 | questions=430/1005 | 42.8% | elapsed=00:00:02 | papers/min=2735.02 | q/min=9046.62 | eta=00:00:03 | new_cache=29 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=134/281 | questions=450/1005 | cache_records=450
+[2026-04-20T23:56:08Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=140/281 | questions=473/1005 | 47.1% | elapsed=00:00:03 | papers/min=2770.29 | q/min=9359.63 | eta=00:00:03 | new_cache=43 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=141/281 | questions=475/1005 | cache_records=475
+[2026-04-20T23:56:08Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=147/281 | questions=500/1005 | cache_records=500
+[2026-04-20T23:56:08Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=150/281 | questions=514/1005 | 51.1% | elapsed=00:00:03 | papers/min=2781.06 | q/min=9529.78 | eta=00:00:03 | new_cache=41 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=154/281 | questions=525/1005 | cache_records=525
+[2026-04-20T23:56:09Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=160/281 | questions=545/1005 | 54.2% | elapsed=00:00:03 | papers/min=2810.47 | q/min=9573.18 | eta=00:00:02 | new_cache=31 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=163/281 | questions=550/1005 | cache_records=550
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=168/281 | questions=575/1005 | cache_records=575
+[2026-04-20T23:56:09Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=170/281 | questions=586/1005 | 58.3% | elapsed=00:00:03 | papers/min=2782.81 | q/min=9592.51 | eta=00:00:02 | new_cache=41 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=173/281 | questions=600/1005 | cache_records=600
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=178/281 | questions=625/1005 | cache_records=625
+[2026-04-20T23:56:09Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=180/281 | questions=631/1005 | 62.8% | elapsed=00:00:03 | papers/min=2734.60 | q/min=9586.30 | eta=00:00:02 | new_cache=45 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:09Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=184/281 | questions=650/1005 | cache_records=650
+[2026-04-20T23:56:09Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=190/281 | questions=667/1005 | 66.4% | elapsed=00:00:04 | papers/min=2742.47 | q/min=9627.50 | eta=00:00:02 | new_cache=36 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=192/281 | questions=675/1005 | cache_records=675
+[2026-04-20T23:56:10Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=200/281 | questions=697/1005 | 69.4% | elapsed=00:00:04 | papers/min=2761.23 | q/min=9622.90 | eta=00:00:01 | new_cache=30 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=201/281 | questions=700/1005 | cache_records=700
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=208/281 | questions=725/1005 | cache_records=725
+[2026-04-20T23:56:10Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=210/281 | questions=731/1005 | 72.7% | elapsed=00:00:04 | papers/min=2828.45 | q/min=9845.68 | eta=00:00:01 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=213/281 | questions=750/1005 | cache_records=750
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=219/281 | questions=775/1005 | cache_records=775
+[2026-04-20T23:56:10Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=220/281 | questions=777/1005 | 77.3% | elapsed=00:00:04 | papers/min=2778.43 | q/min=9812.93 | eta=00:00:01 | new_cache=46 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=227/281 | questions=800/1005 | cache_records=800
+[2026-04-20T23:56:10Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=230/281 | questions=812/1005 | 80.8% | elapsed=00:00:04 | papers/min=2806.27 | q/min=9907.34 | eta=00:00:01 | new_cache=35 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=233/281 | questions=825/1005 | cache_records=825
+[2026-04-20T23:56:10Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=239/281 | questions=850/1005 | cache_records=850
+[2026-04-20T23:56:10Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=240/281 | questions=851/1005 | 84.7% | elapsed=00:00:05 | papers/min=2786.97 | q/min=9882.15 | eta=00:00:00 | new_cache=39 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=245/281 | questions=875/1005 | cache_records=875
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=250/281 | questions=889/1005 | 88.5% | elapsed=00:00:05 | papers/min=2761.53 | q/min=9820.01 | eta=00:00:00 | new_cache=38 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=253/281 | questions=900/1005 | cache_records=900
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=257/281 | questions=925/1005 | cache_records=925
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=260/281 | questions=932/1005 | 92.7% | elapsed=00:00:05 | papers/min=2739.77 | q/min=9821.01 | eta=00:00:00 | new_cache=43 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=265/281 | questions=950/1005 | cache_records=950
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=270/281 | questions=966/1005 | 96.1% | elapsed=00:00:06 | papers/min=2694.80 | q/min=9641.39 | eta=00:00:00 | new_cache=34 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=273/281 | questions=975/1005 | cache_records=975
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=280/281 | questions=998/1005 | 99.3% | elapsed=00:00:06 | papers/min=2731.72 | q/min=9736.62 | eta=00:00:00 | new_cache=32 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=280/281 | questions=1000/1005 | cache_records=1000
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=281/281 | questions=1005/1005 | 100.0% | elapsed=00:00:06 | papers/min=2719.84 | q/min=9727.53 | eta=00:00:00 | new_cache=7 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] checkpoint saved | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=281/281 | questions=1005/1005 | cache_records=1005
+[2026-04-20T23:56:11Z] stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | papers=281/281 | questions=1005/1005 | 100.0% | elapsed=00:00:06 | papers/min=2719.84 | q/min=9727.53 | eta=00:00:00 | new_cache=0 | checkpoint_saved=no | loaded_cached=0 | skipped_existing=0
+[2026-04-20T23:56:11Z] stage complete | stage=stage2 full validation retrieval | method=bridge_from_flat_seeds_selective_current | computed_this_run=1005 | skipped_existing=0 | cache_records=1005
+[2026-04-20T23:56:12Z] completed retrieval bundle | stage=stage2 full validation retrieval | output_json=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage2_validation.json | output_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_stage2_validation.md
+[2026-04-20T23:56:12Z] stage marker end | stage2 full validation retrieval
+[2026-04-20T23:56:12Z] stage marker start | consolidated comparison writing
+[2026-04-20T23:56:12Z] wrote comparison artifacts | json=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_comparison.json | md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\qasper_bridge_repair_comparison.md
+[2026-04-20T23:56:12Z] stage marker end | consolidated comparison writing
+[2026-04-20T23:56:12Z] stage marker start | final artifact writing
+[2026-04-20T23:56:12Z] wrote final artifacts | summary_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\bucket4_5_bridge_repair_summary.md | takeaways_md=C:\Users\naman\OneDrive\Documents\GitHub\LSPBE-LD-RAG\artifacts\current\bucket4_5_bridge_repair\bridge_repair_takeaways.md
+[2026-04-20T23:56:12Z] stage marker end | final artifact writing
+[2026-04-20T23:56:12Z] Bucket 4.5 complete

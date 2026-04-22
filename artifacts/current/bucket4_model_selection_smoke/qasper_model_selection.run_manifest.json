@@ -1,0 +1,57 @@
+{
+  "script_name": "run_qasper_model_selection_study.py",
+  "started_at": "2026-04-20T18:11:25Z",
+  "ended_at": "2026-04-20T18:14:44Z",
+  "duration_seconds": 199.0,
+  "status": "completed",
+  "resumed": false,
+  "output_paths": {
+    "screen_json": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_screen.json",
+    "screen_md": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_screen.md",
+    "screen_subset": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_screen_subset.json",
+    "validation_json": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_validation.json",
+    "validation_md": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_validation.md",
+    "validation_csv": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_validation_per_question.csv",
+    "answer_json": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_answer_eval.json",
+    "answer_md": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_answer_eval.md",
+    "significance_json": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_significance.json",
+    "significance_md": "artifacts\\current\\bucket4_model_selection_smoke\\qasper_model_selection_significance.md",
+    "summary_md": "artifacts\\current\\bucket4_model_selection_smoke\\bucket4_model_selection_summary.md",
+    "final_note_md": "artifacts\\current\\bucket4_model_selection_smoke\\final_model_selection_note.md",
+    "logs_dir": "artifacts\\current\\bucket4_model_selection_smoke\\logs"
+  },
+  "config": {
+    "dataset_path": "data\\qasper_validation_full.json",
+    "split": "validation",
+    "screen_size": 10,
+    "max_questions": 20,
+    "max_papers": 1000000,
+    "fixed_chunk_words": 160,
+    "fixed_chunk_overlap": 40,
+    "answerer": "auto",
+    "qa_model_name": "distilbert-base-cased-distilled-squad",
+    "finalists_count": 2,
+    "bootstrap_samples": 2000,
+    "save_every": 5,
+    "progress_every_papers": 2,
+    "progress_every_seconds": 30,
+    "methods": [
+      "flat_hybrid_current",
+      "adjacency_hybrid_current",
+      "bridge_v2_hybrid_current",
+      "bridge_final_current",
+      "fixed_chunk_bridge_final"
+    ],
+    "finalists": [
+      "fixed_chunk_bridge_final",
+      "flat_hybrid_current"
+    ],
+    "selected_candidate": "fixed_chunk_bridge_final",
+    "structure_aware_diagnostic_included": false
+  },
+  "counters": {
+    "screen_questions": 10,
+    "validation_questions": 20,
+    "answer_eval_questions": 20
+  }
+}

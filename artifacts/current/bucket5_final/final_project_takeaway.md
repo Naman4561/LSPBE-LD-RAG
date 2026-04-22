@@ -1,0 +1,3 @@
+# Final Project Takeaway
+
+The serious QASPER redo ends with `flat_hybrid_current` as the locked final model. On the held-out test split it stays ahead of `bridge_final_current` on retrieval-first evidence recovery, while answer evaluation remains useful but secondary because the local QA layer is still imperfect. The defensible presentation story is that protocol cleanup changed the conclusion: once validation was treated as model selection and bridge fairness was explicitly repaired, the best final result still stayed flat rather than bridge, with remaining weaknesses concentrated in partial evidence recovery, multi-span/float-table cases, and answerer failures despite correct evidence.

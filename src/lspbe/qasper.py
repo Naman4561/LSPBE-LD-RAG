@@ -58,6 +58,18 @@ class QasperMethodConfig:
         return asdict(self)
 
 
+FLAT_BASELINE = QasperMethodConfig(
+    name="flat",
+    label="Flat baseline",
+    method="flat",
+    k=20,
+    context_budget=20,
+    seed_retrieval_mode="hybrid",
+    seed_dense_weight=1.0,
+    seed_sparse_weight=0.5,
+    notes="No local expansion; return the top-ranked seed units directly.",
+)
+
 ADJACENCY_BASELINE = QasperMethodConfig(
     name="adjacency",
     label="Adjacency baseline",
@@ -131,6 +143,7 @@ LEGACY_HYBRID_SOFT = QasperMethodConfig(
 QASPER_METHODS = {
     config.name: config
     for config in [
+        FLAT_BASELINE,
         ADJACENCY_BASELINE,
         BRIDGE_V1_BASELINE,
         BRIDGE_V2_BASELINE,
@@ -198,6 +211,11 @@ def apply_qasper_method(
     """Apply one named method and return retrieved context plus bridge metadata."""
 
     normalized_rank = collapse_retrieved_to_backbone(rank, segments_by_doc, max_results=config.k)
+
+    if config.method == "flat":
+        retrieved = [item.segment for item in normalized_rank[: config.context_budget]]
+        keys = {(segment.doc_id, segment.segment_id) for segment in retrieved}
+        return retrieved, {}, keys, set(), {}
 
     if config.method == "adjacency":
         retrieved = adjacency_expand(normalized_rank, segments_by_doc, context_budget=config.context_budget)

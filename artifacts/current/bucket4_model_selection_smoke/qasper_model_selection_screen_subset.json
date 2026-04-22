@@ -1,0 +1,57 @@
+{
+  "seed": 20260420,
+  "target_size": 10,
+  "selected_question_ids": [
+    "1609.00425::q0",
+    "1704.06194::q0",
+    "1704.06194::q1",
+    "1801.05147::q1",
+    "1810.08699::q2",
+    "1811.00383::q0",
+    "1811.00383::q1",
+    "1909.09067::q1",
+    "1912.01214::q0",
+    "1912.01214::q2"
+  ],
+  "selected_paper_ids": [
+    "1609.00425",
+    "1704.06194",
+    "1801.05147",
+    "1810.08699",
+    "1811.00383",
+    "1909.09067",
+    "1912.01214"
+  ],
+  "selected_counts": {
+    "adjacency_easy": 5,
+    "skip_local": 6,
+    "multi_span": 5,
+    "float_table": 6,
+    "boolean": 1,
+    "what": 3,
+    "how": 1,
+    "which": 3,
+    "other": 2
+  },
+  "target_feature_counts": {
+    "question_type::boolean": 1,
+    "question_type::what": 2,
+    "question_type::how": 1,
+    "question_type::which": 2,
+    "question_type::other": 2,
+    "subset::skip_local": 4,
+    "subset::multi_span": 4,
+    "subset::float_table": 4
+  },
+  "selected_feature_counts": {
+    "question_type::other": 2,
+    "subset::skip_local": 6,
+    "subset::multi_span": 5,
+    "subset::float_table": 6,
+    "question_type::boolean": 1,
+    "question_type::how": 1,
+    "question_type::which": 3,
+    "question_type::what": 3
+  },
+  "screening_policy": "greedy_feature_balanced"
+}
