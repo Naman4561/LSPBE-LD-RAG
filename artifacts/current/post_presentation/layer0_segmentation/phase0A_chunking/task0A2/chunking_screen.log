@@ -1,0 +1,511 @@
+[2026-04-25T20:55:09Z] embedder initialized | kind=bge | model=BAAI/bge-base-en-v1.5
+[2026-04-25T20:55:09Z] family start | stage=smoke | family=paragraph
+[2026-04-25T20:55:09Z] run start | stage=smoke | family=paragraph | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:10:25Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=50/146 | qpm=3.27 | eta_seconds=1759.2
+[2026-04-25T21:10:25Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=100/146 | qpm=6.55 | eta_seconds=421.5
+[2026-04-25T21:10:25Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=146/146 | qpm=9.56 | eta_seconds=0.0
+[2026-04-25T21:10:25Z] run complete | stage=smoke | family=paragraph | harness=sparse_only_baseline | seconds=916.42 | evidence_hit=0.7123 | coverage=0.6385
+[2026-04-25T21:10:25Z] combined comparison updated | path=artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json | runs=1
+[2026-04-25T21:12:17Z] embedder initialized | kind=hash | dims=512
+[2026-04-25T21:12:17Z] family start | stage=smoke | family=paragraph
+[2026-04-25T21:12:17Z] context build start | stage=smoke | family=paragraph | segments=3315 | questions=146
+[2026-04-25T21:12:17Z] context build complete | stage=smoke | family=paragraph | segments=3315 | questions=146
+[2026-04-25T21:12:17Z] run start | stage=smoke | family=paragraph | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=50/146 | qpm=77105.96 | eta_seconds=0.1
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=100/146 | qpm=75501.71 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=146/146 | qpm=76162.59 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] run complete | stage=smoke | family=paragraph | harness=sparse_only_baseline | seconds=0.12 | evidence_hit=0.7123 | coverage=0.6385
+[2026-04-25T21:12:18Z] run start | stage=smoke | family=paragraph | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=50/146 | qpm=85450.61 | eta_seconds=0.1
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=100/146 | qpm=79279.61 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=146/146 | qpm=77308.06 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] run complete | stage=smoke | family=paragraph | harness=dense_only_baseline | seconds=0.11 | evidence_hit=0.5342 | coverage=0.4302
+[2026-04-25T21:12:18Z] run start | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=50/146 | qpm=67526.35 | eta_seconds=0.1
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=100/146 | qpm=60303.69 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=146/146 | qpm=65333.74 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] run complete | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | seconds=0.13 | evidence_hit=0.6027 | coverage=0.5024
+[2026-04-25T21:12:18Z] run start | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=50/146 | qpm=81586.48 | eta_seconds=0.1
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=64353.93 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=65036.64 | eta_seconds=0.0
+[2026-04-25T21:12:18Z] run complete | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | seconds=0.14 | evidence_hit=0.5685 | coverage=0.4903
+[2026-04-25T21:12:18Z] combined comparison updated | path=artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json | runs=4
+[2026-04-25T21:12:40Z] embedder initialized | kind=bge | model=BAAI/bge-base-en-v1.5
+[2026-04-25T21:12:40Z] family start | stage=smoke | family=paragraph
+[2026-04-25T21:12:40Z] context build start | stage=smoke | family=paragraph | segments=3315 | questions=146
+[2026-04-25T21:26:55Z] context build complete | stage=smoke | family=paragraph | segments=3315 | questions=146
+[2026-04-25T21:26:55Z] run start | stage=smoke | family=paragraph | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=50/146 | qpm=42808.89 | eta_seconds=0.1
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=100/146 | qpm=40005.07 | eta_seconds=0.1
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=sparse_only_baseline | questions=146/146 | qpm=41717.76 | eta_seconds=0.0
+[2026-04-25T21:26:55Z] run complete | stage=smoke | family=paragraph | harness=sparse_only_baseline | seconds=0.21 | evidence_hit=0.7123 | coverage=0.6385
+[2026-04-25T21:26:55Z] run start | stage=smoke | family=paragraph | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=50/146 | qpm=63307.30 | eta_seconds=0.1
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=100/146 | qpm=58658.65 | eta_seconds=0.0
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=dense_only_baseline | questions=146/146 | qpm=59847.31 | eta_seconds=0.0
+[2026-04-25T21:26:55Z] run complete | stage=smoke | family=paragraph | harness=dense_only_baseline | seconds=0.15 | evidence_hit=0.6986 | coverage=0.6261
+[2026-04-25T21:26:55Z] run start | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:26:55Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=50/146 | qpm=56072.67 | eta_seconds=0.1
+[2026-04-25T21:26:56Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=100/146 | qpm=48967.80 | eta_seconds=0.1
+[2026-04-25T21:26:56Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | questions=146/146 | qpm=51455.16 | eta_seconds=0.0
+[2026-04-25T21:26:56Z] run complete | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | seconds=0.17 | evidence_hit=0.7123 | coverage=0.6381
+[2026-04-25T21:26:56Z] run start | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:26:56Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=50/146 | qpm=58115.32 | eta_seconds=0.1
+[2026-04-25T21:26:56Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=54290.19 | eta_seconds=0.1
+[2026-04-25T21:26:56Z] progress | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=55742.71 | eta_seconds=0.0
+[2026-04-25T21:26:56Z] run complete | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | seconds=0.16 | evidence_hit=0.6644 | coverage=0.5990
+[2026-04-25T21:26:56Z] combined comparison updated | path=artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json | runs=4
+[2026-04-25T21:27:20Z] embedder initialized | kind=bge | model=BAAI/bge-base-en-v1.5
+[2026-04-25T21:27:20Z] family start | stage=smoke | family=paragraph
+[2026-04-25T21:27:20Z] run skipped | stage=smoke | family=paragraph | harness=sparse_only_baseline | reason=exists
+[2026-04-25T21:27:20Z] run skipped | stage=smoke | family=paragraph | harness=dense_only_baseline | reason=exists
+[2026-04-25T21:27:20Z] run skipped | stage=smoke | family=paragraph | harness=simple_hybrid_baseline | reason=exists
+[2026-04-25T21:27:20Z] run skipped | stage=smoke | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-25T21:27:20Z] family start | stage=smoke | family=paragraph_pair
+[2026-04-25T21:27:21Z] context build start | stage=smoke | family=paragraph_pair | segments=2827 | questions=146
+[2026-04-25T21:49:08Z] context build complete | stage=smoke | family=paragraph_pair | segments=2827 | questions=146
+[2026-04-25T21:49:08Z] run start | stage=smoke | family=paragraph_pair | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:49:08Z] progress | stage=smoke | family=paragraph_pair | harness=sparse_only_baseline | questions=100/146 | qpm=25326.83 | eta_seconds=0.1
+[2026-04-25T21:49:08Z] progress | stage=smoke | family=paragraph_pair | harness=sparse_only_baseline | questions=146/146 | qpm=27463.73 | eta_seconds=0.0
+[2026-04-25T21:49:08Z] run complete | stage=smoke | family=paragraph_pair | harness=sparse_only_baseline | seconds=0.32 | evidence_hit=0.7192 | coverage=0.6580
+[2026-04-25T21:49:08Z] run start | stage=smoke | family=paragraph_pair | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:49:08Z] progress | stage=smoke | family=paragraph_pair | harness=dense_only_baseline | questions=100/146 | qpm=38449.56 | eta_seconds=0.1
+[2026-04-25T21:49:08Z] progress | stage=smoke | family=paragraph_pair | harness=dense_only_baseline | questions=146/146 | qpm=40418.58 | eta_seconds=0.0
+[2026-04-25T21:49:08Z] run complete | stage=smoke | family=paragraph_pair | harness=dense_only_baseline | seconds=0.22 | evidence_hit=0.7123 | coverage=0.6701
+[2026-04-25T21:49:08Z] run start | stage=smoke | family=paragraph_pair | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:49:09Z] progress | stage=smoke | family=paragraph_pair | harness=simple_hybrid_baseline | questions=100/146 | qpm=36359.71 | eta_seconds=0.1
+[2026-04-25T21:49:09Z] progress | stage=smoke | family=paragraph_pair | harness=simple_hybrid_baseline | questions=146/146 | qpm=37763.15 | eta_seconds=0.0
+[2026-04-25T21:49:09Z] run complete | stage=smoke | family=paragraph_pair | harness=simple_hybrid_baseline | seconds=0.23 | evidence_hit=0.7192 | coverage=0.6792
+[2026-04-25T21:49:09Z] run start | stage=smoke | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T21:49:09Z] progress | stage=smoke | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=38627.04 | eta_seconds=0.1
+[2026-04-25T21:49:09Z] progress | stage=smoke | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=40302.29 | eta_seconds=0.0
+[2026-04-25T21:49:09Z] run complete | stage=smoke | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | seconds=0.22 | evidence_hit=0.6507 | coverage=0.5975
+[2026-04-25T21:49:09Z] family start | stage=smoke | family=paragraph_triple
+[2026-04-25T21:49:10Z] context build start | stage=smoke | family=paragraph_triple | segments=2472 | questions=146
+[2026-04-25T22:13:24Z] context build complete | stage=smoke | family=paragraph_triple | segments=2472 | questions=146
+[2026-04-25T22:13:24Z] run start | stage=smoke | family=paragraph_triple | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=sparse_only_baseline | questions=100/146 | qpm=23660.68 | eta_seconds=0.1
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=sparse_only_baseline | questions=146/146 | qpm=25372.35 | eta_seconds=0.0
+[2026-04-25T22:13:25Z] run complete | stage=smoke | family=paragraph_triple | harness=sparse_only_baseline | seconds=0.35 | evidence_hit=0.7329 | coverage=0.6838
+[2026-04-25T22:13:25Z] run start | stage=smoke | family=paragraph_triple | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=dense_only_baseline | questions=100/146 | qpm=31322.16 | eta_seconds=0.1
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=dense_only_baseline | questions=146/146 | qpm=31051.32 | eta_seconds=0.0
+[2026-04-25T22:13:25Z] run complete | stage=smoke | family=paragraph_triple | harness=dense_only_baseline | seconds=0.28 | evidence_hit=0.7466 | coverage=0.7020
+[2026-04-25T22:13:25Z] run start | stage=smoke | family=paragraph_triple | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=simple_hybrid_baseline | questions=100/146 | qpm=31869.75 | eta_seconds=0.1
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=simple_hybrid_baseline | questions=146/146 | qpm=32320.92 | eta_seconds=0.0
+[2026-04-25T22:13:25Z] run complete | stage=smoke | family=paragraph_triple | harness=simple_hybrid_baseline | seconds=0.27 | evidence_hit=0.7603 | coverage=0.7165
+[2026-04-25T22:13:25Z] run start | stage=smoke | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=37398.91 | eta_seconds=0.1
+[2026-04-25T22:13:25Z] progress | stage=smoke | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=38594.30 | eta_seconds=0.0
+[2026-04-25T22:13:26Z] run complete | stage=smoke | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | seconds=0.23 | evidence_hit=0.6644 | coverage=0.6174
+[2026-04-25T22:13:26Z] family start | stage=smoke | family=fixed_120_30
+[2026-04-25T22:13:26Z] context build start | stage=smoke | family=fixed_120_30 | segments=2590 | questions=146
+[2026-04-25T22:31:04Z] context build complete | stage=smoke | family=fixed_120_30 | segments=2590 | questions=146
+[2026-04-25T22:31:04Z] run start | stage=smoke | family=fixed_120_30 | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:31:04Z] progress | stage=smoke | family=fixed_120_30 | harness=sparse_only_baseline | questions=100/146 | qpm=27620.98 | eta_seconds=0.1
+[2026-04-25T22:31:04Z] progress | stage=smoke | family=fixed_120_30 | harness=sparse_only_baseline | questions=146/146 | qpm=31624.81 | eta_seconds=0.0
+[2026-04-25T22:31:04Z] run complete | stage=smoke | family=fixed_120_30 | harness=sparse_only_baseline | seconds=0.28 | evidence_hit=0.6781 | coverage=0.5992
+[2026-04-25T22:31:04Z] run start | stage=smoke | family=fixed_120_30 | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:31:04Z] progress | stage=smoke | family=fixed_120_30 | harness=dense_only_baseline | questions=100/146 | qpm=46522.41 | eta_seconds=0.1
+[2026-04-25T22:31:04Z] progress | stage=smoke | family=fixed_120_30 | harness=dense_only_baseline | questions=146/146 | qpm=48117.80 | eta_seconds=0.0
+[2026-04-25T22:31:04Z] run complete | stage=smoke | family=fixed_120_30 | harness=dense_only_baseline | seconds=0.18 | evidence_hit=0.6712 | coverage=0.5989
+[2026-04-25T22:31:04Z] run start | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:31:04Z] progress | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_baseline | questions=100/146 | qpm=43247.83 | eta_seconds=0.1
+[2026-04-25T22:31:05Z] progress | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_baseline | questions=146/146 | qpm=43711.51 | eta_seconds=0.0
+[2026-04-25T22:31:05Z] run complete | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_baseline | seconds=0.20 | evidence_hit=0.6918 | coverage=0.6234
+[2026-04-25T22:31:05Z] run start | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:31:05Z] progress | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=48167.82 | eta_seconds=0.1
+[2026-04-25T22:31:05Z] progress | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=50264.55 | eta_seconds=0.0
+[2026-04-25T22:31:05Z] run complete | stage=smoke | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | seconds=0.17 | evidence_hit=0.5959 | coverage=0.5454
+[2026-04-25T22:31:05Z] family start | stage=smoke | family=fixed_160_40
+[2026-04-25T22:31:06Z] context build start | stage=smoke | family=fixed_160_40 | segments=1971 | questions=146
+[2026-04-25T22:48:20Z] context build complete | stage=smoke | family=fixed_160_40 | segments=1971 | questions=146
+[2026-04-25T22:48:20Z] run start | stage=smoke | family=fixed_160_40 | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:48:20Z] progress | stage=smoke | family=fixed_160_40 | harness=sparse_only_baseline | questions=100/146 | qpm=28361.92 | eta_seconds=0.1
+[2026-04-25T22:48:20Z] progress | stage=smoke | family=fixed_160_40 | harness=sparse_only_baseline | questions=146/146 | qpm=30088.22 | eta_seconds=0.0
+[2026-04-25T22:48:20Z] run complete | stage=smoke | family=fixed_160_40 | harness=sparse_only_baseline | seconds=0.29 | evidence_hit=0.7055 | coverage=0.6488
+[2026-04-25T22:48:20Z] run start | stage=smoke | family=fixed_160_40 | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=dense_only_baseline | questions=100/146 | qpm=36886.49 | eta_seconds=0.1
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=dense_only_baseline | questions=146/146 | qpm=39519.29 | eta_seconds=0.0
+[2026-04-25T22:48:21Z] run complete | stage=smoke | family=fixed_160_40 | harness=dense_only_baseline | seconds=0.22 | evidence_hit=0.6986 | coverage=0.6488
+[2026-04-25T22:48:21Z] run start | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_baseline | questions=100/146 | qpm=37701.47 | eta_seconds=0.1
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_baseline | questions=146/146 | qpm=38078.86 | eta_seconds=0.0
+[2026-04-25T22:48:21Z] run complete | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_baseline | seconds=0.23 | evidence_hit=0.7123 | coverage=0.6568
+[2026-04-25T22:48:21Z] run start | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=33149.57 | eta_seconds=0.1
+[2026-04-25T22:48:21Z] progress | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=35800.21 | eta_seconds=0.0
+[2026-04-25T22:48:21Z] run complete | stage=smoke | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | seconds=0.25 | evidence_hit=0.6438 | coverage=0.5960
+[2026-04-25T22:48:21Z] family start | stage=smoke | family=fixed_220_60
+[2026-04-25T22:48:22Z] context build start | stage=smoke | family=fixed_220_60 | segments=1542 | questions=146
+[2026-04-25T23:04:43Z] context build complete | stage=smoke | family=fixed_220_60 | segments=1542 | questions=146
+[2026-04-25T23:04:43Z] run start | stage=smoke | family=fixed_220_60 | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=sparse_only_baseline | questions=100/146 | qpm=24633.89 | eta_seconds=0.1
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=sparse_only_baseline | questions=146/146 | qpm=26967.19 | eta_seconds=0.0
+[2026-04-25T23:04:44Z] run complete | stage=smoke | family=fixed_220_60 | harness=sparse_only_baseline | seconds=0.33 | evidence_hit=0.7466 | coverage=0.7005
+[2026-04-25T23:04:44Z] run start | stage=smoke | family=fixed_220_60 | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=dense_only_baseline | questions=100/146 | qpm=33547.89 | eta_seconds=0.1
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=dense_only_baseline | questions=146/146 | qpm=33699.73 | eta_seconds=0.0
+[2026-04-25T23:04:44Z] run complete | stage=smoke | family=fixed_220_60 | harness=dense_only_baseline | seconds=0.26 | evidence_hit=0.7397 | coverage=0.6978
+[2026-04-25T23:04:44Z] run start | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_baseline | questions=100/146 | qpm=26530.29 | eta_seconds=0.1
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_baseline | questions=146/146 | qpm=29055.29 | eta_seconds=0.0
+[2026-04-25T23:04:44Z] run complete | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_baseline | seconds=0.30 | evidence_hit=0.7466 | coverage=0.7102
+[2026-04-25T23:04:44Z] run start | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=36879.77 | eta_seconds=0.1
+[2026-04-25T23:04:44Z] progress | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=38703.91 | eta_seconds=0.0
+[2026-04-25T23:04:44Z] run complete | stage=smoke | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | seconds=0.23 | evidence_hit=0.6849 | coverage=0.6350
+[2026-04-25T23:04:44Z] family start | stage=smoke | family=semantic_lite
+[2026-04-25T23:04:45Z] context build start | stage=smoke | family=semantic_lite | segments=1726 | questions=146
+[2026-04-25T23:19:29Z] context build complete | stage=smoke | family=semantic_lite | segments=1726 | questions=146
+[2026-04-25T23:19:29Z] run start | stage=smoke | family=semantic_lite | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:19:29Z] progress | stage=smoke | family=semantic_lite | harness=sparse_only_baseline | questions=100/146 | qpm=28040.54 | eta_seconds=0.1
+[2026-04-25T23:19:29Z] progress | stage=smoke | family=semantic_lite | harness=sparse_only_baseline | questions=146/146 | qpm=31690.97 | eta_seconds=0.0
+[2026-04-25T23:19:29Z] run complete | stage=smoke | family=semantic_lite | harness=sparse_only_baseline | seconds=0.28 | evidence_hit=0.6986 | coverage=0.6213
+[2026-04-25T23:19:29Z] run start | stage=smoke | family=semantic_lite | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:19:29Z] progress | stage=smoke | family=semantic_lite | harness=dense_only_baseline | questions=100/146 | qpm=43164.63 | eta_seconds=0.1
+[2026-04-25T23:19:29Z] progress | stage=smoke | family=semantic_lite | harness=dense_only_baseline | questions=146/146 | qpm=45050.37 | eta_seconds=0.0
+[2026-04-25T23:19:29Z] run complete | stage=smoke | family=semantic_lite | harness=dense_only_baseline | seconds=0.20 | evidence_hit=0.7055 | coverage=0.6440
+[2026-04-25T23:19:29Z] run start | stage=smoke | family=semantic_lite | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:19:30Z] progress | stage=smoke | family=semantic_lite | harness=simple_hybrid_baseline | questions=100/146 | qpm=42318.16 | eta_seconds=0.1
+[2026-04-25T23:19:30Z] progress | stage=smoke | family=semantic_lite | harness=simple_hybrid_baseline | questions=146/146 | qpm=43393.43 | eta_seconds=0.0
+[2026-04-25T23:19:30Z] run complete | stage=smoke | family=semantic_lite | harness=simple_hybrid_baseline | seconds=0.20 | evidence_hit=0.7055 | coverage=0.6418
+[2026-04-25T23:19:30Z] run start | stage=smoke | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:19:30Z] progress | stage=smoke | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=48406.58 | eta_seconds=0.1
+[2026-04-25T23:19:30Z] progress | stage=smoke | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=51357.64 | eta_seconds=0.0
+[2026-04-25T23:19:30Z] run complete | stage=smoke | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | seconds=0.17 | evidence_hit=0.6712 | coverage=0.6079
+[2026-04-25T23:19:30Z] family start | stage=smoke | family=semantic_balanced
+[2026-04-25T23:19:30Z] context build start | stage=smoke | family=semantic_balanced | segments=1140 | questions=146
+[2026-04-25T23:33:19Z] context build complete | stage=smoke | family=semantic_balanced | segments=1140 | questions=146
+[2026-04-25T23:33:19Z] run start | stage=smoke | family=semantic_balanced | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:33:19Z] progress | stage=smoke | family=semantic_balanced | harness=sparse_only_baseline | questions=100/146 | qpm=20643.87 | eta_seconds=0.1
+[2026-04-25T23:33:19Z] progress | stage=smoke | family=semantic_balanced | harness=sparse_only_baseline | questions=146/146 | qpm=21915.51 | eta_seconds=0.0
+[2026-04-25T23:33:19Z] run complete | stage=smoke | family=semantic_balanced | harness=sparse_only_baseline | seconds=0.40 | evidence_hit=0.7603 | coverage=0.7080
+[2026-04-25T23:33:19Z] run start | stage=smoke | family=semantic_balanced | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=dense_only_baseline | questions=100/146 | qpm=29744.48 | eta_seconds=0.1
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=dense_only_baseline | questions=146/146 | qpm=30667.17 | eta_seconds=0.0
+[2026-04-25T23:33:20Z] run complete | stage=smoke | family=semantic_balanced | harness=dense_only_baseline | seconds=0.29 | evidence_hit=0.7603 | coverage=0.7069
+[2026-04-25T23:33:20Z] run start | stage=smoke | family=semantic_balanced | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=simple_hybrid_baseline | questions=100/146 | qpm=28132.59 | eta_seconds=0.1
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=simple_hybrid_baseline | questions=146/146 | qpm=30587.37 | eta_seconds=0.0
+[2026-04-25T23:33:20Z] run complete | stage=smoke | family=semantic_balanced | harness=simple_hybrid_baseline | seconds=0.29 | evidence_hit=0.7671 | coverage=0.7137
+[2026-04-25T23:33:20Z] run start | stage=smoke | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=31472.34 | eta_seconds=0.1
+[2026-04-25T23:33:20Z] progress | stage=smoke | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=33281.75 | eta_seconds=0.0
+[2026-04-25T23:33:20Z] run complete | stage=smoke | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | seconds=0.26 | evidence_hit=0.7466 | coverage=0.6869
+[2026-04-25T23:33:20Z] family start | stage=smoke | family=semantic_coarse
+[2026-04-25T23:33:21Z] context build start | stage=smoke | family=semantic_coarse | segments=766 | questions=146
+[2026-04-25T23:44:05Z] context build complete | stage=smoke | family=semantic_coarse | segments=766 | questions=146
+[2026-04-25T23:44:05Z] run start | stage=smoke | family=semantic_coarse | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:44:05Z] progress | stage=smoke | family=semantic_coarse | harness=sparse_only_baseline | questions=100/146 | qpm=24310.85 | eta_seconds=0.1
+[2026-04-25T23:44:05Z] progress | stage=smoke | family=semantic_coarse | harness=sparse_only_baseline | questions=146/146 | qpm=27401.65 | eta_seconds=0.0
+[2026-04-25T23:44:05Z] run complete | stage=smoke | family=semantic_coarse | harness=sparse_only_baseline | seconds=0.32 | evidence_hit=0.7740 | coverage=0.7431
+[2026-04-25T23:44:05Z] run start | stage=smoke | family=semantic_coarse | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:44:05Z] progress | stage=smoke | family=semantic_coarse | harness=dense_only_baseline | questions=100/146 | qpm=34248.20 | eta_seconds=0.1
+[2026-04-25T23:44:06Z] progress | stage=smoke | family=semantic_coarse | harness=dense_only_baseline | questions=146/146 | qpm=36127.51 | eta_seconds=0.0
+[2026-04-25T23:44:06Z] run complete | stage=smoke | family=semantic_coarse | harness=dense_only_baseline | seconds=0.24 | evidence_hit=0.7808 | coverage=0.7499
+[2026-04-25T23:44:06Z] run start | stage=smoke | family=semantic_coarse | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:44:06Z] progress | stage=smoke | family=semantic_coarse | harness=simple_hybrid_baseline | questions=100/146 | qpm=35684.65 | eta_seconds=0.1
+[2026-04-25T23:44:06Z] progress | stage=smoke | family=semantic_coarse | harness=simple_hybrid_baseline | questions=146/146 | qpm=37008.28 | eta_seconds=0.0
+[2026-04-25T23:44:06Z] run complete | stage=smoke | family=semantic_coarse | harness=simple_hybrid_baseline | seconds=0.24 | evidence_hit=0.7808 | coverage=0.7499
+[2026-04-25T23:44:06Z] run start | stage=smoke | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:44:06Z] progress | stage=smoke | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=37821.70 | eta_seconds=0.1
+[2026-04-25T23:44:06Z] progress | stage=smoke | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=39613.31 | eta_seconds=0.0
+[2026-04-25T23:44:06Z] run complete | stage=smoke | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | seconds=0.22 | evidence_hit=0.7671 | coverage=0.7305
+[2026-04-25T23:44:06Z] family start | stage=smoke | family=semantic_section_constrained
+[2026-04-25T23:44:07Z] context build start | stage=smoke | family=semantic_section_constrained | segments=1425 | questions=146
+[2026-04-25T23:57:45Z] context build complete | stage=smoke | family=semantic_section_constrained | segments=1425 | questions=146
+[2026-04-25T23:57:45Z] run start | stage=smoke | family=semantic_section_constrained | harness=sparse_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:57:45Z] progress | stage=smoke | family=semantic_section_constrained | harness=sparse_only_baseline | questions=100/146 | qpm=28803.24 | eta_seconds=0.1
+[2026-04-25T23:57:45Z] progress | stage=smoke | family=semantic_section_constrained | harness=sparse_only_baseline | questions=146/146 | qpm=31186.21 | eta_seconds=0.0
+[2026-04-25T23:57:45Z] run complete | stage=smoke | family=semantic_section_constrained | harness=sparse_only_baseline | seconds=0.28 | evidence_hit=0.7603 | coverage=0.7141
+[2026-04-25T23:57:45Z] run start | stage=smoke | family=semantic_section_constrained | harness=dense_only_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=dense_only_baseline | questions=100/146 | qpm=38850.89 | eta_seconds=0.1
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=dense_only_baseline | questions=146/146 | qpm=40869.36 | eta_seconds=0.0
+[2026-04-25T23:57:46Z] run complete | stage=smoke | family=semantic_section_constrained | harness=dense_only_baseline | seconds=0.22 | evidence_hit=0.7534 | coverage=0.7087
+[2026-04-25T23:57:46Z] run start | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_baseline | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_baseline | questions=100/146 | qpm=39157.00 | eta_seconds=0.1
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_baseline | questions=146/146 | qpm=39861.81 | eta_seconds=0.0
+[2026-04-25T23:57:46Z] run complete | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_baseline | seconds=0.22 | evidence_hit=0.7466 | coverage=0.7076
+[2026-04-25T23:57:46Z] run start | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_train_fast50.json
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | questions=100/146 | qpm=44492.83 | eta_seconds=0.1
+[2026-04-25T23:57:46Z] progress | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | questions=146/146 | qpm=43749.67 | eta_seconds=0.0
+[2026-04-25T23:57:46Z] run complete | stage=smoke | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | seconds=0.20 | evidence_hit=0.6918 | coverage=0.6356
+[2026-04-25T23:57:47Z] combined comparison updated | path=artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json | runs=40
+[2026-04-25T23:58:17Z] embedder initialized | kind=bge | model=BAAI/bge-base-en-v1.5
+[2026-04-25T23:58:17Z] family start | stage=validation | family=paragraph
+[2026-04-25T23:58:22Z] context build start | stage=validation | family=paragraph | segments=13474 | questions=1005
+[2026-04-26T00:59:41Z] context build complete | stage=validation | family=paragraph | segments=13474 | questions=1005
+[2026-04-26T00:59:41Z] run start | stage=validation | family=paragraph | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T00:59:42Z] progress | stage=validation | family=paragraph | harness=sparse_only_baseline | questions=500/1005 | qpm=35314.61 | eta_seconds=0.9
+[2026-04-26T00:59:43Z] progress | stage=validation | family=paragraph | harness=sparse_only_baseline | questions=1000/1005 | qpm=37784.01 | eta_seconds=0.0
+[2026-04-26T00:59:43Z] progress | stage=validation | family=paragraph | harness=sparse_only_baseline | questions=1005/1005 | qpm=37692.06 | eta_seconds=0.0
+[2026-04-26T00:59:43Z] run complete | stage=validation | family=paragraph | harness=sparse_only_baseline | seconds=1.60 | evidence_hit=0.7881 | coverage=0.6639
+[2026-04-26T00:59:43Z] run start | stage=validation | family=paragraph | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T00:59:44Z] progress | stage=validation | family=paragraph | harness=dense_only_baseline | questions=500/1005 | qpm=46478.42 | eta_seconds=0.7
+[2026-04-26T00:59:44Z] progress | stage=validation | family=paragraph | harness=dense_only_baseline | questions=1000/1005 | qpm=45060.76 | eta_seconds=0.0
+[2026-04-26T00:59:44Z] progress | stage=validation | family=paragraph | harness=dense_only_baseline | questions=1005/1005 | qpm=44872.26 | eta_seconds=0.0
+[2026-04-26T00:59:45Z] run complete | stage=validation | family=paragraph | harness=dense_only_baseline | seconds=1.34 | evidence_hit=0.8249 | coverage=0.7067
+[2026-04-26T00:59:45Z] run start | stage=validation | family=paragraph | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T00:59:45Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_baseline | questions=500/1005 | qpm=37027.08 | eta_seconds=0.8
+[2026-04-26T00:59:47Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=30904.38 | eta_seconds=0.0
+[2026-04-26T00:59:47Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=30670.44 | eta_seconds=0.0
+[2026-04-26T00:59:47Z] run complete | stage=validation | family=paragraph | harness=simple_hybrid_baseline | seconds=1.97 | evidence_hit=0.8388 | coverage=0.7200
+[2026-04-26T00:59:47Z] run start | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T00:59:48Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=27903.04 | eta_seconds=1.1
+[2026-04-26T00:59:48Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=34695.04 | eta_seconds=0.0
+[2026-04-26T00:59:48Z] progress | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=34626.85 | eta_seconds=0.0
+[2026-04-26T00:59:49Z] run complete | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | seconds=1.74 | evidence_hit=0.7741 | coverage=0.6483
+[2026-04-26T00:59:49Z] family start | stage=validation | family=paragraph_pair
+[2026-04-26T00:59:54Z] context build start | stage=validation | family=paragraph_pair | segments=10979 | questions=1005
+[2026-04-26T02:15:04Z] context build complete | stage=validation | family=paragraph_pair | segments=10979 | questions=1005
+[2026-04-26T02:15:04Z] run start | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T02:15:05Z] progress | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | questions=500/1005 | qpm=39426.89 | eta_seconds=0.8
+[2026-04-26T02:15:06Z] progress | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | questions=1000/1005 | qpm=43186.60 | eta_seconds=0.0
+[2026-04-26T02:15:06Z] progress | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | questions=1005/1005 | qpm=43021.54 | eta_seconds=0.0
+[2026-04-26T02:15:06Z] run complete | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | seconds=1.40 | evidence_hit=0.8239 | coverage=0.7199
+[2026-04-26T02:15:06Z] run start | stage=validation | family=paragraph_pair | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T02:15:06Z] progress | stage=validation | family=paragraph_pair | harness=dense_only_baseline | questions=500/1005 | qpm=49698.46 | eta_seconds=0.6
+[2026-04-26T02:15:07Z] progress | stage=validation | family=paragraph_pair | harness=dense_only_baseline | questions=1000/1005 | qpm=50447.49 | eta_seconds=0.0
+[2026-04-26T02:15:07Z] progress | stage=validation | family=paragraph_pair | harness=dense_only_baseline | questions=1005/1005 | qpm=50063.85 | eta_seconds=0.0
+[2026-04-26T02:15:07Z] run complete | stage=validation | family=paragraph_pair | harness=dense_only_baseline | seconds=1.21 | evidence_hit=0.8448 | coverage=0.7555
+[2026-04-26T02:15:07Z] run start | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T02:15:08Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | questions=500/1005 | qpm=38969.24 | eta_seconds=0.8
+[2026-04-26T02:15:09Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=37791.33 | eta_seconds=0.0
+[2026-04-26T02:15:09Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=37583.17 | eta_seconds=0.0
+[2026-04-26T02:15:09Z] run complete | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | seconds=1.61 | evidence_hit=0.8557 | coverage=0.7682
+[2026-04-26T02:15:09Z] run start | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T02:15:09Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=41524.15 | eta_seconds=0.7
+[2026-04-26T02:15:10Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=46934.59 | eta_seconds=0.0
+[2026-04-26T02:15:10Z] progress | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=46819.38 | eta_seconds=0.0
+[2026-04-26T02:15:10Z] run complete | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | seconds=1.29 | evidence_hit=0.7910 | coverage=0.6803
+[2026-04-26T02:15:10Z] family start | stage=validation | family=paragraph_triple
+[2026-04-26T02:15:16Z] context build start | stage=validation | family=paragraph_triple | segments=9133 | questions=1005
+[2026-04-26T03:34:55Z] context build complete | stage=validation | family=paragraph_triple | segments=9133 | questions=1005
+[2026-04-26T03:34:55Z] run start | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T03:34:56Z] progress | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | questions=500/1005 | qpm=32742.39 | eta_seconds=0.9
+[2026-04-26T03:34:56Z] progress | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | questions=1000/1005 | qpm=34026.22 | eta_seconds=0.0
+[2026-04-26T03:34:56Z] progress | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | questions=1005/1005 | qpm=33882.43 | eta_seconds=0.0
+[2026-04-26T03:34:56Z] run complete | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | seconds=1.78 | evidence_hit=0.8448 | coverage=0.7630
+[2026-04-26T03:34:56Z] run start | stage=validation | family=paragraph_triple | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T03:34:57Z] progress | stage=validation | family=paragraph_triple | harness=dense_only_baseline | questions=500/1005 | qpm=40685.97 | eta_seconds=0.7
+[2026-04-26T03:34:58Z] progress | stage=validation | family=paragraph_triple | harness=dense_only_baseline | questions=1000/1005 | qpm=39841.69 | eta_seconds=0.0
+[2026-04-26T03:34:58Z] progress | stage=validation | family=paragraph_triple | harness=dense_only_baseline | questions=1005/1005 | qpm=39575.03 | eta_seconds=0.0
+[2026-04-26T03:34:58Z] run complete | stage=validation | family=paragraph_triple | harness=dense_only_baseline | seconds=1.52 | evidence_hit=0.8517 | coverage=0.7735
+[2026-04-26T03:34:58Z] run start | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T03:34:59Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | questions=500/1005 | qpm=25522.00 | eta_seconds=1.2
+[2026-04-26T03:35:01Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=18222.83 | eta_seconds=0.0
+[2026-04-26T03:35:01Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=18102.27 | eta_seconds=0.0
+[2026-04-26T03:35:02Z] run complete | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | seconds=3.33 | evidence_hit=0.8617 | coverage=0.7871
+[2026-04-26T03:35:02Z] run start | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T03:35:03Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=23134.77 | eta_seconds=1.3
+[2026-04-26T03:35:04Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=24693.11 | eta_seconds=0.0
+[2026-04-26T03:35:04Z] progress | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=24605.44 | eta_seconds=0.0
+[2026-04-26T03:35:04Z] run complete | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | seconds=2.45 | evidence_hit=0.8050 | coverage=0.7088
+[2026-04-26T03:35:04Z] family start | stage=validation | family=fixed_120_30
+[2026-04-26T03:35:11Z] context build start | stage=validation | family=fixed_120_30 | segments=11558 | questions=1005
+[2026-04-26T04:41:44Z] context build complete | stage=validation | family=fixed_120_30 | segments=11558 | questions=1005
+[2026-04-26T04:41:44Z] run start | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T04:41:44Z] progress | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | questions=500/1005 | qpm=39360.48 | eta_seconds=0.8
+[2026-04-26T04:41:45Z] progress | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | questions=1000/1005 | qpm=40928.70 | eta_seconds=0.0
+[2026-04-26T04:41:45Z] progress | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | questions=1005/1005 | qpm=40765.74 | eta_seconds=0.0
+[2026-04-26T04:41:45Z] run complete | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | seconds=1.48 | evidence_hit=0.7791 | coverage=0.6751
+[2026-04-26T04:41:45Z] run start | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T04:41:46Z] progress | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | questions=500/1005 | qpm=49380.65 | eta_seconds=0.6
+[2026-04-26T04:41:46Z] progress | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | questions=1000/1005 | qpm=50554.12 | eta_seconds=0.0
+[2026-04-26T04:41:46Z] progress | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | questions=1005/1005 | qpm=50313.80 | eta_seconds=0.0
+[2026-04-26T04:41:46Z] run complete | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | seconds=1.20 | evidence_hit=0.8040 | coverage=0.6987
+[2026-04-26T04:41:46Z] run start | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T04:41:47Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | questions=500/1005 | qpm=38048.71 | eta_seconds=0.8
+[2026-04-26T04:41:48Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=33237.93 | eta_seconds=0.0
+[2026-04-26T04:41:48Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=33134.18 | eta_seconds=0.0
+[2026-04-26T04:41:48Z] run complete | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | seconds=1.82 | evidence_hit=0.8050 | coverage=0.7019
+[2026-04-26T04:41:48Z] run start | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T04:41:49Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=26951.54 | eta_seconds=1.1
+[2026-04-26T04:41:50Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=32168.88 | eta_seconds=0.0
+[2026-04-26T04:41:50Z] progress | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=32154.75 | eta_seconds=0.0
+[2026-04-26T04:41:50Z] run complete | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | seconds=1.88 | evidence_hit=0.7662 | coverage=0.6507
+[2026-04-26T04:41:50Z] family start | stage=validation | family=fixed_160_40
+[2026-04-26T04:41:57Z] context build start | stage=validation | family=fixed_160_40 | segments=9008 | questions=1005
+[2026-04-26T05:56:11Z] context build complete | stage=validation | family=fixed_160_40 | segments=9008 | questions=1005
+[2026-04-26T05:56:11Z] run start | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T05:56:11Z] progress | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | questions=500/1005 | qpm=43783.80 | eta_seconds=0.7
+[2026-04-26T05:56:12Z] progress | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | questions=1000/1005 | qpm=46885.63 | eta_seconds=0.0
+[2026-04-26T05:56:12Z] progress | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | questions=1005/1005 | qpm=46548.42 | eta_seconds=0.0
+[2026-04-26T05:56:12Z] run complete | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | seconds=1.30 | evidence_hit=0.8299 | coverage=0.7400
+[2026-04-26T05:56:12Z] run start | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T05:56:13Z] progress | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | questions=500/1005 | qpm=53179.75 | eta_seconds=0.6
+[2026-04-26T05:56:13Z] progress | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | questions=1000/1005 | qpm=55123.76 | eta_seconds=0.0
+[2026-04-26T05:56:13Z] progress | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | questions=1005/1005 | qpm=54945.39 | eta_seconds=0.0
+[2026-04-26T05:56:13Z] run complete | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | seconds=1.10 | evidence_hit=0.8368 | coverage=0.7495
+[2026-04-26T05:56:13Z] run start | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T05:56:14Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | questions=500/1005 | qpm=47163.89 | eta_seconds=0.6
+[2026-04-26T05:56:15Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=39955.44 | eta_seconds=0.0
+[2026-04-26T05:56:15Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=39626.95 | eta_seconds=0.0
+[2026-04-26T05:56:15Z] run complete | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | seconds=1.52 | evidence_hit=0.8488 | coverage=0.7637
+[2026-04-26T05:56:15Z] run start | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T05:56:16Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=26147.10 | eta_seconds=1.2
+[2026-04-26T05:56:17Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=28939.83 | eta_seconds=0.0
+[2026-04-26T05:56:17Z] progress | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=28848.18 | eta_seconds=0.0
+[2026-04-26T05:56:17Z] run complete | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | seconds=2.09 | evidence_hit=0.7970 | coverage=0.6964
+[2026-04-26T05:56:17Z] family start | stage=validation | family=fixed_220_60
+[2026-04-26T05:56:22Z] context build start | stage=validation | family=fixed_220_60 | segments=6994 | questions=1005
+[2026-04-26T06:55:11Z] context build complete | stage=validation | family=fixed_220_60 | segments=6994 | questions=1005
+[2026-04-26T06:55:11Z] run start | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T06:55:12Z] progress | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | questions=500/1005 | qpm=43074.93 | eta_seconds=0.7
+[2026-04-26T06:55:12Z] progress | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | questions=1000/1005 | qpm=46353.95 | eta_seconds=0.0
+[2026-04-26T06:55:12Z] progress | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | questions=1005/1005 | qpm=46206.85 | eta_seconds=0.0
+[2026-04-26T06:55:12Z] run complete | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | seconds=1.31 | evidence_hit=0.8557 | coverage=0.7812
+[2026-04-26T06:55:12Z] run start | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T06:55:13Z] progress | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | questions=500/1005 | qpm=44341.87 | eta_seconds=0.7
+[2026-04-26T06:55:14Z] progress | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | questions=1000/1005 | qpm=46894.89 | eta_seconds=0.0
+[2026-04-26T06:55:14Z] progress | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | questions=1005/1005 | qpm=46781.67 | eta_seconds=0.0
+[2026-04-26T06:55:14Z] run complete | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | seconds=1.29 | evidence_hit=0.8587 | coverage=0.7871
+[2026-04-26T06:55:14Z] run start | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T06:55:14Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | questions=500/1005 | qpm=46870.34 | eta_seconds=0.6
+[2026-04-26T06:55:15Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=45371.72 | eta_seconds=0.0
+[2026-04-26T06:55:15Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=45146.97 | eta_seconds=0.0
+[2026-04-26T06:55:15Z] run complete | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | seconds=1.34 | evidence_hit=0.8667 | coverage=0.7962
+[2026-04-26T06:55:15Z] run start | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T06:55:16Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=46551.76 | eta_seconds=0.7
+[2026-04-26T06:55:16Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=49561.48 | eta_seconds=0.0
+[2026-04-26T06:55:16Z] progress | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=49416.33 | eta_seconds=0.0
+[2026-04-26T06:55:16Z] run complete | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | seconds=1.22 | evidence_hit=0.8169 | coverage=0.7296
+[2026-04-26T06:55:16Z] family start | stage=validation | family=semantic_lite
+[2026-04-26T06:55:20Z] context build start | stage=validation | family=semantic_lite | segments=7706 | questions=1005
+[2026-04-26T07:56:05Z] context build complete | stage=validation | family=semantic_lite | segments=7706 | questions=1005
+[2026-04-26T07:56:05Z] run start | stage=validation | family=semantic_lite | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T07:56:06Z] progress | stage=validation | family=semantic_lite | harness=sparse_only_baseline | questions=500/1005 | qpm=45677.50 | eta_seconds=0.7
+[2026-04-26T07:56:06Z] progress | stage=validation | family=semantic_lite | harness=sparse_only_baseline | questions=1000/1005 | qpm=48268.82 | eta_seconds=0.0
+[2026-04-26T07:56:06Z] progress | stage=validation | family=semantic_lite | harness=sparse_only_baseline | questions=1005/1005 | qpm=47999.66 | eta_seconds=0.0
+[2026-04-26T07:56:06Z] run complete | stage=validation | family=semantic_lite | harness=sparse_only_baseline | seconds=1.26 | evidence_hit=0.8229 | coverage=0.7261
+[2026-04-26T07:56:06Z] run start | stage=validation | family=semantic_lite | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T07:56:07Z] progress | stage=validation | family=semantic_lite | harness=dense_only_baseline | questions=500/1005 | qpm=56248.15 | eta_seconds=0.5
+[2026-04-26T07:56:07Z] progress | stage=validation | family=semantic_lite | harness=dense_only_baseline | questions=1000/1005 | qpm=55818.11 | eta_seconds=0.0
+[2026-04-26T07:56:07Z] progress | stage=validation | family=semantic_lite | harness=dense_only_baseline | questions=1005/1005 | qpm=55661.85 | eta_seconds=0.0
+[2026-04-26T07:56:07Z] run complete | stage=validation | family=semantic_lite | harness=dense_only_baseline | seconds=1.08 | evidence_hit=0.8368 | coverage=0.7414
+[2026-04-26T07:56:07Z] run start | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T07:56:08Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | questions=500/1005 | qpm=38681.99 | eta_seconds=0.8
+[2026-04-26T07:56:09Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=37498.60 | eta_seconds=0.0
+[2026-04-26T07:56:09Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=37338.24 | eta_seconds=0.0
+[2026-04-26T07:56:09Z] run complete | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | seconds=1.62 | evidence_hit=0.8488 | coverage=0.7542
+[2026-04-26T07:56:09Z] run start | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T07:56:10Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=34231.36 | eta_seconds=0.9
+[2026-04-26T07:56:11Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=32550.47 | eta_seconds=0.0
+[2026-04-26T07:56:11Z] progress | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=32418.42 | eta_seconds=0.0
+[2026-04-26T07:56:11Z] run complete | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | seconds=1.86 | evidence_hit=0.8090 | coverage=0.7044
+[2026-04-26T07:56:11Z] family start | stage=validation | family=semantic_balanced
+[2026-04-26T07:56:16Z] context build start | stage=validation | family=semantic_balanced | segments=5130 | questions=1005
+[2026-04-26T08:46:30Z] context build complete | stage=validation | family=semantic_balanced | segments=5130 | questions=1005
+[2026-04-26T08:46:30Z] run start | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T08:46:31Z] progress | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | questions=500/1005 | qpm=39030.11 | eta_seconds=0.8
+[2026-04-26T08:46:31Z] progress | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | questions=1000/1005 | qpm=42132.75 | eta_seconds=0.0
+[2026-04-26T08:46:31Z] progress | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | questions=1005/1005 | qpm=42034.82 | eta_seconds=0.0
+[2026-04-26T08:46:31Z] run complete | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | seconds=1.44 | evidence_hit=0.8597 | coverage=0.7897
+[2026-04-26T08:46:31Z] run start | stage=validation | family=semantic_balanced | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T08:46:32Z] progress | stage=validation | family=semantic_balanced | harness=dense_only_baseline | questions=500/1005 | qpm=51532.56 | eta_seconds=0.6
+[2026-04-26T08:46:33Z] progress | stage=validation | family=semantic_balanced | harness=dense_only_baseline | questions=1000/1005 | qpm=50513.04 | eta_seconds=0.0
+[2026-04-26T08:46:33Z] progress | stage=validation | family=semantic_balanced | harness=dense_only_baseline | questions=1005/1005 | qpm=50376.10 | eta_seconds=0.0
+[2026-04-26T08:46:33Z] run complete | stage=validation | family=semantic_balanced | harness=dense_only_baseline | seconds=1.20 | evidence_hit=0.8607 | coverage=0.7886
+[2026-04-26T08:46:33Z] run start | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T08:46:33Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | questions=500/1005 | qpm=50694.09 | eta_seconds=0.6
+[2026-04-26T08:46:34Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=49437.23 | eta_seconds=0.0
+[2026-04-26T08:46:34Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=49275.15 | eta_seconds=0.0
+[2026-04-26T08:46:34Z] run complete | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | seconds=1.22 | evidence_hit=0.8647 | coverage=0.7921
+[2026-04-26T08:46:34Z] run start | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T08:46:35Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=52727.17 | eta_seconds=0.6
+[2026-04-26T08:46:35Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=51869.56 | eta_seconds=0.0
+[2026-04-26T08:46:35Z] progress | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=51717.46 | eta_seconds=0.0
+[2026-04-26T08:46:35Z] run complete | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | seconds=1.17 | evidence_hit=0.8438 | coverage=0.7603
+[2026-04-26T08:46:35Z] family start | stage=validation | family=semantic_coarse
+[2026-04-26T08:46:39Z] context build start | stage=validation | family=semantic_coarse | segments=3488 | questions=1005
+[2026-04-26T08:58:58Z] embedder initialized | kind=bge | model=BAAI/bge-base-en-v1.5
+[2026-04-26T08:58:58Z] family start | stage=validation | family=paragraph
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=paragraph_pair
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_pair | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_pair | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_pair | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_pair | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=paragraph_triple
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_triple | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_triple | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_triple | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=paragraph_triple | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=fixed_120_30
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_120_30 | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_120_30 | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_120_30 | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_120_30 | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=fixed_160_40
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_160_40 | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_160_40 | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_160_40 | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_160_40 | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=fixed_220_60
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_220_60 | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_220_60 | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_220_60 | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=fixed_220_60 | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=semantic_lite
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_lite | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_lite | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_lite | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_lite | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=semantic_balanced
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_balanced | harness=sparse_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_balanced | harness=dense_only_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_balanced | harness=simple_hybrid_baseline | reason=exists
+[2026-04-26T08:58:58Z] run skipped | stage=validation | family=semantic_balanced | harness=simple_hybrid_minimal_adjacency_control | reason=exists
+[2026-04-26T08:58:58Z] family start | stage=validation | family=semantic_coarse
+[2026-04-26T08:59:02Z] context build start | stage=validation | family=semantic_coarse | segments=3488 | questions=1005
+[2026-04-26T09:40:39Z] context build complete | stage=validation | family=semantic_coarse | segments=3488 | questions=1005
+[2026-04-26T09:40:39Z] run start | stage=validation | family=semantic_coarse | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T09:40:40Z] progress | stage=validation | family=semantic_coarse | harness=sparse_only_baseline | questions=500/1005 | qpm=36703.75 | eta_seconds=0.8
+[2026-04-26T09:40:41Z] progress | stage=validation | family=semantic_coarse | harness=sparse_only_baseline | questions=1000/1005 | qpm=39214.89 | eta_seconds=0.0
+[2026-04-26T09:40:41Z] progress | stage=validation | family=semantic_coarse | harness=sparse_only_baseline | questions=1005/1005 | qpm=39043.86 | eta_seconds=0.0
+[2026-04-26T09:40:41Z] run complete | stage=validation | family=semantic_coarse | harness=sparse_only_baseline | seconds=1.55 | evidence_hit=0.8776 | coverage=0.8146
+[2026-04-26T09:40:41Z] run start | stage=validation | family=semantic_coarse | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T09:40:41Z] progress | stage=validation | family=semantic_coarse | harness=dense_only_baseline | questions=500/1005 | qpm=46986.50 | eta_seconds=0.6
+[2026-04-26T09:40:42Z] progress | stage=validation | family=semantic_coarse | harness=dense_only_baseline | questions=1000/1005 | qpm=41785.52 | eta_seconds=0.0
+[2026-04-26T09:40:42Z] progress | stage=validation | family=semantic_coarse | harness=dense_only_baseline | questions=1005/1005 | qpm=41422.55 | eta_seconds=0.0
+[2026-04-26T09:40:42Z] run complete | stage=validation | family=semantic_coarse | harness=dense_only_baseline | seconds=1.46 | evidence_hit=0.8756 | coverage=0.8125
+[2026-04-26T09:40:42Z] run start | stage=validation | family=semantic_coarse | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T09:40:43Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_baseline | questions=500/1005 | qpm=31994.79 | eta_seconds=0.9
+[2026-04-26T09:40:44Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=28184.20 | eta_seconds=0.0
+[2026-04-26T09:40:44Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=27683.54 | eta_seconds=0.0
+[2026-04-26T09:40:45Z] run complete | stage=validation | family=semantic_coarse | harness=simple_hybrid_baseline | seconds=2.18 | evidence_hit=0.8776 | coverage=0.8148
+[2026-04-26T09:40:45Z] run start | stage=validation | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T09:40:46Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=27765.88 | eta_seconds=1.1
+[2026-04-26T09:40:46Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=33213.91 | eta_seconds=0.0
+[2026-04-26T09:40:46Z] progress | stage=validation | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=33078.35 | eta_seconds=0.0
+[2026-04-26T09:40:46Z] run complete | stage=validation | family=semantic_coarse | harness=simple_hybrid_minimal_adjacency_control | seconds=1.82 | evidence_hit=0.8677 | coverage=0.7997
+[2026-04-26T09:40:46Z] family start | stage=validation | family=semantic_section_constrained
+[2026-04-26T09:40:51Z] context build start | stage=validation | family=semantic_section_constrained | segments=6601 | questions=1005
+[2026-04-26T10:33:05Z] context build complete | stage=validation | family=semantic_section_constrained | segments=6601 | questions=1005
+[2026-04-26T10:33:05Z] run start | stage=validation | family=semantic_section_constrained | harness=sparse_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T10:33:06Z] progress | stage=validation | family=semantic_section_constrained | harness=sparse_only_baseline | questions=500/1005 | qpm=43124.84 | eta_seconds=0.7
+[2026-04-26T10:33:06Z] progress | stage=validation | family=semantic_section_constrained | harness=sparse_only_baseline | questions=1000/1005 | qpm=45355.22 | eta_seconds=0.0
+[2026-04-26T10:33:06Z] progress | stage=validation | family=semantic_section_constrained | harness=sparse_only_baseline | questions=1005/1005 | qpm=45199.24 | eta_seconds=0.0
+[2026-04-26T10:33:06Z] run complete | stage=validation | family=semantic_section_constrained | harness=sparse_only_baseline | seconds=1.33 | evidence_hit=0.8527 | coverage=0.7726
+[2026-04-26T10:33:06Z] run start | stage=validation | family=semantic_section_constrained | harness=dense_only_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T10:33:07Z] progress | stage=validation | family=semantic_section_constrained | harness=dense_only_baseline | questions=500/1005 | qpm=56303.17 | eta_seconds=0.5
+[2026-04-26T10:33:07Z] progress | stage=validation | family=semantic_section_constrained | harness=dense_only_baseline | questions=1000/1005 | qpm=55725.97 | eta_seconds=0.0
+[2026-04-26T10:33:07Z] progress | stage=validation | family=semantic_section_constrained | harness=dense_only_baseline | questions=1005/1005 | qpm=55560.62 | eta_seconds=0.0
+[2026-04-26T10:33:08Z] run complete | stage=validation | family=semantic_section_constrained | harness=dense_only_baseline | seconds=1.09 | evidence_hit=0.8507 | coverage=0.7749
+[2026-04-26T10:33:08Z] run start | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_baseline | dataset=data/qasper_validation_full.json
+[2026-04-26T10:33:08Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_baseline | questions=500/1005 | qpm=50966.05 | eta_seconds=0.6
+[2026-04-26T10:33:09Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_baseline | questions=1000/1005 | qpm=50049.72 | eta_seconds=0.0
+[2026-04-26T10:33:09Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_baseline | questions=1005/1005 | qpm=49909.31 | eta_seconds=0.0
+[2026-04-26T10:33:09Z] run complete | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_baseline | seconds=1.21 | evidence_hit=0.8587 | coverage=0.7798
+[2026-04-26T10:33:09Z] run start | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | dataset=data/qasper_validation_full.json
+[2026-04-26T10:33:09Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | questions=500/1005 | qpm=52142.98 | eta_seconds=0.6
+[2026-04-26T10:33:10Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | questions=1000/1005 | qpm=54758.47 | eta_seconds=0.0
+[2026-04-26T10:33:10Z] progress | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | questions=1005/1005 | qpm=54491.50 | eta_seconds=0.0
+[2026-04-26T10:33:10Z] run complete | stage=validation | family=semantic_section_constrained | harness=simple_hybrid_minimal_adjacency_control | seconds=1.11 | evidence_hit=0.8259 | coverage=0.7350
+[2026-04-26T10:33:11Z] combined comparison updated | path=artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json | runs=80

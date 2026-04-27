@@ -1,0 +1,44 @@
+{
+  "task": "T0-Final",
+  "layer": "Layer 0 - Segmentation",
+  "goal": "Finalize Layer 0 with a clean Layer 1 handoff and guardrails around subset labels, structure reuse, and retrieval_text safety.",
+  "layer1_segmentation_candidates": [
+    "semantic_balanced__plain",
+    "semantic_coarse__plain",
+    "semantic_section_constrained__plain",
+    "fixed_220_60__plain",
+    "semantic_lite__plain",
+    "paragraph_triple__plain"
+  ],
+  "audit_only_structure_variants": [
+    "semantic_coarse__structure_lite_caption",
+    "semantic_balanced__structure_lite_heading",
+    "fixed_220_60__structure_lite_caption",
+    "semantic_lite__structure_lite_heading",
+    "paragraph_triple__structure_lite_heading"
+  ],
+  "historical_controls": [
+    "paragraph_pair",
+    "paragraph"
+  ],
+  "dropped_from_future_sweeps": [
+    "fixed_160_40",
+    "fixed_120_30",
+    "all structure_lite_inline_ref",
+    "all mixed_structure_bundle",
+    "all structure_full_*"
+  ],
+  "guardrails": {
+    "fixed_question_level_subsets_required_for_cross_family_comparisons": true,
+    "segmentation_specific_subset_labels_primary_cross_family_view_allowed": false,
+    "ranking_may_use_retrieval_text": true,
+    "evidence_matching_must_use_text_or_raw_text": true,
+    "context_assembly_must_state_raw_or_enriched_text": true,
+    "structure_variants_are_not_automatically_layer1_eligible": true,
+    "plain_promoted_segmentations_only_default_layer1_candidates": true
+  },
+  "sources": [
+    "T0A.3",
+    "T0B.2"
+  ]
+}

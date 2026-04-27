@@ -1,0 +1,319 @@
+{
+  "schema_version": "layer0_segmentation_manifest_v1",
+  "created_at": "2026-04-22T23:09:40Z",
+  "task": "T0A.1",
+  "output_dir": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1",
+  "datasets": [
+    {
+      "dataset_path": "data/qasper_train_fast50.json",
+      "dataset_name": "qasper_train_fast50",
+      "paper_count": 50,
+      "families": [
+        {
+          "family_name": "fixed_120_30",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.fixed_120_30.json",
+          "unit_count": 2590,
+          "avg_unit_words": 106.21737451737452
+        },
+        {
+          "family_name": "fixed_160_40",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.fixed_160_40.json",
+          "unit_count": 1971,
+          "avg_unit_words": 136.60223236935565
+        },
+        {
+          "family_name": "fixed_220_60",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.fixed_220_60.json",
+          "unit_count": 1542,
+          "avg_unit_words": 174.3988326848249
+        },
+        {
+          "family_name": "paragraph",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.paragraph.json",
+          "unit_count": 3315,
+          "avg_unit_words": 65.88325791855203
+        },
+        {
+          "family_name": "paragraph_pair",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.paragraph_pair.json",
+          "unit_count": 2827,
+          "avg_unit_words": 118.84895649097983
+        },
+        {
+          "family_name": "paragraph_triple",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.paragraph_triple.json",
+          "unit_count": 2472,
+          "avg_unit_words": 159.8972491909385
+        },
+        {
+          "family_name": "semantic_balanced",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.semantic_balanced.json",
+          "unit_count": 1140,
+          "avg_unit_words": 191.58157894736843
+        },
+        {
+          "family_name": "semantic_coarse",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.semantic_coarse.json",
+          "unit_count": 766,
+          "avg_unit_words": 285.12140992167105
+        },
+        {
+          "family_name": "semantic_lite",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.semantic_lite.json",
+          "unit_count": 1726,
+          "avg_unit_words": 126.53707995365006
+        },
+        {
+          "family_name": "semantic_section_constrained",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.semantic_section_constrained.json",
+          "unit_count": 1425,
+          "avg_unit_words": 153.26526315789474
+        }
+      ]
+    },
+    {
+      "dataset_path": "data/qasper_train_dev.json",
+      "dataset_name": "qasper_train_dev",
+      "paper_count": 622,
+      "families": [
+        {
+          "family_name": "fixed_120_30",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.fixed_120_30.json",
+          "unit_count": 27576,
+          "avg_unit_words": 104.46475195822454
+        },
+        {
+          "family_name": "fixed_160_40",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.fixed_160_40.json",
+          "unit_count": 21430,
+          "avg_unit_words": 131.71395240317312
+        },
+        {
+          "family_name": "fixed_220_60",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.fixed_220_60.json",
+          "unit_count": 16716,
+          "avg_unit_words": 167.04773869346732
+        },
+        {
+          "family_name": "paragraph",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.paragraph.json",
+          "unit_count": 33079,
+          "avg_unit_words": 70.05864748027449
+        },
+        {
+          "family_name": "paragraph_pair",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.paragraph_pair.json",
+          "unit_count": 27294,
+          "avg_unit_words": 126.64933685058988
+        },
+        {
+          "family_name": "paragraph_triple",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.paragraph_triple.json",
+          "unit_count": 23039,
+          "avg_unit_words": 170.4544902122488
+        },
+        {
+          "family_name": "semantic_balanced",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.semantic_balanced.json",
+          "unit_count": 12227,
+          "avg_unit_words": 189.53709004661815
+        },
+        {
+          "family_name": "semantic_coarse",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.semantic_coarse.json",
+          "unit_count": 8249,
+          "avg_unit_words": 280.9395078191296
+        },
+        {
+          "family_name": "semantic_lite",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.semantic_lite.json",
+          "unit_count": 18383,
+          "avg_unit_words": 126.06593047924713
+        },
+        {
+          "family_name": "semantic_section_constrained",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_dev.semantic_section_constrained.json",
+          "unit_count": 15658,
+          "avg_unit_words": 148.00549240005108
+        }
+      ]
+    },
+    {
+      "dataset_path": "data/qasper_validation_full.json",
+      "dataset_name": "qasper_validation_full",
+      "paper_count": 281,
+      "families": [
+        {
+          "family_name": "fixed_120_30",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.fixed_120_30.json",
+          "unit_count": 11558,
+          "avg_unit_words": 104.01643883024745
+        },
+        {
+          "family_name": "fixed_160_40",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.fixed_160_40.json",
+          "unit_count": 9008,
+          "avg_unit_words": 130.7650976909414
+        },
+        {
+          "family_name": "fixed_220_60",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.fixed_220_60.json",
+          "unit_count": 6994,
+          "avg_unit_words": 166.0726336860166
+        },
+        {
+          "family_name": "paragraph",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.paragraph.json",
+          "unit_count": 13474,
+          "avg_unit_words": 71.9231111770818
+        },
+        {
+          "family_name": "paragraph_pair",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.paragraph_pair.json",
+          "unit_count": 10979,
+          "avg_unit_words": 130.46834866563438
+        },
+        {
+          "family_name": "paragraph_triple",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.paragraph_triple.json",
+          "unit_count": 9133,
+          "avg_unit_words": 175.62082557757583
+        },
+        {
+          "family_name": "semantic_balanced",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.semantic_balanced.json",
+          "unit_count": 5130,
+          "avg_unit_words": 188.90682261208576
+        },
+        {
+          "family_name": "semantic_coarse",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.semantic_coarse.json",
+          "unit_count": 3488,
+          "avg_unit_words": 277.8360091743119
+        },
+        {
+          "family_name": "semantic_lite",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.semantic_lite.json",
+          "unit_count": 7706,
+          "avg_unit_words": 125.7581105631975
+        },
+        {
+          "family_name": "semantic_section_constrained",
+          "artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.semantic_section_constrained.json",
+          "unit_count": 6601,
+          "avg_unit_words": 146.8098772913195
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "name": "fixed_120_30",
+      "description": "Section-aware fixed windows of 120 words with 30-word overlap.",
+      "parameters": {
+        "chunk_words": 120,
+        "overlap_words": 30
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "fixed_160_40",
+      "description": "Section-aware fixed windows of 160 words with 40-word overlap.",
+      "parameters": {
+        "chunk_words": 160,
+        "overlap_words": 40
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "fixed_220_60",
+      "description": "Section-aware fixed windows of 220 words with 60-word overlap.",
+      "parameters": {
+        "chunk_words": 220,
+        "overlap_words": 60
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "paragraph",
+      "description": "Single-paragraph units with sentence-aware splitting only when a paragraph exceeds the max length.",
+      "parameters": {
+        "target_words": 170,
+        "max_words": 220
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "paragraph_pair",
+      "description": "Overlapping two-unit windows over the paragraph family within each section.",
+      "parameters": {
+        "window_size": 2,
+        "paragraph_basis_target_words": 170,
+        "paragraph_basis_max_words": 220
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "paragraph_triple",
+      "description": "Overlapping three-unit windows over the paragraph family within each section.",
+      "parameters": {
+        "window_size": 3,
+        "paragraph_basis_target_words": 170,
+        "paragraph_basis_max_words": 220
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "semantic_balanced",
+      "description": "Mid-size semantic grouping with a stronger cohesion threshold and moderate target length.",
+      "parameters": {
+        "target_words": 170,
+        "min_words": 110,
+        "max_words": 240,
+        "similarity_floor": 0.12,
+        "allow_cross_section": true
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "semantic_coarse",
+      "description": "Coarser semantic grouping that allows longer units before flushing.",
+      "parameters": {
+        "target_words": 260,
+        "min_words": 170,
+        "max_words": 360,
+        "similarity_floor": 0.08,
+        "allow_cross_section": true
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "semantic_lite",
+      "description": "Lightweight semantic grouping with smaller target units and limited cross-section carry-over.",
+      "parameters": {
+        "target_words": 110,
+        "min_words": 70,
+        "max_words": 150,
+        "similarity_floor": 0.08,
+        "allow_cross_section": true
+      },
+      "heading_policy": "primary+all"
+    },
+    {
+      "name": "semantic_section_constrained",
+      "description": "Semantic grouping with the same local cohesion heuristic as balanced but with hard section boundaries.",
+      "parameters": {
+        "target_words": 170,
+        "min_words": 110,
+        "max_words": 240,
+        "similarity_floor": 0.12,
+        "allow_cross_section": false
+      },
+      "heading_policy": "primary+all"
+    }
+  ],
+  "artifacts": {
+    "design_doc_md": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/segmentation_registry_design.md",
+    "summary_md": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/segmentation_variants_summary.md"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": "layer0_chunking_screen_run_v1",
+  "created_at": "2026-04-26T06:55:16Z",
+  "started_at": "2026-04-26T06:55:15Z",
+  "ended_at": "2026-04-26T06:55:16Z",
+  "stage": "validation",
+  "status": "completed",
+  "dataset_path": "data/qasper_validation_full.json",
+  "dataset_name": "qasper_validation_full",
+  "segmentation_artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_validation_full.fixed_220_60.json",
+  "family_name": "fixed_220_60",
+  "harness": {
+    "name": "simple_hybrid_minimal_adjacency_control",
+    "label": "Simple hybrid + minimal adjacency control",
+    "seed_mode": "hybrid",
+    "k": 8,
+    "context_budget": 20,
+    "dense_weight": 1.0,
+    "sparse_weight": 0.5,
+    "use_adjacency": true
+  },
+  "embedder": {
+    "kind": "bge",
+    "model_name": "BAAI/bge-base-en-v1.5",
+    "fallback_used": false
+  },
+  "paper_count": 281,
+  "question_count": 1005,
+  "structure_diagnostics": {
+    "unit_count": 6994,
+    "per_paper_unit_count_stats": {
+      "avg": 24.889679715302492,
+      "median": 24.0,
+      "min": 7.0,
+      "max": 94.0,
+      "p95": 42.0
+    },
+    "artifact_avg_unit_words": 166.0726336860166,
+    "artifact_length_distribution_words": {
+      "000_080": 1023,
+      "081_140": 1337,
+      "141_220": 4634,
+      "221_320": 0,
+      "321_plus": 0
+    },
+    "headings_preserved": true,
+    "metadata_trace_fields": [
+      "paper_id",
+      "unit_id",
+      "section.primary_section_name",
+      "section.primary_heading_path",
+      "span.doc_char_start",
+      "span.doc_word_start",
+      "source.paragraph_ids",
+      "parent_links"
+    ]
+  },
+  "runtime": {
+    "total_seconds": 1.2208793000027072,
+    "avg_latency_ms": 0.2828059701492534,
+    "p95_latency_ms": 0.533,
+    "queries_per_minute": 49390.63181746655
+  },
+  "metrics": {
+    "overall": {
+      "queries": 1005,
+      "seed_hit_rate": 0.7223880597014926,
+      "evidence_hit_rate": 0.8169154228855722,
+      "evidence_coverage_rate": 0.7296277407471438,
+      "first_evidence_rank": 2.7823691460055096,
+      "first_evidence_rank_stats": {
+        "mean": 2.7823691460055096,
+        "median": 2.0,
+        "min": 1,
+        "max": 8,
+        "count": 726
+      },
+      "avg_retrieved_units": 14.871641791044777,
+      "avg_retrieved_words": 2429.321393034826,
+      "avg_latency_ms": 0.2828059701492534,
+      "p95_latency_ms": 0.533
+    },
+    "subsets": {
+      "skip_local": {
+        "queries": 277,
+        "seed_hit_rate": 0.8880866425992779,
+        "evidence_hit_rate": 0.9675090252707581,
+        "evidence_coverage_rate": 0.7769371615039484,
+        "first_evidence_rank": 2.686991869918699,
+        "first_evidence_rank_stats": {
+          "mean": 2.686991869918699,
+          "median": 2.0,
+          "min": 1,
+          "max": 8,
+          "count": 246
+        },
+        "avg_retrieved_units": 15.205776173285198,
+        "avg_retrieved_words": 2486.0974729241875,
+        "avg_latency_ms": 0.29280505415162456,
+        "p95_latency_ms": 0.529
+      },
+      "multi_span": {
+        "queries": 237,
+        "seed_hit_rate": 0.8860759493670886,
+        "evidence_hit_rate": 0.9746835443037974,
+        "evidence_coverage_rate": 0.7692502176679392,
+        "first_evidence_rank": 2.757142857142857,
+        "first_evidence_rank_stats": {
+          "mean": 2.757142857142857,
+          "median": 2.0,
+          "min": 1,
+          "max": 8,
+          "count": 210
+        },
+        "avg_retrieved_units": 15.329113924050633,
+        "avg_retrieved_words": 2505.2911392405063,
+        "avg_latency_ms": 0.29533755274261597,
+        "p95_latency_ms": 0.529
+      },
+      "float_table": {
+        "queries": 561,
+        "seed_hit_rate": 0.786096256684492,
+        "evidence_hit_rate": 0.8841354723707665,
+        "evidence_coverage_rate": 0.7498394307217837,
+        "first_evidence_rank": 2.81859410430839,
+        "first_evidence_rank_stats": {
+          "mean": 2.81859410430839,
+          "median": 2.0,
+          "min": 1,
+          "max": 8,
+          "count": 441
+        },
+        "avg_retrieved_units": 14.889483065953653,
+        "avg_retrieved_words": 2440.3279857397506,
+        "avg_latency_ms": 0.2891051693404634,
+        "p95_latency_ms": 0.574
+      }
+    },
+    "subset_counts": {
+      "adjacency_easy": 639,
+      "skip_local": 277,
+      "multi_span": 237,
+      "float_table": 561,
+      "float_direct": 0,
+      "float_reference": 561,
+      "float_adjacent_prose": 0,
+      "boolean": 145,
+      "what": 506,
+      "how": 193,
+      "which": 101,
+      "other": 60
+    }
+  },
+  "notes": []
+}

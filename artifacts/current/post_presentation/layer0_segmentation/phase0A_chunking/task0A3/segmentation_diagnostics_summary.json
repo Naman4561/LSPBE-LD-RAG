@@ -1,0 +1,91 @@
+{
+  "subset_labels_varied_across_families": true,
+  "subset_labels_varied_within_family_across_harnesses": false,
+  "corrected_fixed_subset_rankings_produced": true,
+  "semantic_coarse_best_after_context_efficiency_normalization": false,
+  "semantic_coarse_best_under_word_budget_normalization": false,
+  "semantic_balanced_better_lightweight_default": true,
+  "cross_harness_same_winner": true,
+  "cross_harness_winner_set": [
+    "semantic_coarse"
+  ],
+  "final_classification": {
+    "main_promoted_candidate": [
+      "semantic_coarse",
+      "semantic_balanced",
+      "semantic_section_constrained"
+    ],
+    "specialist_or_control_promoted_candidate": [
+      "fixed_220_60",
+      "semantic_lite",
+      "paragraph_triple"
+    ],
+    "historical_control_only": [
+      "paragraph_pair",
+      "paragraph"
+    ],
+    "killed_for_future_model_building": [
+      "fixed_160_40",
+      "fixed_120_30"
+    ]
+  },
+  "word_budget_winners": {
+    "2500": "semantic_balanced",
+    "3500": "semantic_coarse",
+    "5000": "semantic_coarse"
+  },
+  "context_efficiency_primary": {
+    "semantic_coarse": {
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "question_count": 1005,
+      "avg_retrieved_units": 10.776119402985074,
+      "avg_retrieved_words": 2976.305472636816,
+      "median_retrieved_words": 2999.0,
+      "p95_retrieved_words": 4412.0,
+      "avg_paper_words": 3427.5671641791046,
+      "avg_fraction_of_paper_retrieved": 0.9224598198455058,
+      "median_fraction_of_paper_retrieved": 1.0,
+      "p95_fraction_of_paper_retrieved": 1.0,
+      "evidence_hit_rate": 0.8676616915422886,
+      "evidence_coverage_rate": 0.7997148961328063,
+      "seed_hit_rate": 0.8258706467661692,
+      "first_evidence_rank": 2.727710843373494,
+      "evidence_hit_per_1000_words": 0.2915230642550934,
+      "evidence_coverage_per_1000_words": 0.2686938230921271,
+      "evidence_hit_per_unit": 0.08051708217913205,
+      "evidence_coverage_per_unit": 0.07421177013974796,
+      "approx_gold_evidence_words_retrieved": 148.25575620396512,
+      "gold_evidence_density": 0.05340052137529618,
+      "non_gold_context_burden": 2828.0497164328517,
+      "avg_latency_ms": 0.29449253731343283,
+      "p95_latency_ms": 0.583
+    },
+    "semantic_balanced": {
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "question_count": 1005,
+      "avg_retrieved_units": 13.318407960199005,
+      "avg_retrieved_words": 2502.071641791045,
+      "median_retrieved_words": 2483.0,
+      "p95_retrieved_words": 3499.0,
+      "avg_paper_words": 3427.5671641791046,
+      "avg_fraction_of_paper_retrieved": 0.8062885371711626,
+      "median_fraction_of_paper_retrieved": 0.8236953455571228,
+      "p95_fraction_of_paper_retrieved": 1.0,
+      "evidence_hit_rate": 0.8437810945273632,
+      "evidence_coverage_rate": 0.7602526833870118,
+      "seed_hit_rate": 0.7621890547263681,
+      "first_evidence_rank": 2.8120104438642297,
+      "evidence_hit_per_1000_words": 0.33723298743091296,
+      "evidence_coverage_per_1000_words": 0.3038492866026826,
+      "evidence_hit_per_unit": 0.0633545013074337,
+      "evidence_coverage_per_unit": 0.05708284996667515,
+      "approx_gold_evidence_words_retrieved": 138.72748328285633,
+      "gold_evidence_density": 0.05783006859001399,
+      "non_gold_context_burden": 2363.3441585081896,
+      "avg_latency_ms": 0.24466766169154283,
+      "p95_latency_ms": 0.435
+    }
+  }
+}

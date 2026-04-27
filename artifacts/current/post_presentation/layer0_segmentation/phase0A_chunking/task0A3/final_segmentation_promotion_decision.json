@@ -1,0 +1,27 @@
+{
+  "classification": {
+    "main_promoted_candidate": [
+      "semantic_coarse",
+      "semantic_balanced",
+      "semantic_section_constrained"
+    ],
+    "specialist_or_control_promoted_candidate": [
+      "fixed_220_60",
+      "semantic_lite",
+      "paragraph_triple"
+    ],
+    "historical_control_only": [
+      "paragraph_pair",
+      "paragraph"
+    ],
+    "killed_for_future_model_building": [
+      "fixed_160_40",
+      "fixed_120_30"
+    ]
+  },
+  "notes": {
+    "killed_definition": "Killed means not used in future model-building sweeps, while remaining preserved in artifacts for history and reference.",
+    "semantic_coarse_caution": "semantic_coarse remains the best validation family, but it also retrieves the largest average word volume among the promoted semantic set and should be treated as a high-context candidate rather than the only default.",
+    "semantic_balanced_default": "semantic_balanced is the safest lightweight semantic default because it remains near the top overall, wins corrected nonlocal subset rankings, and is more context-efficient than semantic_coarse."
+  }
+}

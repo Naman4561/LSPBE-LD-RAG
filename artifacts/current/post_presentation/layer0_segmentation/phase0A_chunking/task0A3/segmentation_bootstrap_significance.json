@@ -1,0 +1,139 @@
+{
+  "harness_name": "simple_hybrid_minimal_adjacency_control",
+  "bootstrap_samples": 2000,
+  "seed": 20260426,
+  "comparisons": [
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "semantic_balanced",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.023880597014925373,
+        "ci_low": 0.010945273631840797,
+        "ci_high": 0.03681592039800995
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.039462212745794846,
+        "ci_low": 0.026149806522940848,
+        "ci_high": 0.053015478164731906
+      },
+      "first_evidence_rank_delta": {
+        "n": 746,
+        "mean_delta": -0.289544235924933,
+        "ci_low": -0.4262734584450402,
+        "ci_high": -0.15415549597855227
+      }
+    },
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "semantic_section_constrained",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.041791044776119404,
+        "ci_low": 0.026865671641791045,
+        "ci_high": 0.05771144278606965
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.06472550763595543,
+        "ci_low": 0.0480675985153597,
+        "ci_high": 0.0804932408663752
+      },
+      "first_evidence_rank_delta": {
+        "n": 723,
+        "mean_delta": -0.42461964038727523,
+        "ci_low": -0.5573997233748271,
+        "ci_high": -0.28769017980636236
+      }
+    },
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "fixed_220_60",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.050746268656716415,
+        "ci_low": 0.03482587064676617,
+        "ci_high": 0.06766169154228856
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.07008715538566287,
+        "ci_low": 0.053209744926162865,
+        "ci_high": 0.0872672352523099
+      },
+      "first_evidence_rank_delta": {
+        "n": 709,
+        "mean_delta": -0.4217207334273625,
+        "ci_low": -0.5557122708039492,
+        "ci_high": -0.2863187588152327
+      }
+    },
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "semantic_lite",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.05870646766169154,
+        "ci_low": 0.041791044776119404,
+        "ci_high": 0.07661691542288557
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.09529608499757752,
+        "ci_low": 0.0774768478499822,
+        "ci_high": 0.11343481007660114
+      },
+      "first_evidence_rank_delta": {
+        "n": 680,
+        "mean_delta": -0.4985294117647059,
+        "ci_low": -0.6529411764705882,
+        "ci_high": -0.35
+      }
+    },
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "paragraph_triple",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.0626865671641791,
+        "ci_low": 0.04477611940298507,
+        "ci_high": 0.08059701492537313
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.09089405164032026,
+        "ci_low": 0.0735559226604003,
+        "ci_high": 0.10873669366206679
+      },
+      "first_evidence_rank_delta": {
+        "n": 713,
+        "mean_delta": -0.16690042075736325,
+        "ci_low": -0.3015427769985975,
+        "ci_high": -0.023842917251051893
+      }
+    },
+    {
+      "left_family": "semantic_coarse",
+      "right_family": "paragraph_pair",
+      "evidence_hit_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.07661691542288557,
+        "ci_low": 0.05771144278606965,
+        "ci_high": 0.0945273631840796
+      },
+      "evidence_coverage_rate_delta": {
+        "n": 1005,
+        "mean_delta": 0.11940747298956253,
+        "ci_low": 0.09997692303662446,
+        "ci_high": 0.14009602158855883
+      },
+      "first_evidence_rank_delta": {
+        "n": 687,
+        "mean_delta": -0.2780203784570597,
+        "ci_low": -0.43377001455604075,
+        "ci_high": -0.12954876273653565
+      }
+    }
+  ]
+}

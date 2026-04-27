@@ -1,0 +1,280 @@
+{
+  "harnesses": {
+    "dense_only_baseline": {
+      "top5_by_evidence_hit": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8756218905472637,
+          "evidence_coverage_rate": 0.8125033348913945
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8606965174129353,
+          "evidence_coverage_rate": 0.7885714072281237
+        },
+        {
+          "rank": 3,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8587064676616916,
+          "evidence_coverage_rate": 0.7871302966079085
+        },
+        {
+          "rank": 4,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.8517412935323383,
+          "evidence_coverage_rate": 0.7735265057653118
+        },
+        {
+          "rank": 5,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8507462686567164,
+          "evidence_coverage_rate": 0.7749281332117154
+        }
+      ],
+      "top5_by_evidence_coverage": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8756218905472637,
+          "evidence_coverage_rate": 0.8125033348913945
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8606965174129353,
+          "evidence_coverage_rate": 0.7885714072281237
+        },
+        {
+          "rank": 3,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8587064676616916,
+          "evidence_coverage_rate": 0.7871302966079085
+        },
+        {
+          "rank": 4,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8507462686567164,
+          "evidence_coverage_rate": 0.7749281332117154
+        },
+        {
+          "rank": 5,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.8517412935323383,
+          "evidence_coverage_rate": 0.7735265057653118
+        }
+      ],
+      "winner_by_evidence_hit": "semantic_coarse",
+      "winner_by_evidence_coverage": "semantic_coarse"
+    },
+    "simple_hybrid_baseline": {
+      "top5_by_evidence_hit": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8776119402985074,
+          "evidence_coverage_rate": 0.8148250596011788
+        },
+        {
+          "rank": 2,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8666666666666667,
+          "evidence_coverage_rate": 0.7962398645980735
+        },
+        {
+          "rank": 3,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8646766169154229,
+          "evidence_coverage_rate": 0.7920954536626179
+        },
+        {
+          "rank": 4,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.8616915422885573,
+          "evidence_coverage_rate": 0.7871239518254441
+        },
+        {
+          "rank": 5,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8587064676616916,
+          "evidence_coverage_rate": 0.7797851544120202
+        }
+      ],
+      "top5_by_evidence_coverage": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8776119402985074,
+          "evidence_coverage_rate": 0.8148250596011788
+        },
+        {
+          "rank": 2,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8666666666666667,
+          "evidence_coverage_rate": 0.7962398645980735
+        },
+        {
+          "rank": 3,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8646766169154229,
+          "evidence_coverage_rate": 0.7920954536626179
+        },
+        {
+          "rank": 4,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.8616915422885573,
+          "evidence_coverage_rate": 0.7871239518254441
+        },
+        {
+          "rank": 5,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8587064676616916,
+          "evidence_coverage_rate": 0.7797851544120202
+        }
+      ],
+      "winner_by_evidence_hit": "semantic_coarse",
+      "winner_by_evidence_coverage": "semantic_coarse"
+    },
+    "simple_hybrid_minimal_adjacency_control": {
+      "top5_by_evidence_hit": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8676616915422886,
+          "evidence_coverage_rate": 0.7997148961328063
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8437810945273632,
+          "evidence_coverage_rate": 0.7602526833870118
+        },
+        {
+          "rank": 3,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8258706467661692,
+          "evidence_coverage_rate": 0.7349893884968512
+        },
+        {
+          "rank": 4,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8169154228855722,
+          "evidence_coverage_rate": 0.7296277407471438
+        },
+        {
+          "rank": 5,
+          "family_name": "semantic_lite",
+          "evidence_hit_rate": 0.808955223880597,
+          "evidence_coverage_rate": 0.7044188111352289
+        }
+      ],
+      "top5_by_evidence_coverage": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8676616915422886,
+          "evidence_coverage_rate": 0.7997148961328063
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8437810945273632,
+          "evidence_coverage_rate": 0.7602526833870118
+        },
+        {
+          "rank": 3,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8258706467661692,
+          "evidence_coverage_rate": 0.7349893884968512
+        },
+        {
+          "rank": 4,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8169154228855722,
+          "evidence_coverage_rate": 0.7296277407471438
+        },
+        {
+          "rank": 5,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.8049751243781095,
+          "evidence_coverage_rate": 0.7088208444924862
+        }
+      ],
+      "winner_by_evidence_hit": "semantic_coarse",
+      "winner_by_evidence_coverage": "semantic_coarse"
+    },
+    "sparse_only_baseline": {
+      "top5_by_evidence_hit": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8776119402985074,
+          "evidence_coverage_rate": 0.8145526123138062
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8597014925373134,
+          "evidence_coverage_rate": 0.7896777801255414
+        },
+        {
+          "rank": 3,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8557213930348259,
+          "evidence_coverage_rate": 0.7811809890914369
+        },
+        {
+          "rank": 4,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8527363184079602,
+          "evidence_coverage_rate": 0.772585396018232
+        },
+        {
+          "rank": 5,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.844776119402985,
+          "evidence_coverage_rate": 0.7629725878233341
+        }
+      ],
+      "top5_by_evidence_coverage": [
+        {
+          "rank": 1,
+          "family_name": "semantic_coarse",
+          "evidence_hit_rate": 0.8776119402985074,
+          "evidence_coverage_rate": 0.8145526123138062
+        },
+        {
+          "rank": 2,
+          "family_name": "semantic_balanced",
+          "evidence_hit_rate": 0.8597014925373134,
+          "evidence_coverage_rate": 0.7896777801255414
+        },
+        {
+          "rank": 3,
+          "family_name": "fixed_220_60",
+          "evidence_hit_rate": 0.8557213930348259,
+          "evidence_coverage_rate": 0.7811809890914369
+        },
+        {
+          "rank": 4,
+          "family_name": "semantic_section_constrained",
+          "evidence_hit_rate": 0.8527363184079602,
+          "evidence_coverage_rate": 0.772585396018232
+        },
+        {
+          "rank": 5,
+          "family_name": "paragraph_triple",
+          "evidence_hit_rate": 0.844776119402985,
+          "evidence_coverage_rate": 0.7629725878233341
+        }
+      ],
+      "winner_by_evidence_hit": "semantic_coarse",
+      "winner_by_evidence_coverage": "semantic_coarse"
+    }
+  },
+  "same_family_wins_all_harnesses": true,
+  "winner_set": [
+    "semantic_coarse"
+  ]
+}

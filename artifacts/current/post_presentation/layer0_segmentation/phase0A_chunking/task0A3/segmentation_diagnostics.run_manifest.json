@@ -1,0 +1,30 @@
+{
+  "script_name": "scripts/studies/post_presentation/run_segmentation_diagnostics.py",
+  "created_at": "2026-04-26T16:01:06Z",
+  "task0a1_dir": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1",
+  "task0a2_dir": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2",
+  "output_dir": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A3",
+  "validation_dataset_path": "data/qasper_validation_full.json",
+  "inputs": {
+    "summary_md": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_summary.md",
+    "summary_json": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_summary.json",
+    "combined_json": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json",
+    "run_manifest_json": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen.run_manifest.json"
+  },
+  "word_budget_families": [
+    "semantic_coarse",
+    "semantic_balanced",
+    "semantic_section_constrained",
+    "fixed_220_60",
+    "semantic_lite",
+    "paragraph_triple",
+    "paragraph_pair"
+  ],
+  "word_budgets": [
+    2500,
+    3500,
+    5000
+  ],
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 20260426
+}

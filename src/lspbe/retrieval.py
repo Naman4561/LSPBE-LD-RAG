@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from math import log
 from pathlib import Path
 import re
+from statistics import mean
 from typing import Counter as CounterType
 from typing import Protocol
 
@@ -15,6 +16,43 @@ _STOPWORDS = {
     "the", "a", "an", "and", "or", "for", "of", "to", "in", "on", "is", "are", "was", "were",
     "be", "as", "by", "with", "that", "this", "it", "from", "at", "we", "our", "their", "can",
 }
+
+
+def retrieval_text_for_segment(segment: DocumentSegment) -> str:
+    retrieval_text = segment.metadata.get("retrieval_text") if segment.metadata else None
+    if isinstance(retrieval_text, str) and retrieval_text.strip():
+        return retrieval_text
+    return segment.text
+
+
+def describe_retrieval_text_policy() -> dict[str, str]:
+    return {
+        "ranking_field": "retrieval_text",
+        "ranking_accessor": "retrieval_text_for_segment",
+        "evidence_matching_field": "text/raw_text",
+        "context_assembly_field": "text/raw_text",
+    }
+
+
+def summarize_retrieval_text_deltas(segments: list[DocumentSegment]) -> dict[str, float | int]:
+    changed = 0
+    added_words: list[int] = []
+    for segment in segments:
+        retrieval_text = retrieval_text_for_segment(segment).strip()
+        raw_text = str(
+            segment.metadata.get("raw_text")
+            or segment.text
+        ).strip()
+        if retrieval_text != raw_text:
+            changed += 1
+            added_words.append(max(len(retrieval_text.split()) - len(raw_text.split()), 0))
+    return {
+        "segments": len(segments),
+        "changed_segments": changed,
+        "unchanged_segments": len(segments) - changed,
+        "avg_added_words": float(mean(added_words)) if added_words else 0.0,
+        "max_added_words": max(added_words) if added_words else 0,
+    }
 
 
 def _content_tokens(text: str) -> list[str]:
@@ -96,11 +134,12 @@ class BGERetriever:
     def __init__(self, segments: list[DocumentSegment], embedder: Embedder | None = None) -> None:
         self.segments = segments
         self.embedder = embedder or SentenceTransformerEmbedder("BAAI/bge-base-en-v1.5")
-        self._segment_matrix = self.embedder.encode([s.text for s in segments])
+        segment_texts = [retrieval_text_for_segment(segment) for segment in segments]
+        self._segment_matrix = self.embedder.encode(segment_texts)
         self._doc_to_indices: dict[str, list[int]] = {}
         for idx, seg in enumerate(segments):
             self._doc_to_indices.setdefault(seg.doc_id, []).append(idx)
-        self._sparse_vectors, self._sparse_idf = self._build_sparse_vectors([s.text for s in segments])
+        self._sparse_vectors, self._sparse_idf = self._build_sparse_vectors(segment_texts)
 
     @staticmethod
     def _cosine_scores(query_vec: np.ndarray, doc_mat: np.ndarray) -> np.ndarray:

@@ -1,0 +1,572 @@
+{
+  "schema_version": "layer0_chunking_screen_summary_v1",
+  "created_at": "2026-04-26T10:33:11Z",
+  "primary_ranking_harness": "simple_hybrid_minimal_adjacency_control",
+  "runs_total": 80,
+  "smoke_completed": 40,
+  "validation_completed": 40,
+  "failed_runs": [],
+  "overall_ranking": [
+    {
+      "rank": 1,
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8676616915422886,
+      "evidence_coverage_rate": 0.7997148961328063,
+      "seed_hit_rate": 0.8258706467661692,
+      "first_evidence_rank": 2.727710843373494,
+      "avg_latency_ms": 0.29449253731343283,
+      "avg_units_per_paper": 12.412811387900355
+    },
+    {
+      "rank": 2,
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8437810945273632,
+      "evidence_coverage_rate": 0.7602526833870118,
+      "seed_hit_rate": 0.7621890547263681,
+      "first_evidence_rank": 2.8120104438642297,
+      "avg_latency_ms": 0.24466766169154283,
+      "avg_units_per_paper": 18.256227758007118
+    },
+    {
+      "rank": 3,
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8258706467661692,
+      "evidence_coverage_rate": 0.7349893884968512,
+      "seed_hit_rate": 0.7343283582089553,
+      "first_evidence_rank": 2.861788617886179,
+      "avg_latency_ms": 0.2670955223880599,
+      "avg_units_per_paper": 23.491103202846976
+    },
+    {
+      "rank": 4,
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8169154228855722,
+      "evidence_coverage_rate": 0.7296277407471438,
+      "seed_hit_rate": 0.7223880597014926,
+      "first_evidence_rank": 2.7823691460055096,
+      "avg_latency_ms": 0.2828059701492534,
+      "avg_units_per_paper": 24.889679715302492
+    },
+    {
+      "rank": 5,
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.808955223880597,
+      "evidence_coverage_rate": 0.7044188111352289,
+      "seed_hit_rate": 0.6935323383084577,
+      "first_evidence_rank": 2.8967001434720228,
+      "avg_latency_ms": 0.5411850746268652,
+      "avg_units_per_paper": 27.423487544483987
+    },
+    {
+      "rank": 6,
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8049751243781095,
+      "evidence_coverage_rate": 0.7088208444924862,
+      "seed_hit_rate": 0.7293532338308458,
+      "first_evidence_rank": 2.5798090040927693,
+      "avg_latency_ms": 0.5909611940298516,
+      "avg_units_per_paper": 32.50177935943061
+    },
+    {
+      "rank": 7,
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.7970149253731343,
+      "evidence_coverage_rate": 0.6963950585592378,
+      "seed_hit_rate": 0.6825870646766169,
+      "first_evidence_rank": 2.9620991253644315,
+      "avg_latency_ms": 0.6307999999999994,
+      "avg_units_per_paper": 32.05693950177936
+    },
+    {
+      "rank": 8,
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.7910447761194029,
+      "evidence_coverage_rate": 0.6803074231432444,
+      "seed_hit_rate": 0.7044776119402985,
+      "first_evidence_rank": 2.6228813559322033,
+      "avg_latency_ms": 0.3638825870646769,
+      "avg_units_per_paper": 39.071174377224196
+    },
+    {
+      "rank": 9,
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.7741293532338308,
+      "evidence_coverage_rate": 0.6482825905960236,
+      "seed_hit_rate": 0.6865671641791045,
+      "first_evidence_rank": 2.8463768115942027,
+      "avg_latency_ms": 0.6582477611940316,
+      "avg_units_per_paper": 47.95017793594306
+    },
+    {
+      "rank": 10,
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.7661691542288557,
+      "evidence_coverage_rate": 0.6507438772364146,
+      "seed_hit_rate": 0.6139303482587065,
+      "first_evidence_rank": 2.8557536466774716,
+      "avg_latency_ms": 0.6359144278606955,
+      "avg_units_per_paper": 41.13167259786477
+    }
+  ],
+  "skip_local_ranking": [
+    {
+      "rank": 1,
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9955156950672646,
+      "evidence_coverage_rate": 0.8216188802511674,
+      "seed_hit_rate": 0.9327354260089686,
+      "first_evidence_rank": 2.5625,
+      "avg_latency_ms": 0.24466766169154283,
+      "avg_units_per_paper": 18.256227758007118
+    },
+    {
+      "rank": 2,
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9945054945054945,
+      "evidence_coverage_rate": 0.9039986611415183,
+      "seed_hit_rate": 0.9835164835164835,
+      "first_evidence_rank": 2.435754189944134,
+      "avg_latency_ms": 0.29449253731343283,
+      "avg_units_per_paper": 12.412811387900355
+    },
+    {
+      "rank": 3,
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9795918367346939,
+      "evidence_coverage_rate": 0.7861195597930292,
+      "seed_hit_rate": 0.9102040816326531,
+      "first_evidence_rank": 2.6278026905829597,
+      "avg_latency_ms": 0.2670955223880599,
+      "avg_units_per_paper": 23.491103202846976
+    },
+    {
+      "rank": 4,
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.967741935483871,
+      "evidence_coverage_rate": 0.7489092010597387,
+      "seed_hit_rate": 0.8745519713261649,
+      "first_evidence_rank": 2.668032786885246,
+      "avg_latency_ms": 0.5411850746268652,
+      "avg_units_per_paper": 27.423487544483987
+    },
+    {
+      "rank": 5,
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9675090252707581,
+      "evidence_coverage_rate": 0.7769371615039484,
+      "seed_hit_rate": 0.8880866425992779,
+      "first_evidence_rank": 2.686991869918699,
+      "avg_latency_ms": 0.2828059701492534,
+      "avg_units_per_paper": 24.889679715302492
+    },
+    {
+      "rank": 6,
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.96,
+      "evidence_coverage_rate": 0.7290107477607479,
+      "seed_hit_rate": 0.8466666666666667,
+      "first_evidence_rank": 2.9330708661417324,
+      "avg_latency_ms": 0.6307999999999994,
+      "avg_units_per_paper": 32.05693950177936
+    },
+    {
+      "rank": 7,
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9529411764705882,
+      "evidence_coverage_rate": 0.7106636086047848,
+      "seed_hit_rate": 0.8676470588235294,
+      "first_evidence_rank": 2.4983050847457626,
+      "avg_latency_ms": 0.3638825870646769,
+      "avg_units_per_paper": 39.071174377224196
+    },
+    {
+      "rank": 8,
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9436201780415431,
+      "evidence_coverage_rate": 0.6536320580089126,
+      "seed_hit_rate": 0.8486646884272997,
+      "first_evidence_rank": 2.6153846153846154,
+      "avg_latency_ms": 0.6582477611940316,
+      "avg_units_per_paper": 47.95017793594306
+    },
+    {
+      "rank": 9,
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9312169312169312,
+      "evidence_coverage_rate": 0.7596074480995115,
+      "seed_hit_rate": 0.8783068783068783,
+      "first_evidence_rank": 2.394578313253012,
+      "avg_latency_ms": 0.5909611940298516,
+      "avg_units_per_paper": 32.50177935943061
+    },
+    {
+      "rank": 10,
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9212121212121213,
+      "evidence_coverage_rate": 0.6580518800973345,
+      "seed_hit_rate": 0.7666666666666667,
+      "first_evidence_rank": 2.8102766798418974,
+      "avg_latency_ms": 0.6359144278606955,
+      "avg_units_per_paper": 41.13167259786477
+    }
+  ],
+  "multi_span_ranking": [
+    {
+      "rank": 1,
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9948453608247423,
+      "evidence_coverage_rate": 0.8191642120765832,
+      "seed_hit_rate": 0.9278350515463918,
+      "first_evidence_rank": 2.561111111111111,
+      "avg_latency_ms": 0.24466766169154283,
+      "avg_units_per_paper": 18.256227758007118
+    },
+    {
+      "rank": 2,
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9937106918238994,
+      "evidence_coverage_rate": 0.9053958270939404,
+      "seed_hit_rate": 0.9811320754716981,
+      "first_evidence_rank": 2.4551282051282053,
+      "avg_latency_ms": 0.29449253731343283,
+      "avg_units_per_paper": 12.412811387900355
+    },
+    {
+      "rank": 3,
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9821428571428571,
+      "evidence_coverage_rate": 0.7838169642857143,
+      "seed_hit_rate": 0.9107142857142857,
+      "first_evidence_rank": 2.6519607843137254,
+      "avg_latency_ms": 0.2670955223880599,
+      "avg_units_per_paper": 23.491103202846976
+    },
+    {
+      "rank": 4,
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9753086419753086,
+      "evidence_coverage_rate": 0.7453034162910707,
+      "seed_hit_rate": 0.8724279835390947,
+      "first_evidence_rank": 2.740566037735849,
+      "avg_latency_ms": 0.5411850746268652,
+      "avg_units_per_paper": 27.423487544483987
+    },
+    {
+      "rank": 5,
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9746835443037974,
+      "evidence_coverage_rate": 0.7692502176679392,
+      "seed_hit_rate": 0.8860759493670886,
+      "first_evidence_rank": 2.757142857142857,
+      "avg_latency_ms": 0.2828059701492534,
+      "avg_units_per_paper": 24.889679715302492
+    },
+    {
+      "rank": 6,
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9696969696969697,
+      "evidence_coverage_rate": 0.7331544612794613,
+      "seed_hit_rate": 0.8522727272727273,
+      "first_evidence_rank": 2.902222222222222,
+      "avg_latency_ms": 0.6307999999999994,
+      "avg_units_per_paper": 32.05693950177936
+    },
+    {
+      "rank": 7,
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9671361502347418,
+      "evidence_coverage_rate": 0.7425404277516953,
+      "seed_hit_rate": 0.9154929577464789,
+      "first_evidence_rank": 2.364102564102564,
+      "avg_latency_ms": 0.5909611940298516,
+      "avg_units_per_paper": 32.50177935943061
+    },
+    {
+      "rank": 8,
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9629629629629629,
+      "evidence_coverage_rate": 0.700751192109217,
+      "seed_hit_rate": 0.8888888888888888,
+      "first_evidence_rank": 2.611111111111111,
+      "avg_latency_ms": 0.3638825870646769,
+      "avg_units_per_paper": 39.071174377224196
+    },
+    {
+      "rank": 9,
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9446366782006921,
+      "evidence_coverage_rate": 0.6677445487999121,
+      "seed_hit_rate": 0.8546712802768166,
+      "first_evidence_rank": 2.6639676113360324,
+      "avg_latency_ms": 0.6582477611940316,
+      "avg_units_per_paper": 47.95017793594306
+    },
+    {
+      "rank": 10,
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9340277777777778,
+      "evidence_coverage_rate": 0.657977843915344,
+      "seed_hit_rate": 0.7638888888888888,
+      "first_evidence_rank": 2.827272727272727,
+      "avg_latency_ms": 0.6359144278606955,
+      "avg_units_per_paper": 41.13167259786477
+    }
+  ],
+  "float_table_ranking": [
+    {
+      "rank": 1,
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9357945425361156,
+      "evidence_coverage_rate": 0.8360072523796441,
+      "seed_hit_rate": 0.8956661316211878,
+      "first_evidence_rank": 2.661290322580645,
+      "avg_latency_ms": 0.29449253731343283,
+      "avg_units_per_paper": 12.412811387900355
+    },
+    {
+      "rank": 2,
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.9087719298245615,
+      "evidence_coverage_rate": 0.7857699805068225,
+      "seed_hit_rate": 0.8333333333333334,
+      "first_evidence_rank": 2.711578947368421,
+      "avg_latency_ms": 0.24466766169154283,
+      "avg_units_per_paper": 18.256227758007118
+    },
+    {
+      "rank": 3,
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8870370370370371,
+      "evidence_coverage_rate": 0.7492716851050183,
+      "seed_hit_rate": 0.8037037037037037,
+      "first_evidence_rank": 2.9193548387096775,
+      "avg_latency_ms": 0.2670955223880599,
+      "avg_units_per_paper": 23.491103202846976
+    },
+    {
+      "rank": 4,
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8861003861003861,
+      "evidence_coverage_rate": 0.7264248942820373,
+      "seed_hit_rate": 0.7683397683397684,
+      "first_evidence_rank": 2.8844221105527637,
+      "avg_latency_ms": 0.5411850746268652,
+      "avg_units_per_paper": 27.423487544483987
+    },
+    {
+      "rank": 5,
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8841354723707665,
+      "evidence_coverage_rate": 0.7498394307217837,
+      "seed_hit_rate": 0.786096256684492,
+      "first_evidence_rank": 2.81859410430839,
+      "avg_latency_ms": 0.2828059701492534,
+      "avg_units_per_paper": 24.889679715302492
+    },
+    {
+      "rank": 6,
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8737024221453287,
+      "evidence_coverage_rate": 0.7339604647563125,
+      "seed_hit_rate": 0.7975778546712803,
+      "first_evidence_rank": 2.5683297180043385,
+      "avg_latency_ms": 0.5909611940298516,
+      "avg_units_per_paper": 32.50177935943061
+    },
+    {
+      "rank": 7,
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8593155893536122,
+      "evidence_coverage_rate": 0.7039998710626086,
+      "seed_hit_rate": 0.747148288973384,
+      "first_evidence_rank": 3.035623409669211,
+      "avg_latency_ms": 0.6307999999999994,
+      "avg_units_per_paper": 32.05693950177936
+    },
+    {
+      "rank": 8,
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8542435424354243,
+      "evidence_coverage_rate": 0.6860689126371782,
+      "seed_hit_rate": 0.7693726937269373,
+      "first_evidence_rank": 2.613908872901679,
+      "avg_latency_ms": 0.3638825870646769,
+      "avg_units_per_paper": 39.071174377224196
+    },
+    {
+      "rank": 9,
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8181818181818182,
+      "evidence_coverage_rate": 0.6188936442345536,
+      "seed_hit_rate": 0.7318181818181818,
+      "first_evidence_rank": 2.888198757763975,
+      "avg_latency_ms": 0.6582477611940316,
+      "avg_units_per_paper": 47.95017793594306
+    },
+    {
+      "rank": 10,
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "evidence_hit_rate": 0.8132530120481928,
+      "evidence_coverage_rate": 0.6357467387587868,
+      "seed_hit_rate": 0.6686746987951807,
+      "first_evidence_rank": 2.813813813813814,
+      "avg_latency_ms": 0.6359144278606955,
+      "avg_units_per_paper": 41.13167259786477
+    }
+  ],
+  "efficiency_ranking": [
+    {
+      "rank": 1,
+      "family_name": "semantic_balanced",
+      "avg_latency_ms": 0.24466766169154283,
+      "p95_latency_ms": 0.435,
+      "avg_units_per_paper": 18.256227758007118,
+      "overall_hit": 0.8437810945273632
+    },
+    {
+      "rank": 2,
+      "family_name": "semantic_section_constrained",
+      "avg_latency_ms": 0.2670955223880599,
+      "p95_latency_ms": 0.47,
+      "avg_units_per_paper": 23.491103202846976,
+      "overall_hit": 0.8258706467661692
+    },
+    {
+      "rank": 3,
+      "family_name": "fixed_220_60",
+      "avg_latency_ms": 0.2828059701492534,
+      "p95_latency_ms": 0.533,
+      "avg_units_per_paper": 24.889679715302492,
+      "overall_hit": 0.8169154228855722
+    },
+    {
+      "rank": 4,
+      "family_name": "semantic_coarse",
+      "avg_latency_ms": 0.29449253731343283,
+      "p95_latency_ms": 0.583,
+      "avg_units_per_paper": 12.412811387900355,
+      "overall_hit": 0.8676616915422886
+    },
+    {
+      "rank": 5,
+      "family_name": "paragraph_pair",
+      "avg_latency_ms": 0.3638825870646769,
+      "p95_latency_ms": 0.723,
+      "avg_units_per_paper": 39.071174377224196,
+      "overall_hit": 0.7910447761194029
+    },
+    {
+      "rank": 6,
+      "family_name": "semantic_lite",
+      "avg_latency_ms": 0.5411850746268652,
+      "p95_latency_ms": 1.133,
+      "avg_units_per_paper": 27.423487544483987,
+      "overall_hit": 0.808955223880597
+    },
+    {
+      "rank": 7,
+      "family_name": "paragraph_triple",
+      "avg_latency_ms": 0.5909611940298516,
+      "p95_latency_ms": 1.189,
+      "avg_units_per_paper": 32.50177935943061,
+      "overall_hit": 0.8049751243781095
+    },
+    {
+      "rank": 8,
+      "family_name": "fixed_160_40",
+      "avg_latency_ms": 0.6307999999999994,
+      "p95_latency_ms": 1.348,
+      "avg_units_per_paper": 32.05693950177936,
+      "overall_hit": 0.7970149253731343
+    },
+    {
+      "rank": 9,
+      "family_name": "fixed_120_30",
+      "avg_latency_ms": 0.6359144278606955,
+      "p95_latency_ms": 1.293,
+      "avg_units_per_paper": 41.13167259786477,
+      "overall_hit": 0.7661691542288557
+    },
+    {
+      "rank": 10,
+      "family_name": "paragraph",
+      "avg_latency_ms": 0.6582477611940316,
+      "p95_latency_ms": 1.413,
+      "avg_units_per_paper": 47.95017793594306,
+      "overall_hit": 0.7741293532338308
+    }
+  ],
+  "promotions": {
+    "general_retrieval": [
+      "semantic_coarse",
+      "semantic_balanced",
+      "semantic_section_constrained"
+    ],
+    "nonlocal_retrieval": [
+      "semantic_balanced",
+      "semantic_coarse"
+    ],
+    "structure_oriented_retrieval": [
+      "semantic_coarse",
+      "semantic_balanced"
+    ]
+  },
+  "kill_recommendations": [
+    "fixed_220_60",
+    "semantic_lite",
+    "paragraph_triple",
+    "fixed_160_40",
+    "paragraph_pair",
+    "paragraph",
+    "fixed_120_30"
+  ],
+  "landscape_notes": {
+    "best_overall_family": "semantic_coarse",
+    "best_semantic_family": "semantic_coarse",
+    "best_fixed_family": "fixed_220_60",
+    "paragraph_pair_rank": 8,
+    "semantic_best_delta_vs_overall": 0.0,
+    "fixed_best_delta_vs_overall": -0.05074626865671639,
+    "paragraph_pair_delta_vs_overall": -0.07661691542288562
+  }
+}

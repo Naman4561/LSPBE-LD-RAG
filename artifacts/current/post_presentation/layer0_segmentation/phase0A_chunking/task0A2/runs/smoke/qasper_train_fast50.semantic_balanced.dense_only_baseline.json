@@ -1,0 +1,155 @@
+{
+  "schema_version": "layer0_chunking_screen_run_v1",
+  "created_at": "2026-04-25T23:33:20Z",
+  "started_at": "2026-04-25T23:33:19Z",
+  "ended_at": "2026-04-25T23:33:20Z",
+  "stage": "smoke",
+  "status": "completed",
+  "dataset_path": "data/qasper_train_fast50.json",
+  "dataset_name": "qasper_train_fast50",
+  "segmentation_artifact_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1/qasper_train_fast50.semantic_balanced.json",
+  "family_name": "semantic_balanced",
+  "harness": {
+    "name": "dense_only_baseline",
+    "label": "Dense-only baseline",
+    "seed_mode": "dense",
+    "k": 20,
+    "context_budget": 20,
+    "dense_weight": 1.0,
+    "sparse_weight": 0.5,
+    "use_adjacency": false
+  },
+  "embedder": {
+    "kind": "bge",
+    "model_name": "BAAI/bge-base-en-v1.5",
+    "fallback_used": false
+  },
+  "paper_count": 50,
+  "question_count": 146,
+  "structure_diagnostics": {
+    "unit_count": 1140,
+    "per_paper_unit_count_stats": {
+      "avg": 22.8,
+      "median": 19.0,
+      "min": 1.0,
+      "max": 111.0,
+      "p95": 50.0
+    },
+    "artifact_avg_unit_words": 191.58157894736843,
+    "artifact_length_distribution_words": {
+      "000_080": 20,
+      "081_140": 78,
+      "141_220": 761,
+      "221_320": 281,
+      "321_plus": 0
+    },
+    "headings_preserved": true,
+    "metadata_trace_fields": [
+      "paper_id",
+      "unit_id",
+      "section.primary_section_name",
+      "section.primary_heading_path",
+      "span.doc_char_start",
+      "span.doc_word_start",
+      "source.paragraph_ids",
+      "parent_links"
+    ]
+  },
+  "runtime": {
+    "total_seconds": 0.2870450999998866,
+    "avg_latency_ms": 0.2910547945205478,
+    "p95_latency_ms": 0.477,
+    "queries_per_minute": 30517.852421112435
+  },
+  "metrics": {
+    "overall": {
+      "queries": 146,
+      "seed_hit_rate": 0.7602739726027398,
+      "evidence_hit_rate": 0.7602739726027398,
+      "evidence_coverage_rate": 0.7068601869971732,
+      "first_evidence_rank": 5.423423423423423,
+      "first_evidence_rank_stats": {
+        "mean": 5.423423423423423,
+        "median": 4.0,
+        "min": 1,
+        "max": 20,
+        "count": 111
+      },
+      "avg_retrieved_units": 17.71232876712329,
+      "avg_retrieved_words": 3389.6438356164385,
+      "avg_latency_ms": 0.2910547945205478,
+      "p95_latency_ms": 0.477
+    },
+    "subsets": {
+      "skip_local": {
+        "queries": 18,
+        "seed_hit_rate": 1.0,
+        "evidence_hit_rate": 1.0,
+        "evidence_coverage_rate": 0.8846560846560847,
+        "first_evidence_rank": 3.2222222222222223,
+        "first_evidence_rank_stats": {
+          "mean": 3.2222222222222223,
+          "median": 2.0,
+          "min": 1,
+          "max": 17,
+          "count": 18
+        },
+        "avg_retrieved_units": 18.444444444444443,
+        "avg_retrieved_words": 3585.8333333333335,
+        "avg_latency_ms": 0.2795555555555556,
+        "p95_latency_ms": 0.415
+      },
+      "multi_span": {
+        "queries": 14,
+        "seed_hit_rate": 1.0,
+        "evidence_hit_rate": 1.0,
+        "evidence_coverage_rate": 0.9272959183673469,
+        "first_evidence_rank": 3.5714285714285716,
+        "first_evidence_rank_stats": {
+          "mean": 3.5714285714285716,
+          "median": 1.5,
+          "min": 1,
+          "max": 17,
+          "count": 14
+        },
+        "avg_retrieved_units": 18.785714285714285,
+        "avg_retrieved_words": 3707.5714285714284,
+        "avg_latency_ms": 0.2885714285714286,
+        "p95_latency_ms": 0.415
+      },
+      "float_table": {
+        "queries": 68,
+        "seed_hit_rate": 0.9117647058823529,
+        "evidence_hit_rate": 0.9117647058823529,
+        "evidence_coverage_rate": 0.8185282446311857,
+        "first_evidence_rank": 4.32258064516129,
+        "first_evidence_rank_stats": {
+          "mean": 4.32258064516129,
+          "median": 3.0,
+          "min": 1,
+          "max": 18,
+          "count": 62
+        },
+        "avg_retrieved_units": 17.941176470588236,
+        "avg_retrieved_words": 3430.294117647059,
+        "avg_latency_ms": 0.2877941176470588,
+        "p95_latency_ms": 0.463
+      }
+    },
+    "subset_counts": {
+      "adjacency_easy": 97,
+      "skip_local": 18,
+      "multi_span": 14,
+      "float_table": 68,
+      "float_direct": 0,
+      "float_reference": 68,
+      "float_adjacent_prose": 0,
+      "boolean": 27,
+      "what": 62,
+      "how": 36,
+      "which": 13,
+      "other": 8
+    }
+  },
+  "notes": []
+}

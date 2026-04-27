@@ -56,3 +56,10 @@ The labels are cached for validation and test in:
 - `skip_local` is intended as a harder tag, not a strict partition
 - `multi_span` is especially useful because evidence coverage matters more there than a simple hit flag
 - the float/table label is heuristic and should be treated as a structured-evidence proxy until a later bucket adds richer float-aware indexing
+
+## Layer 0 And Layer 1 Guardrail
+
+- segmentation-specific subset labels can still be useful for diagnostics and implementation audits
+- for primary cross-family segmentation comparisons, fixed question-level labels are required
+- the recommended helper is `lspbe.fixed_subsets.require_fixed_question_level_subset_labels(...)`
+- do not silently fall back to segmentation-specific evidence-to-unit matching when the goal is cross-family comparison

@@ -1,0 +1,399 @@
+{
+  "script_name": "scripts/studies/post_presentation/run_chunking_screen.py",
+  "created_at": "2026-04-26T10:33:11Z",
+  "output_dir": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2",
+  "segmentation_root": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A1",
+  "embedder": {
+    "kind": "bge",
+    "model_name": "BAAI/bge-base-en-v1.5",
+    "fallback_used": false
+  },
+  "families": [
+    "paragraph",
+    "paragraph_pair",
+    "paragraph_triple",
+    "fixed_120_30",
+    "fixed_160_40",
+    "fixed_220_60",
+    "semantic_lite",
+    "semantic_balanced",
+    "semantic_coarse",
+    "semantic_section_constrained"
+  ],
+  "harnesses": [
+    {
+      "name": "sparse_only_baseline",
+      "label": "Sparse-only baseline",
+      "seed_mode": "sparse",
+      "k": 20,
+      "context_budget": 20,
+      "dense_weight": 0.0,
+      "sparse_weight": 1.0,
+      "use_adjacency": false
+    },
+    {
+      "name": "dense_only_baseline",
+      "label": "Dense-only baseline",
+      "seed_mode": "dense",
+      "k": 20,
+      "context_budget": 20,
+      "dense_weight": 1.0,
+      "sparse_weight": 0.5,
+      "use_adjacency": false
+    },
+    {
+      "name": "simple_hybrid_baseline",
+      "label": "Simple hybrid baseline",
+      "seed_mode": "hybrid",
+      "k": 20,
+      "context_budget": 20,
+      "dense_weight": 1.0,
+      "sparse_weight": 0.5,
+      "use_adjacency": false
+    },
+    {
+      "name": "simple_hybrid_minimal_adjacency_control",
+      "label": "Simple hybrid + minimal adjacency control",
+      "seed_mode": "hybrid",
+      "k": 8,
+      "context_budget": 20,
+      "dense_weight": 1.0,
+      "sparse_weight": 0.5,
+      "use_adjacency": true
+    }
+  ],
+  "stages": [
+    "validation"
+  ],
+  "runs": [
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_pair",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_pair.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_pair",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_pair.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_pair.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_pair",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_pair.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_triple",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_triple.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_triple",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_triple.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_triple.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "paragraph_triple",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.paragraph_triple.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_120_30",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_120_30.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_120_30",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_120_30.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_120_30.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_120_30",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_120_30.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_160_40",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_160_40.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_160_40",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_160_40.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_160_40.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_160_40",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_160_40.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_220_60",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_220_60.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_220_60",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_220_60.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_220_60.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "fixed_220_60",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.fixed_220_60.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_lite",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_lite.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_lite",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_lite.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_lite.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_lite",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_lite.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_balanced",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_balanced.sparse_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_balanced",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_balanced.dense_only_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_balanced.simple_hybrid_baseline.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_balanced",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_balanced.simple_hybrid_minimal_adjacency_control.json"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_coarse",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_coarse.sparse_only_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_coarse.sparse_only_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_coarse",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_coarse.dense_only_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_coarse.dense_only_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_coarse.simple_hybrid_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_coarse.simple_hybrid_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_coarse",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_coarse.simple_hybrid_minimal_adjacency_control.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_coarse.simple_hybrid_minimal_adjacency_control.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_section_constrained",
+      "harness_name": "sparse_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_section_constrained.sparse_only_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_section_constrained.sparse_only_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_section_constrained",
+      "harness_name": "dense_only_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_section_constrained.dense_only_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_section_constrained.dense_only_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_baseline",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_section_constrained.simple_hybrid_baseline.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_section_constrained.simple_hybrid_baseline.csv"
+    },
+    {
+      "stage": "validation",
+      "dataset_name": "qasper_validation_full",
+      "family_name": "semantic_section_constrained",
+      "harness_name": "simple_hybrid_minimal_adjacency_control",
+      "status": "completed",
+      "run_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/runs/validation/qasper_validation_full.semantic_section_constrained.simple_hybrid_minimal_adjacency_control.json",
+      "csv_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/per_question/validation/qasper_validation_full.semantic_section_constrained.simple_hybrid_minimal_adjacency_control.csv"
+    }
+  ],
+  "combined_json_path": "artifacts/current/post_presentation/layer0_segmentation/phase0A_chunking/task0A2/chunking_screen_combined.json"
+}

@@ -28,12 +28,23 @@ The root `scripts/*.py` files are compatibility wrappers. Use the categorized su
 - `scripts/studies/run_qasper_structure_repr_study.py`
 - `scripts/studies/run_qasper_model_selection_study.py`
 - `scripts/studies/run_qasper_bridge_repair_study.py`
+- `scripts/studies/post_presentation/build_segmentation_variants.py`
+- `scripts/studies/post_presentation/build_structure_segmentation_variants.py`
+- `scripts/studies/post_presentation/summarize_segmentation_variants.py`
+- `scripts/studies/post_presentation/summarize_structure_segmentation_variants.py`
+- `scripts/studies/post_presentation/run_chunking_screen.py`
+- `scripts/studies/post_presentation/run_structure_segmentation_screen.py`
+- `scripts/studies/post_presentation/summarize_chunking_screen.py`
+- `scripts/studies/post_presentation/run_segmentation_diagnostics.py`
+- `scripts/studies/post_presentation/run_structure_segmentation_diagnostics.py`
+- `scripts/studies/post_presentation/run_structure_audit_and_verification.py`
 
 ## Diagnostic Scripts
 
 - `scripts/diagnostics/run_env_preflight.py`
 - `scripts/diagnostics/run_qasper_diagnostics.py`
 - `scripts/diagnostics/audit_hardcoded_paths.py`
+- `scripts/diagnostics/check_retrieval_text_safety.py`
 
 ## Utility Scripts
 
@@ -65,3 +76,8 @@ Legacy scripts that depend on debug-only data now read from `data/archive_debug/
 - caches: `artifacts/support/cache/...`
 - logs: `artifacts/support/logs/...`
 - archived smoke or clutter: `artifacts/archive_serious_redo/...`
+
+## Layer 0 Guardrails
+
+- For Layer 0 or Layer 1 segmentation cross-family comparisons, use fixed question-level subset labels via `lspbe.fixed_subsets` rather than rebuilding segmentation-specific subset labels as the primary slice view.
+- `scripts/diagnostics/check_retrieval_text_safety.py` is the lightweight guardrail check for the Layer 0 `retrieval_text` separation rule.
